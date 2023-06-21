@@ -1,0 +1,16 @@
+state={
+	id=140
+	name="STATE_140"
+	provinces={
+		37 1012 1236 1612 1879 3283 3295 3296 3300 3311 3321 3324 3339 
+	}
+    history = {
+        owner = DSC
+        add_core_of = DSC
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

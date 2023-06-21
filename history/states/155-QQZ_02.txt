@@ -1,0 +1,16 @@
+state={
+	id=155
+	name="STATE_155"
+	provinces={
+		2008 2627 
+	}
+    history = {
+        owner = QQZ
+        add_core_of = QQZ
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

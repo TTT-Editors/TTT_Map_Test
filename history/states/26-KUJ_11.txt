@@ -1,0 +1,21 @@
+
+state={
+	id=26
+	name="STATE_26"
+	provinces={
+		1849 2300 2602 5450 5455 5463 
+	}
+    history = {
+        owner = INA
+        add_core_of = INA
+        buildings = {
+            infrastructure = 1
+
+
+        }
+	}
+	state_category = rural
+	manpower=65183
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

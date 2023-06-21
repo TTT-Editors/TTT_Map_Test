@@ -1,0 +1,20 @@
+state={
+	id=44
+	name="STATE_44"
+	provinces={
+		5582 5583 5584 
+	}
+    history = {
+        owner = INA
+        add_core_of = INA
+        buildings = {
+            infrastructure = 0
+
+
+        }
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

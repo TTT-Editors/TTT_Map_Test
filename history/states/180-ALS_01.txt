@@ -1,0 +1,16 @@
+state={
+	id=180
+	name="STATE_180"
+	provinces={
+		119 276 293 336 507 992 1019 1042 1219 1364 1776 2524 2872 2875 2877 2882 2890 
+	}
+    history = {
+        owner = ALS
+        add_core_of = ALS
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

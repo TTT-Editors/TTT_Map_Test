@@ -1,0 +1,16 @@
+state={
+	id=154
+	name="STATE_154"
+	provinces={
+		1056 2317 2319 3199 3212 
+	}
+    history = {
+        owner = QQZ
+        add_core_of = QQZ
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

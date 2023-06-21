@@ -1,0 +1,16 @@
+state={
+	id=285
+	name="STATE_285"
+	provinces={
+		21 350 509 1267 2206 2467 5084 5089 5124 5192 
+	}
+    history = {
+        owner = SUD
+        add_core_of = SUD
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,16 @@
+state={
+	id=137
+	name="STATE_137"
+	provinces={
+		1425 1739 1872 3452 3473 3497 3499 3504 
+	}
+    history = {
+        owner = DSC
+        add_core_of = DSC
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

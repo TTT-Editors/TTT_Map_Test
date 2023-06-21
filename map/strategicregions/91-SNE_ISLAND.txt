@@ -1,0 +1,10 @@
+
+strategic_region={
+	id=91
+	name="STRATEGICREGION_91"
+	provinces={
+		541 1044 1273 3069 
+	}
+	weather={
+	}
+}

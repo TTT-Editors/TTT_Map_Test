@@ -1,0 +1,16 @@
+state={
+	id=174
+	name="STATE_174"
+	provinces={
+		645 748 969 1093 1335 1692 1839 1841 1998 2328 2623 2908 2915 2929 2934 2941 2942 2957 
+	}
+    history = {
+        owner = TWL
+        add_core_of = TWL
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

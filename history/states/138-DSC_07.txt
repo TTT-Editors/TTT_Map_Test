@@ -1,0 +1,16 @@
+state={
+	id=138
+	name="STATE_138"
+	provinces={
+		366 1078 1786 2162 3382 3397 3402 3414 3422 3433 3440 3462 3465 
+	}
+    history = {
+        owner = DSC
+        add_core_of = DSC
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,16 @@
+state={
+	id=203
+	name="STATE_203"
+	provinces={
+		1695 1973 2055 4284 4317 4338 4350 4357 4379 
+	}
+    history = {
+        owner = SUM
+        add_core_of = SUM
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,16 @@
+state={
+	id=246
+	name="STATE_246"
+	provinces={
+		8 30 38 39 44 72 227 283 286 287 302 307 313 401 485 537 564 567 624 631 658 761 765 850 943 1033 1051 1118 1160 1699 1797 1852 2160 2244 2661 2878 2881 2884 2886 2887 2888 3058 
+	}
+    history = {
+        owner = FON
+        add_core_of = FON
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

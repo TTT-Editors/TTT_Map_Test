@@ -1,0 +1,21 @@
+
+state={
+	id=24
+	name="STATE_24"
+	provinces={
+		819 1833 2137 2459 5377 5386 5388 5405 5406 5420 5434 5435 5448 
+	}
+    history = {
+        owner = INA
+        add_core_of = INA
+        buildings = {
+            infrastructure = 2
+
+
+        }
+	}
+	state_category = rural
+	manpower=21412
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

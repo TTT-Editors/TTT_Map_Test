@@ -1,0 +1,20 @@
+state={
+	id=35
+	name="STATE_35"
+	provinces={
+		210 994 1399 2028 5562 5565 
+	}
+    history = {
+        owner = TRM
+        add_core_of = TRM
+        buildings = {
+            infrastructure = 0
+
+
+        }
+	}
+	state_category = wasteland
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

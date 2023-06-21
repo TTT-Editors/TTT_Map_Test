@@ -1,0 +1,17 @@
+
+state={
+	id=276
+	name="STATE_276"
+	provinces={
+		586 1314 1478 1611 1646 1848 1990 2044 2247 2342 2423 4110 4120 4137 4188 4220 4242 4246 
+	}
+    history = {
+        owner = SUD
+        add_core_of = SUD
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

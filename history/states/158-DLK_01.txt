@@ -1,0 +1,17 @@
+
+state={
+	id=158
+	name="STATE_158"
+	provinces={
+		19 1156 1610 2005 2274 2305 2589 3226 3247 3252 3264 3268 3269 3282 3286 
+	}
+    history = {
+        owner = DLK
+        add_core_of = DLK
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

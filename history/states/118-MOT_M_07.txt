@@ -1,0 +1,16 @@
+state={
+	id=118
+	name="STATE_118"
+	provinces={
+		642 1947 2207 3163 3177 3204 3205 3218 3221 3236 
+	}
+    history = {
+        owner = MOT
+        add_core_of = MOT
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

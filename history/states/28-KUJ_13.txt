@@ -1,0 +1,20 @@
+state={
+	id=28
+	name="STATE_28"
+	provinces={
+		274 429 1050 1840 2688 2724 5445 5462 5469 5479 5499 
+	}
+    history = {
+        owner = INA
+        add_core_of = INA
+        buildings = {
+            infrastructure = 2
+
+
+        }
+	}
+	state_category = rural
+	manpower=28691
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

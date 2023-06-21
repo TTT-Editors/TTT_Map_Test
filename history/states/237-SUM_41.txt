@@ -1,0 +1,17 @@
+
+state={
+	id=237
+	name="STATE_237"
+	provinces={
+		23 140 452 474 545 649 741 944 1705 1745 2071 2477 4604 4654 4673 4698 4707 4733 4758 4779 4786 4795 4807 4812 4818 
+	}
+    history = {
+        owner = SUM
+        add_core_of = SUM
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

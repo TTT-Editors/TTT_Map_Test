@@ -1,0 +1,16 @@
+state={
+	id=191
+	name="STATE_191"
+	provinces={
+		4 199 205 261 387 506 572 659 1552 1563 2002 2856 2864 2868 
+	}
+    history = {
+        owner = SNE
+        add_core_of = SNE
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

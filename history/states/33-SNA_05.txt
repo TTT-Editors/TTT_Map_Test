@@ -1,0 +1,20 @@
+state={
+	id=33
+	name="STATE_33"
+	provinces={
+		393 1183 1487 1651 5382 5387 5396 5402 5404 5418 5438 5442 5443 5451 5459 5577 5578 
+	}
+    history = {
+        owner = SNA
+        add_core_of = SNA
+        buildings = {
+            infrastructure = 3
+
+
+        }
+	}
+	state_category = town
+	manpower=247190
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

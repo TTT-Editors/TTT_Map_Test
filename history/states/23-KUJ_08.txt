@@ -1,0 +1,20 @@
+state={
+	id=23
+	name="STATE_23"
+	provinces={
+		2329 2476 5344 5350 5367 5370 5384 5385 5408 5409 
+	}
+    history = {
+        owner = INA
+        add_core_of = INA
+        buildings = {
+            infrastructure = 1
+
+
+        }
+	}
+	state_category = small_island
+	manpower=1874
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

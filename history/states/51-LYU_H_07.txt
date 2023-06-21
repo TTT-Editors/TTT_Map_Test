@@ -1,0 +1,17 @@
+
+state={
+	id=51
+	name="STATE_51"
+	provinces={
+		457 1253 1340 1351 1649 1661 1886 2230 2248 2296 2364 2428 2695 2788 4370 4399 4400 4420 4429 4461 4472 4492 4501 4521 4533 4547 4550 4563 4565 4584 4608 4625 4629 4644 4653 4657 4679 4705 4706 
+	}
+    history = {
+        owner = LYU
+        add_core_of = LYU
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

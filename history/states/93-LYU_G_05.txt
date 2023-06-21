@@ -1,0 +1,16 @@
+state={
+	id=93
+	name="STATE_93"
+	provinces={
+		41 81 424 779 1052 2006 2095 2301 2493 2759 4156 4172 4173 4180 4219 4253 4265 
+	}
+    history = {
+        owner = LYU
+        add_core_of = LYU
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

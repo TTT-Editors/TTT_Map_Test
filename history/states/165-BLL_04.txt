@@ -1,0 +1,16 @@
+state={
+	id=165
+	name="STATE_165"
+	provinces={
+		1005 2760 3161 3172 3176 3187 3190 3207 
+	}
+    history = {
+        owner = BLL
+        add_core_of = BLL
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

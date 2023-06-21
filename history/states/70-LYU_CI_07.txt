@@ -1,0 +1,17 @@
+
+state={
+	id=70
+	name="STATE_70"
+	provinces={
+		129 719 908 1318 1402 1416 1759 1929 2098 2219 2277 2440 2764 4285 4286 4293 4295 4296 4314 4318 4319 4323 4324 4337 4339 4344 4358 4361 4362 4381 4397 
+	}
+    history = {
+        owner = LYU
+        add_core_of = LYU
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

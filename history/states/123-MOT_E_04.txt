@@ -1,0 +1,16 @@
+state={
+	id=123
+	name="STATE_123"
+	provinces={
+		28 1065 1268 1358 1510 1985 2130 2449 2505 2901 2909 2916 2920 2922 2926 2930 2931 2936 2948 2949 2951 2980 2982 
+	}
+    history = {
+        owner = FXE
+        add_core_of = FXE
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

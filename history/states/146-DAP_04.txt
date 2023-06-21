@@ -1,0 +1,16 @@
+state={
+	id=146
+	name="STATE_146"
+	provinces={
+		1826 2075 3375 3386 3393 3413 
+	}
+    history = {
+        owner = MDQ
+        add_core_of = MDQ
+
+	}
+	state_category = pastoral
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

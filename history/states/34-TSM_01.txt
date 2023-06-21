@@ -1,0 +1,20 @@
+state={
+	id=34
+	name="STATE_34"
+	provinces={
+		345 439 1084 1158 1534 2093 5563 5585 
+	}
+    history = {
+        owner = TRM
+        add_core_of = TRM
+        buildings = {
+            infrastructure = 0
+
+
+        }
+	}
+	state_category = wasteland
+	manpower=1
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

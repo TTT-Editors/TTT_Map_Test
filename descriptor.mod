@@ -13,6 +13,7 @@ tags={
 }
 replace_path="common/countries"
 replace_path="common/country_tags"
+replace_path="events"
 replace_path="gfx/flags"
 replace_path="history/countries"
 replace_path="history/states"
