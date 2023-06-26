@@ -1,0 +1,46 @@
+capital = 1
+oob = "KQG"
+set_research_slots = 2
+
+recruit_character = KQG_Xiongbohong
+recruit_character = KQG_Lizhuoyong
+recruit_character = KQG_Wangxieqia
+recruit_character = KQG_jieminuofu
+recruit_character = LYU_Hutao
+recruit_character = LYU_ZhongliA
+recruit_character = KQG_guangpingyi
+recruit_character = KQG_liyun
+recruit_character = KQG_yangxunli
+recruit_character = KQG_Afuyuer
+recruit_character = KQG_Aerfuleide
+recruit_character = KQG_Xiaozhao
+recruit_character = KQG_hanqi
+
+add_ideas = {
+	KQG1_43
+	KQG1_42
+    Limited_election
+    Low_tax
+    balance_laws
+    Balanced_publicity
+	volunteer_only
+	civilian_economy
+}
+
+set_stability = 0.45
+set_war_support = 0.50
+set_convoys = 50
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1996.1.1"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+    communism = 35
+	totalitarianism = 10
+	liberalism = 20
+    reformism = 20
+	left_wing_anarchism = 15 
+}

@@ -1,0 +1,81 @@
+capital = 1
+oob = "KUJ"
+set_research_slots = 2
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	infantry_weapons2 = 1
+	support_weapons = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_maintenance_company = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	bow_1 = 1
+	bow_2 = 1
+	basic_compass = 1
+	improved_compass = 1
+	improved_infantry_weapons = 1
+	marines = 1
+	ttt_uniform = 1
+	motorised_infantry = 1
+}
+
+recruit_character = KUJ_Kujou_Sara
+recruit_character = KUJ_SiTian
+recruit_character = KUJ_kujou_MiSaHiTo
+recruit_character = KUJ_YangJie
+recruit_character = KUJ_ShiChuan
+recruit_character = KUJ_SongPing
+recruit_character = KUJ_XiaoYe
+recruit_character = KUJ_HuZhiZhu
+recruit_character = KUJ_XuanSan
+
+set_variable = { RE_state63_inlufence = 0 }
+set_variable = { RE_state64_inlufence = 0 }
+set_variable = { RE_state65_inlufence = 0 }
+set_variable = { RE_state70_inlufence = 0 }
+set_variable = { RE_state74_inlufence = 0 }
+set_variable = { RE_state75_inlufence = 0 }
+set_variable = { RE_state350_inlufence = 0 }
+set_variable = { RE_state351_inlufence = 0 }
+set_variable = { RE_state352_inlufence = 0 }
+set_variable = { RE_state353_inlufence = 0 }
+set_variable = { RE_state354_inlufence = 0 }
+set_variable = { RE_state355_inlufence = 0 }
+set_variable = { RE_state356_inlufence = 0 }
+set_variable = { RE_state357_inlufence = 0 }
+set_variable = { RE_state358_inlufence = 0 }
+set_variable = { RE_state359_inlufence = 0 }
+set_variable = { RE_state361_inlufence = 0 }
+set_variable = { RE_state362_inlufence = 0 }
+
+set_variable = { RE_Naganohara_support = 0 }
+set_variable = { RE_Ritou_support = 0 }
+
+set_variable = { var = Raden_Shogun_doubt  value = 0 }
+
+add_ideas = {
+		extensive_conscription
+		war_economy
+		conscription_militia
+        limited_exports
+		army_forces_0
+}
+set_politics = {
+	ruling_party = national_socialism
+	last_election = "1935.11.27"
+	election_frequency = 36
+	elections_allowed = yes
+}
+set_popularities = {
+    liberalism = 15
+    national_socialism = 30
+    authoritarianism = 10
+    despotism = 10
+    esotericism = 20
+    reformism = 15
+}
+
+

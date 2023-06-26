@@ -1,0 +1,43 @@
+capital = 1
+set_research_slots = 3
+
+
+add_ideas = {
+	QQR_from_the_abgrund 
+	Limited_supervision
+	Authoritative_release
+	equalitarianism
+	Literary_artistic_protection
+	war_economy
+	extensive_conscription
+    closed_economy
+}
+
+recruit_character = QQR_Fire_axe_chuchu
+recruit_character = QQR_fire_strike_chuchu
+recruit_character = QQR_wood_strike_chuchu
+recruit_character = QQR_wind_master_chuchu
+recruit_character = QQR_abgrund_ice_master
+
+add_state_core = 280
+add_state_core = 281
+add_state_core = 284
+add_state_core = 398
+add_state_core = 400
+add_state_core = 402
+add_state_core = 283
+add_state_core = 286
+
+set_oob = "QQR"
+
+set_stability = 0.8
+set_war_support = 0.8
+set_convoys = 0
+set_politics = {
+	ruling_party = esotericism
+	last_election = "1997.11.8"
+	elections_allowed = no
+}
+set_popularities = {
+	esotericism = 100
+}

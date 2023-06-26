@@ -1,0 +1,39 @@
+capital = 1
+oob = "ZDG"
+set_research_slots = 4
+
+add_ideas = {
+    National_supremacy
+    No_right_to_vote
+    deficit_laws
+    High_tax
+	conscription_militia
+
+	extensive_conscription
+	partial_economic_mobilisation
+	closed_economy
+
+	CLSIA_chulaizhadao1
+	CLSIA_dui_dangdiren_huaiyi1
+	CLSIA_yuanzhengjun
+	CLSIA_bujibuzu
+}
+
+set_stability = 0.90
+set_war_support = 0.90
+
+set_convoys = 100
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	authoritarianism = 15
+	totalitarianism = 5
+	liberalism = 5
+	national_socialism = 30
+    despotism = 45
+}

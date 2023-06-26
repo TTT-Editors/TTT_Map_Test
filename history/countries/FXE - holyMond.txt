@@ -1,0 +1,66 @@
+﻿capital = 1
+set_research_slots = 3
+set_technology = {
+	infantry_weapons = 1
+	ttt_uniform = 1
+	z_1999_grain_tech = 1
+}
+
+recruit_character = MOT_FXE_military_committee
+recruit_character = MOT_Fischl
+recruit_character = FXE_Raymond
+recruit_character =FXE_Miles
+recruit_character =FXE_Hertha
+recruit_character =FXE_Harry
+recruit_character =FXE_Ella_Musk
+recruit_character =FXE_Herman
+recruit_character =FXE_Fender
+recruit_character =FXE_Cloris
+recruit_character =FXE_Schubert
+recruit_character =FXE_Amber
+recruit_character =FXE_Eula
+
+
+
+add_ideas = {
+	Olive_tax
+	deficit_laws
+	war_economy
+	Freedom_first
+	extensive_conscription
+	war_machines
+    Limited_election
+    limited_exports
+	TWL_military_government
+    FXE_mengdechengzhixia
+	FXE_mowuqingrao
+	FXE_shibaidegongyehua
+	FXE_yiminchao
+	FXE_yurenzhongdeganshe
+
+}
+
+set_stability = 0.50
+set_war_support = 0.50
+
+set_convoys = 100
+
+set_politics = {
+	ruling_party = authoritarianism
+	last_election = "1932.11.8"
+	election_frequency = 70
+	elections_allowed = Yes
+}
+set_popularities = {
+	liberalism = 15
+	totalitarianism = 5
+	reformism = 30
+    national_socialism = 5
+    communism = 10
+	esotericism = 10
+	despotism = 5
+	left_wing_anarchism = 10
+	authoritarianism = 10
+}
+
+

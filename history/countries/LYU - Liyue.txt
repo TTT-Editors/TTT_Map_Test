@@ -1,0 +1,367 @@
+capital = 1
+oob = "LYU"
+set_research_slots = 2
+
+recruit_character = LYU_morax
+recruit_character = LYU_changzhuyishi
+recruit_character = LYU_Ganyu
+recruit_character = LYU_Keqing
+recruit_character = LYU_Xiangling
+recruit_character = LYU_NingGuang
+recruit_character = LYU_Xinyan
+recruit_character = LYU_Yunjin
+recruit_character = LYU_BeiDou
+recruit_character = LYU_Xiao
+recruit_character = XRG_Shenhe
+recruit_character = LYU_Yanfei
+recruit_character = LYU_Baizhu
+recruit_character = LYU_troika
+recruit_character = LYU_qiqi
+recruit_character = LYU_Xiaoyu
+recruit_character = LYU_Pinglaolao
+recruit_character = LYU_Yelan
+recruit_character = LYU_Chongyun
+
+set_technology = {
+	#infantry
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	infantry_weapons2 = 1
+	improved_infantry_weapons = 1
+	basic_compass = 1
+	ttt_uniform = 1
+	support_weapons = 1
+	motorised_infantry = 1
+	floating_stone = 1
+	
+	#support
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	railway_research = 1
+	fon_train_tech_1 = 1
+	z_1999_grain_tech = 1
+	wind_wing = 1
+	
+	#artillery
+	bow_1 = 1
+	
+	#electronic
+	electronic_mechanical_engineering = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		three_masted_warship = 1
+		light_ironclads = 1
+		medium_ironclads = 1
+		heavy_ironclads = 1
+		super_heavy_warship = 1
+		improved_light_ironclads = 1
+		early_destroyer = 1
+		basic_transport = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		#ship hull
+		wooden_ship_hull_light = 1
+		iron_ship_hull_light = 1
+		improved_iron_ship_hull_light = 1
+		early_ship_hull_light = 1
+		iron_ship_hull_cruiser = 1
+		
+		#naval support
+		mtg_early_transport = 1
+		pre_industrial_battery = 1
+		iron_ship_battery = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		early_torpedo = 1
+	}
+}
+
+starting_train_buffer = 2
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	set_technology = {
+		wind_element_usage = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "LYU_navy_mtg"
+		set_war_support = 0.15
+	else = {
+		set_naval_oob = "LYU_navy"
+		set_war_support = 0.2
+	}
+}
+
+add_ideas = {
+	Liyue_Vast_territory
+    balance_laws
+	volunteer_only
+	civilian_economy
+	export_focus
+	a_dying_morax
+	an_unbalanced_developed_country
+	a_torn_society
+}
+
+set_stability = 0.5
+set_convoys = 100
+add_political_power = 0
+
+set_politics = {
+	ruling_party = reformism
+	last_election = "1997.10.20"
+	election_frequency = 60
+	elections_allowed = no
+} 
+set_popularities = {
+	communism = 25
+	liberalism = 25
+    reformism = 50
+}
+
+####变量
+set_variable = { Ganyu_PP = 39 }
+set_variable = { Keqing_PP = 15 }
+set_variable = { NingGuang_PP = 25 }
+set_variable = { Ganyu_PS = 27 }
+set_variable = { Keqing_PS = 40 }
+set_variable = { NingGuang_PS = 60 }
+set_variable = { Operationprogress = 0.20 }
+set_variable = { Keqing_Alioth = 35 }
+set_variable = { Ningguang_Tianquan_Star = 65 }
+set_variable = { General_Affairs_Division = 20 }
+
+country_lock_all_division_template = yes
+
+#if = {
+#	limit = {
+#		has_dlc = "By Blood Alone"
+#	}
+#	create_equipment_variant = {
+#		name = "Feiying.1"
+#		type = primitive_small_plane_airframe_1
+#		modules = {
+#			fixed_main_weapon_slot = early_small_explosive_box
+#			fixed_auxiliary_weapon_slot_1 = empty
+#			engine_type_slot = wind_elemental_engine_2_1x
+#			special_type_slot_1 = empty
+#			special_type_slot_2 = empty	
+#		}
+#	}
+#}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	
+	#Destroyers
+	#木神
+	create_equipment_variant = {
+		name = "Mushen Class"	
+		type = ship_hull_light_1
+		name_group = LYU_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	
+	#玄武
+	create_equipment_variant = {
+		name = "Xuanwu Class"	
+		type = ship_hull_light_2
+		name_group = LYU_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	
+	#泽物
+	create_equipment_variant = {
+		name = "Zewu Class"	
+		type = ship_hull_light_3
+		name_group = LYU_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_3
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_3
+			fixed_ship_torpedo_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	
+	#云山
+	create_equipment_variant = {
+		name = "Yunshan Class"	
+		type = ship_hull_light_4
+		name_group = LYU_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_4
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_4
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+	}
+	
+	#Light Cruiser
+	#博土
+	create_equipment_variant = {
+		name = "Botu Class"
+		type = ship_hull_cruiser_2
+		name_group = LYU_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_light_medium_battery_2
+			rear_1_custom_slot = empty
+		}
+	}
+	
+	#Heavy Cruiser
+	#銮岩
+	create_equipment_variant = {
+		name = "Luanyan Class"
+		type = ship_hull_cruiser_2
+		name_group = LYU_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_medium_battery_2
+			rear_1_custom_slot = empty
+		}
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "Liyuegang"
+		#name = "Xiao'e Gui"		#小鳄龟
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "Tiema"
+		#name = "Yingzui Gui"	#鹰嘴龟
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+}
+
+1999.4.1 = {
+	  156 = {
+			add_dynamic_modifier = { modifier = Stratigraphic_abyss }
+		}
+	  205 = {
+			add_dynamic_modifier = { modifier = Stratigraphic_abyss }
+		}
+	  208 = {
+			add_dynamic_modifier = { modifier = Stratigraphic_abyss }
+		}
+	  209 = {
+			add_dynamic_modifier = { modifier = Stratigraphic_abyss }
+		}
+	  206 = {
+			add_dynamic_modifier = { modifier = Stratigraphic_abyss }
+		}
+	  207 = {
+			add_dynamic_modifier = { modifier = Stratigraphic_abyss }
+		}
+	  155 = {
+			add_dynamic_modifier = { modifier = Stratigraphic_abyss }
+		}
+}

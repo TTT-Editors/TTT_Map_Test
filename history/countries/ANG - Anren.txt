@@ -1,0 +1,58 @@
+capital = 1
+set_research_slots = 3
+
+recruit_character = ANG_com_zijigongshe
+recruit_character = ANG_mil_weiyuanhui
+recruit_character = ANG_mil_changchuan
+recruit_character = ANG_mil_guangwei
+recruit_character = ANG_mil_zhenhong
+recruit_character = ANG_mil_mudanshan
+recruit_character = ANG_mil_xionghaoguang
+recruit_character = ANG_mil_luqingwen
+
+recruit_character = ANG_com_gaochang
+recruit_character = ANG_com_cuishan
+recruit_character = ANG_com_gechang
+recruit_character = ANG_com_guangwenhong
+recruit_character = ANG_com_shenshufang
+recruit_character = ANG_com_xingyunxiu
+
+recruit_character = ANG_mil_hanjing
+recruit_character = ANG_mil_jinran
+recruit_character = ANG_mil_mazao
+
+add_ideas = {
+	Gonewith_Wind
+	deficit_laws
+	Inverted_pyramid_tax
+	extensive_conscription
+	low_economic_mobilisation
+	closed_economy
+	ANG_idea_0
+	ANG_idea_1
+	civilself_determination
+	contention_hundred_schools_thought
+	emerge_itself_perish_itself
+	Cancel_entertainment
+}
+set_stability = 0.50
+
+set_war_support = 0.25
+
+set_convoys = 100
+
+
+set_politics = {
+	ruling_party = left_wing_anarchism
+	last_election = "1997.10.20"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	authoritarianism = 15
+	left_wing_anarchism = 55
+	populism = 15
+    liberalism = 10
+	right_wing_anarchism = 5
+}
+

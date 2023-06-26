@@ -1,0 +1,20 @@
+capital = 1
+oob = "XQG"
+set_research_slots = 1
+set_stability = 0.50
+add_political_power = 200
+set_war_support = 0.10
+
+set_convoys = 100
+
+set_politics = {
+	ruling_party = reformism
+	last_election = "1997.10.20"
+	election_frequency = 60
+	elections_allowed = yes
+}
+set_popularities = {
+	communism = 20
+	liberalism = 40
+    reformism = 40
+}

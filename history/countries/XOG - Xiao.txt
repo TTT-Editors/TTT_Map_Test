@@ -1,0 +1,49 @@
+capital = 1
+oob = "XOG"
+set_research_slots = 3
+recruit_character = XOG_huaian
+recruit_character = XOG_jiangxue
+recruit_character = XOG_zhonlin
+recruit_character = XOG_suolaya
+recruit_character = XOG_ruoxin
+recruit_character = XOG_luye
+recruit_character = XOG_changjiuye
+recruit_character = XOG_yanxiao
+recruit_character = XOG_qingzhou
+recruit_character = XOG_landa
+recruit_character = XOG_Qiaoxi
+recruit_character = XOG_Damihu
+recruit_character = XOG_Zuijinzhao
+recruit_character = XOG_Xuanfan
+recruit_character = XOG_Shaling
+add_ideas = {
+    Low_tax
+    Balanced_publicity
+	volunteer_only
+	civilian_economy
+	free_trade
+	XOG_1_ideas
+	XOG_2_ideas
+	XOG_3_ideas
+}
+set_stability = 0.60
+
+set_war_support = 0.10
+
+set_convoys = 100
+
+add_dynamic_modifier = { modifier = XOG_yezhangdu_buff }
+
+set_politics = {
+	ruling_party = reformism
+	last_election = "1997.10.20"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	communism = 10
+	reformism = 35
+	authoritarianism = 10
+	right_wing_anarchism = 20
+	liberalism = 25
+}
