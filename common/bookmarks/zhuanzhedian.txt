@@ -1,0 +1,93 @@
+bookmarks = {
+	
+	bookmark = {
+		name = "zhuanzhedian_name"
+		desc = "zhuanzhedian_desc"
+		date = 1999.4.1.12
+		picture = "zhuanzhedian-149150"
+		default_country = "MOT"
+		default = yes
+		
+		effect = {
+			randomize_weather = 2022 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+		
+		"LYU"={
+			history = "OTHER_GATHERING_LYU_DESC"
+			ideology = reformism
+			ideas={
+				a_dying_morax
+				an_unbalanced_developed_country
+				a_torn_society
+				#no more than three ideas
+			}
+			focuses = {
+			    LYU_lantern_festival
+				drop_the_oracle				
+				#newfocus_1
+				#newfocus_2
+				#no more than three focuses
+			}
+		}
+		
+		"MOT"={
+			history = "OTHER_GATHERING_MOT_DESC"
+			ideology = authoritarianism
+			ideas={
+				MOT_partial_industrialization_1
+				mot_lead_by_wind_a
+				MOT_crisis_of_Tewalin
+			}
+			focuses = {
+			    MOT_tree_0_01
+				MOT_tree_0_17
+				MOT_tree_0_38				
+			}
+		}
+		
+		"INA"={
+			history = "OTHER_GATHERING_INA_DESC"
+			ideology = authoritarianism
+			focuses = {
+				INA_1
+				INA_33
+				INA_34
+			}
+			ideas = {
+				Sharp_human_contradictions
+				Vision_Hunt_Decree
+				putrid_Shogunate_Army
+			}
+		}
+		
+		"SUM"={
+			history = "OTHER_GATHERING_SUM_DESC"
+			ideology = authoritarianism
+			focus = {
+				SUM_Akademiya_Daily_Activity
+				SUM_Akademiya_Withering_problem
+				SUM_Akademiya_Res_plan
+			}
+			ideas = {
+				SUM_idea_AkashaTerminal
+				SUM_idea_depend_AkashaTerminal
+				SUM_idea_WitheringZone_1
+			}
+		}
+		
+		"FON"={
+			history = "OTHER_GATHERING_FON_DESC"
+		}
+		
+		"NAT"={
+			history = ""
+		}
+		
+		"SNE"={
+			history = "OTHER_GATHERING_SNE_DESC"
+		}
+
+		# minors #
+	}
+}

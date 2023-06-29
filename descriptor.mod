@@ -11,6 +11,7 @@ tags={
 	"Historical"
 	"Translation"
 }
+replace_path="common/bookmarks"
 replace_path="common/countries"
 replace_path="common/country_tags"
 replace_path="events"
