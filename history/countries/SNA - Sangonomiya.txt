@@ -186,36 +186,36 @@ if = {
 	  85 = {
 			add_dynamic_modifier = { modifier = SNA_state_modifier_2 }
 		}
-	  371 = {
-			add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
-		}
-	  373 = {
-			add_dynamic_modifier = { modifier = SNA_state_modifier_2 }
-		}
+	 # 371 = {
+	#		add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
+	#	}
+	 # 373 = {
+	#		add_dynamic_modifier = { modifier = SNA_state_modifier_2 }
+	#	}
 	  81 = {
 			add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
 		}
 	  87 = {
 			add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
 		}
-	  369 = {
-			add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
-		}
+	 # 369 = {
+	#		add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
+	#	}
 	  84 = {
 			add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
 		}
-	  370 = {
-			add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
-		}
-	  372 = {
-			add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
-		}
+	 # 370 = {
+	#		add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
+	#	}
+	#  372 = {
+	#		add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
+	#	}
 	  95 = {
 			add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
 		}
-	  374 = {
-			add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
-		}
+	#  374 = {
+	#		add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
+	#	}
 	  96 = {
 			add_dynamic_modifier = { modifier = SNA_state_modifier_1 }
 		}

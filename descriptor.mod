@@ -11,14 +11,12 @@ tags={
 	"Historical"
 	"Translation"
 }
-replace_path="common/bookmarks"
-replace_path="common/countries"
-replace_path="common/country_tags"
-replace_path="events"
-replace_path="gfx/flags"
 replace_path="history/countries"
 replace_path="history/states"
 replace_path="history/units"
 replace_path="map/strategicregions"
 name="Genshin Impact:The Twist of Teyvat(Map Test)"
+dependencies={
+	"Genshin Impact:The Twist of Teyvat (Github Version)"
+}
 supported_version="1.12.*"
