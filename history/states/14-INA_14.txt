@@ -9,12 +9,18 @@ state={
         add_core_of = INA
         buildings = {
             infrastructure = 4
+			2168 = {
+				naval_base = 10
 
+			}
+			5319 = {
+				naval_base = 8
 
+			}
         }
 	}
 	state_category = city
-	manpower=400
+	manpower=400000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

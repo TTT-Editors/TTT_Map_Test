@@ -16,7 +16,15 @@ state={
             industrial_complex = 3
             arms_factory = 1
             dockyard = 1
+			1968 = {
+				naval_base = 3
 
+			}
+			1732 = {
+				naval_base = 8
+
+			}
+        
         }
 	}
 	manpower=1919810

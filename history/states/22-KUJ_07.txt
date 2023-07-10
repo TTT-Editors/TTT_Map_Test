@@ -9,8 +9,14 @@ state={
         add_core_of = INA
         buildings = {
             infrastructure = 2
+			2012 = {
+				naval_base = 3
 
+			}
+			5394 = {
+				naval_base = 1
 
+			}
         }
 	}
 	state_category = rural

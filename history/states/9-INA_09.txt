@@ -9,7 +9,10 @@ state={
         add_core_of = INA
         buildings = {
             infrastructure = 1
+			5036 = {
+				naval_base = 5
 
+			}
 
         }
 	}

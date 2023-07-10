@@ -12,6 +12,10 @@ state={
         add_core_of = INA
         buildings = {
             infrastructure = 1
+			4792 = {
+				naval_base = 2
+
+			}
         }
 	}
 	manpower=148245

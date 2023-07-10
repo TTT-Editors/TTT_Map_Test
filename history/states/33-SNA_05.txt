@@ -9,7 +9,10 @@ state={
         add_core_of = SNA
         buildings = {
             infrastructure = 3
+			1183 = {
+				naval_base = 3
 
+			}
 
         }
 	}
