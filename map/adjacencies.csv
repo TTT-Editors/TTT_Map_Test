@@ -21,7 +21,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 1838;5343;sea;6367;-1;-1;-1;-1;;INA2
 5310;2700;sea;5968;-1;-1;-1;-1;;INA3
 5421;1560;sea;6221;-1;-1;-1;-1;;INA4
-5508;5497;sea;6223;-1;-1;-1;-1;;INA5
 5416;2270;sea;6370;-1;-1;-1;-1;;INA6
 5391;5415;sea;6127;-1;-1;-1;-1;;INA7
 5411;2548;sea;6127;-1;-1;-1;-1;;INA8
@@ -96,7 +95,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 4273;1430;sea;5639;-1;-1;-1;-1;;GUyun5
 4342;4306;sea;5639;-1;-1;-1;-1;;GUyun6
 1430;4359;sea;5639;-1;-1;-1;-1;;GUyun7
-3946;1729;sea;5848;-1;-1;-1;-1;;GUyun8
 
 489;3069;sea;6049;-1;-1;-1;-1;;GUyun9
 
