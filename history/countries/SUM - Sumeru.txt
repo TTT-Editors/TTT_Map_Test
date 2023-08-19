@@ -1,4 +1,4 @@
-capital = 202
+capital = 1
 
 oob = "SUM"
 SUM_lazy_load_oob = yes
