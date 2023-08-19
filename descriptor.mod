@@ -11,6 +11,7 @@ tags={
 	"Historical"
 	"Translation"
 }
+replace_path="common/national_focus"
 replace_path="history/countries"
 replace_path="history/states"
 replace_path="history/units"
