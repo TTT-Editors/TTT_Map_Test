@@ -1,0 +1,10 @@
+state={
+	id=148
+	name="STATE_148"
+	provinces={
+		913 1143 2337 2738 4402 4404 4425 4431 4434 4458 4466 4488 4498 4499 4508 4526 4527 4562 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
