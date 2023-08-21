@@ -6392,8 +6392,8 @@
 6391;93;1;1;land;false;plains;0
 6392;27;190;3;land;true;plains;0
 6393;140;120;21;land;false;plains;0
-6394;5;30;4;lake;false;ocean;0
-6395;30;31;19;lake;false;ocean;0
+6394;5;30;140;land;false;plains;0
+6395;130;131;119;land;false;plains;0
 6396;160;27;151;land;false;plains;0
 6397;30;170;130;land;false;plains;0
 6398;63;190;140;land;false;plains;0
