@@ -2,10 +2,18 @@
 state={
 	id=122
 	name="STATE_122"
+	history={
+		owner = SUM
+		add_core_of = SUM
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
 	provinces={
 		1141 1148 1537 1794 1810 1880 1916 4503 4523 4559 4572 4577 4619 4627 4647 4661 4674 4701 
 	}
-	manpower=0
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

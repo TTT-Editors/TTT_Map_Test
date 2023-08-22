@@ -1,10 +1,19 @@
 state={
 	id=46
 	name="STATE_46"
+	history={
+		owner = DSC
+		add_core_of= DSC
+		add_core_of = MOT
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
 	provinces={
 		435 947 1078 1786 2162 2447 2486 2494 2538 2651 3343 3363 3382 3397 3402 3405 3414 3422 3440 3465 3466 3474 3487 3505 3522 3523 3541 3556 3576 
 	}
-	manpower=0
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

@@ -1,10 +1,19 @@
+
 state={
 	id=150
 	name="STATE_150"
-	provinces={
-		100 181 1385 1420 1476 1813 1942 1991 2332 4064 4081 4099 4111 4142 4160 4190 4214 4223 4227 4228 4230 
+	history={
+		owner = SUM
+		add_core_of = SUM
+		buildings = {
+			infrastructure = 1
+		}
+
 	}
-	manpower=0
+	provinces={
+		100 145 181 768 920 1385 1420 1476 1813 1942 1991 2332 4064 4081 4099 4111 4142 4160 4190 4214 4223 4227 4228 4230 
+	}
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

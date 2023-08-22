@@ -2,10 +2,18 @@
 state={
 	id=238
 	name="STATE_238"
+	history={
+		owner = SNA
+		add_core_of = SNA
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
 	provinces={
 		554 1650 5468 5472 5473 5474 5477 5493 5494 5498 5507 
 	}
-	manpower=0
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

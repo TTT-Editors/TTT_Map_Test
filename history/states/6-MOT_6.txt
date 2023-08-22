@@ -2,10 +2,18 @@
 state={
 	id=6
 	name="STATE_6"
+	history={
+		owner = MOT
+		add_core_of = MOT
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
 	provinces={
 		3015 3022 3023 3218 3221 3236 3244 
 	}
-	manpower=0
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
