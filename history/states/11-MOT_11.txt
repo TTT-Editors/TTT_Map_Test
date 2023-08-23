@@ -2,10 +2,19 @@
 state={
 	id=11
 	name="STATE_11"
+	history={
+		owner = FXE
+		add_core_of= FXE
+		add_core_of = MOT
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
 	provinces={
 		357 1306 1614 1910 2047 2320 2415 2456 2987 2994 3004 3010 3024 3025 3036 3037 3044 3080 6389 
 	}
-	manpower=0
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

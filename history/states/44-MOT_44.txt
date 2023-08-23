@@ -2,10 +2,19 @@
 state={
 	id=44
 	name="STATE_44"
-	provinces={
-		132 1753 2085 2429 2636 3157 3168 3211 
+	history={
+		owner = BLL
+		add_core_of= BLL
+		add_core_of = MOT
+		buildings = {
+			infrastructure = 1
+		}
+
 	}
-	manpower=0
+	provinces={
+		1753 2085 2429 3157 3168 
+	}
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

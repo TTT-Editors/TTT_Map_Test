@@ -2,10 +2,19 @@
 state={
 	id=35
 	name="STATE_35"
+	history={
+		owner = MDQ
+		add_core_of = MDQ
+		add_core_of = MOT
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
 	provinces={
 		1012 2226 2441 3358 3364 3366 3384 
 	}
-	manpower=0
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

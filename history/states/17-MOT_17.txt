@@ -2,10 +2,19 @@
 state={
 	id=17
 	name="STATE_17"
+	history={
+		owner = DLK
+		add_core_of= DLK
+		add_core_of = MOT
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
 	provinces={
 		19 461 1452 1571 1610 2132 2376 3247 3263 3267 3285 3305 3315 
 	}
-	manpower=0
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

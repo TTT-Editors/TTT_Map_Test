@@ -1,0 +1,18 @@
+state={
+	id=259
+	name="STATE_259"
+	history={
+		owner = SNE
+		add_core_of = SNE
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+	provinces={
+		2 34 151 168 198 319 328 339 412 484 492 553 602 859 875 1232 1297 1544 1562 1593 1687 1811 2109 2874 2883 2885 2893 2903 
+	}
+	manpower=1000000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

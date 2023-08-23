@@ -2,10 +2,18 @@
 state={
 	id=89
 	name="STATE_89"
+	history={
+		owner = LYU
+		add_core_of = LYU
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
 	provinces={
 		41 81 424 779 1052 2006 2095 2301 2493 2759 4144 4146 4156 4172 4173 4179 4180 4218 4219 4252 4253 4265 
 	}
-	manpower=0
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
