@@ -2,10 +2,19 @@
 state={
 	id=13
 	name="STATE_13"
-	provinces={
-		1235 1491 1939 2094 2319 2466 2670 3150 3162 3173 3199 3212 
+	history={
+		owner = QQZ
+		add_core_of= QQZ
+		add_core_of = MOT
+		buildings = {
+			infrastructure = 1
+		}
+
 	}
-	manpower=0
+	provinces={
+		1235 1491 1939 2094 2319 2466 2670 3150 3162 3173 3197 3199 3212 
+	}
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

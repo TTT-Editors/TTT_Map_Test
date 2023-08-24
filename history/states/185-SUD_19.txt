@@ -1,10 +1,18 @@
 state={
 	id=185
 	name="STATE_185"
+	history={
+		owner = SUD
+		add_core_of = SUD
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
 	provinces={
 		365 523 532 708 999 2099 4971 4987 
 	}
-	manpower=0
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

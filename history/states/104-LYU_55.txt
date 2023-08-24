@@ -1,10 +1,22 @@
+
 state={
 	id=104
 	name="STATE_104"
-	provinces={
-		359 750 1131 1722 1738 1834 1922 3222 3223 3228 3231 3239 3241 3255 3277 3287 3289 
+
+	history={
+		owner = LYU
+		add_core_of = LYU
+		buildings = {
+			infrastructure = 1
+
+		}
+
 	}
-	manpower=0
+
+	provinces={
+		232 1131 1722 1738 2537 3277 3287 3289 3291 3318 
+	}
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

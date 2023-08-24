@@ -8,7 +8,6 @@ state={
 		add_core_of = MOT
 		buildings = {
 			infrastructure = 4
-
 		}
 
 	}

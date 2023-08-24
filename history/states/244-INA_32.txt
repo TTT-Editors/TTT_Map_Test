@@ -2,10 +2,18 @@
 state={
 	id=244
 	name="STATE_244"
+	history={
+		owner = INA
+		add_core_of = INA
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
 	provinces={
 		504 652 714 1004 1129 1137 1298 5536 5551 5553 
 	}
-	manpower=0
+	manpower=1000000
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
