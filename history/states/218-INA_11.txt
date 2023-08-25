@@ -6,14 +6,15 @@ state={
 		owner = INA
 		add_core_of = INA
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
 
 	}
 	provinces={
 		1120 1414 2144 2186 2237 5117 
 	}
-	manpower=1000000
+	manpower=3653890
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
+	state_category = rural
 }
