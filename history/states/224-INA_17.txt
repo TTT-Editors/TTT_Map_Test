@@ -2,6 +2,10 @@
 state={
 	id=224
 	name="STATE_224"
+	resources = {
+		aluminium = 10
+		oil = 10
+	}
 	history={
 		owner = INA
 		add_core_of = INA
@@ -13,7 +17,8 @@ state={
 	provinces={
 		1128 1924 2139 2233 2479 2611 5333 5354 5357 
 	}
-	manpower=1000000
+	manpower=51298
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
+	state_category = pastoral
 }
