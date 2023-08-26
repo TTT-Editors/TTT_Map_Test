@@ -5,14 +5,17 @@ state={
 		owner = SUM
 		add_core_of = SUM
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
 		}
 
 	}
 	provinces={
 		712 802 1162 1455 1704 2235 2610 2675 4591 4684 4715 4718 4747 4759 
 	}
-	manpower=1000000
+	manpower=132400
+	state_category = large_town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

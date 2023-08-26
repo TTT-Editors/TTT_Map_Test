@@ -6,14 +6,15 @@ state={
 		owner = SUD
 		add_core_of = SUD
 		buildings = {
-			infrastructure = 1
+
 		}
 
 	}
 	provinces={
 		169 230 291 314 394 398 716 1283 1843 2161 2204 2458 2473 2541 5401 5439 5464 5488 
 	}
-	manpower=1000000
+	manpower=13130
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

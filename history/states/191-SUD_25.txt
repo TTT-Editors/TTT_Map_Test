@@ -6,14 +6,15 @@ state={
 		owner = SUD
 		add_core_of = SUD
 		buildings = {
-			infrastructure = 1
+
 		}
 
 	}
 	provinces={
 		96 635 1180 1617 2361 
 	}
-	manpower=1000000
+	manpower=56741
+	state_category = wasteland
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

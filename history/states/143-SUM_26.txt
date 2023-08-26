@@ -12,7 +12,8 @@ state={
 	provinces={
 		882 914 1076 1126 1473 1693 1708 2111 2205 2252 2453 2523 2552 4928 4944 4947 4997 5005 5018 5024 5030 5031 5044 5077 5088 5093 5101 5115 
 	}
-	manpower=1000000
+	manpower=342000
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

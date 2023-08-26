@@ -1,18 +1,24 @@
+
 state={
 	id=126
 	name="STATE_126"
+
 	history={
 		owner = SUM
 		add_core_of = SUM
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
+			industrial_complex = 1
+
 		}
 
 	}
+
 	provinces={
-		88 805 1134 1512 1603 1801 1948 1973 2080 4122 4129 4149 4184 4200 4201 4206 4225 4232 4238 4243 4284 4317 6401 
+		88 805 1134 1512 1603 1801 1948 1973 2080 4122 4129 4149 4184 4200 4201 4206 4225 4232 4238 4243 4284 4317 
 	}
-	manpower=1000000
+	manpower=1143000
 	buildings_max_level_factor=1.000
+	state_category=town
 	local_supplies=0.000
 }
