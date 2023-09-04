@@ -1,4 +1,4 @@
-capital = 1
+capital = 68
 oob = "RTG"
 set_research_slots = 4
 

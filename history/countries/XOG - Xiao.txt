@@ -1,4 +1,4 @@
-capital = 1
+capital = 106
 oob = "XOG"
 set_research_slots = 3
 recruit_character = XOG_huaian

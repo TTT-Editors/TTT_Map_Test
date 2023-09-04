@@ -1,4 +1,4 @@
-capital = 1
+capital = 51
 oob = "LYU"
 set_research_slots = 2
 

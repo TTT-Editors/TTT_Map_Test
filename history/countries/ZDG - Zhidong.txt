@@ -1,4 +1,4 @@
-capital = 1
+capital = 207
 oob = "ZDG"
 set_research_slots = 4
 

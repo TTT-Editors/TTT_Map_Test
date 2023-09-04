@@ -1,4 +1,4 @@
-capital = 1
+capital = 260
 oob = "SNE"
 set_research_slots = 4
 

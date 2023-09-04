@@ -1,4 +1,4 @@
-capital = 1
+capital = 79
 oob = "XRG"
 set_research_slots = 3
 
