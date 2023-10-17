@@ -9,7 +9,15 @@ state={
 			industrial_complex = 3
 			arms_factory = 3
 		}
-
+		victory_points = {
+			2017 25
+		}
+	}
+	resources = {
+		coal = 24
+		steel = 10
+		wood = 14
+		grain = 4
 	}
 	provinces={
 		445 1378 2017 2241 2691 4336 4343 4374 4390 4407 4410 4452 

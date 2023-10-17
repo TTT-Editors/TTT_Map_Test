@@ -2,17 +2,20 @@
 state={
 	id=34
 	name="STATE_34"
+
 	history={
 		owner = DSC
-		add_core_of= DSC
+		add_core_of = DSC
 		add_core_of = MOT
 		buildings = {
 			infrastructure = 1
+
 		}
 
 	}
+
 	provinces={
-		37 1236 1612 3283 3295 3296 3300 3311 3324 3334 3339 
+		37 1236 1612 3249 3253 3283 3295 3296 3300 3311 3324 3334 3339 
 	}
 	manpower=1000000
 	buildings_max_level_factor=1.000

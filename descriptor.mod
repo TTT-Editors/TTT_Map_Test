@@ -20,4 +20,4 @@ name="Genshin Impact:The Twist of Teyvat(Map Test)"
 dependencies={
 	"Genshin Impact:The Twist of Teyvat (Github Version)"
 }
-supported_version="1.12.*"
+supported_version="1.13.*"

@@ -10,15 +10,23 @@ state={
 			infrastructure = 3
 			industrial_complex = 1
 			arms_factory = 1
+
 		}
-
+		victory_points = {
+			4620 15
+		}
 	}
-
+	resources = {
+		grain = 34
+		aluminium = 2
+		coal = 4
+		wood = 54
+	}
 	provinces={
 		1141 1148 1537 1794 1810 1880 1916 4503 4523 4559 4572 4577 4579 4602 4619 4620 4633 4647 4655 4665 4674 4701 6408 
 	}
 	manpower=1369000
-	state_category = town
 	buildings_max_level_factor=1.000
+	state_category=town
 	local_supplies=0.000
 }

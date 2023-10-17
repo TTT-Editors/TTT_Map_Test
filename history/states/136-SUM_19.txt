@@ -7,7 +7,15 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
-
+		victory_points = {
+			397 1
+		}
+	}
+	resources = {
+		steel = 4
+		chromium = 12
+		tungsten = 4
+		aluminium = 16
 	}
 	provinces={
 		397 599 798 1434 1507 1717 1721 1790 4797 4808 4829 4899 4904 4920 4927 4955 4980 4985 4989 5009 5021 6409 

@@ -2,6 +2,7 @@
 state={
 	id=159
 	name="STATE_159"
+
 	history={
 		owner = SUM
 		add_core_of = SUM
@@ -10,11 +11,12 @@ state={
 		}
 
 	}
+
 	provinces={
-		147 883 899 1077 1275 2190 2451 4443 4473 4479 4493 4512 4543 
+		147 883 899 1077 1275 2451 4443 4473 4479 4493 4512 
 	}
 	manpower=42
-	state_category = wasteland
 	buildings_max_level_factor=1.000
+	state_category=wasteland
 	local_supplies=0.000
 }
