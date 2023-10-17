@@ -7,8 +7,10 @@ state={
 		owner = LYU
 		add_core_of = LYU
 		buildings = {
-			infrastructure = 1
-
+			infrastructure = 3
+			dockyard = 1
+			arms_factory = 1
+			industrial_complex = 1
 		}
 
 	}
@@ -16,7 +18,8 @@ state={
 	provinces={
 		558 810 2024 2101 2462 2679 3635 3662 3675 3703 3723 3736 3739 3757 3772 3799 3820 
 	}
-	manpower=1000000
+	manpower=3120120
+	state_category = city
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
