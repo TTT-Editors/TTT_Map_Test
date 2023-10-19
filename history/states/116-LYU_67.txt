@@ -8,6 +8,21 @@ state={
 			infrastructure = 2
 			dockyard = 2
 			arms_factory = 1
+			4186 = {
+				naval_base = 4
+			}
+			937 = {
+				naval_base = 1
+			}
+			722 = {
+				naval_base = 1
+			}
+			4023 = {
+				naval_base = 1
+			}
+			3911 = {
+				naval_base = 1
+			}
 		}
 
 	}

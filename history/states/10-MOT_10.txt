@@ -11,6 +11,9 @@ state={
 			industrial_complex = 1
 			arms_factory = 1
 			dockyard = 1
+			2960 = {
+				naval_base = 1
+			}
 		}
 
 	}

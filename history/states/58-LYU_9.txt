@@ -6,6 +6,9 @@ state={
 		add_core_of = LYU
 		buildings = {
 			infrastructure = 2
+			5116 = {
+				naval_base = 1
+			}
 		}
 
 	}
