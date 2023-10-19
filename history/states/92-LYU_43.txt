@@ -8,7 +8,13 @@ state={
 			infrastructure = 3
 			arms_factory = 2
 		}
-
+		victory_points = {
+			2039 20
+		}
+	}
+	resources = {
+		grain = 10
+		wood = 10
 	}
 	provinces={
 		310 1048 1123 1155 1354 2039 2125 2587 3857 3910 3925 

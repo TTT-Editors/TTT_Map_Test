@@ -8,7 +8,7 @@ state={
 		add_core_of = BLL
 		add_core_of = MOT
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 
 		}
 
@@ -17,7 +17,8 @@ state={
 	provinces={
 		132 672 1850 1867 2005 2815 3195 3209 3210 3226 3230 
 	}
-	manpower=1000000
+	manpower=1191200
+	state_category = rural
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

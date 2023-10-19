@@ -11,7 +11,14 @@ state={
 			industrial_complex = 2
 			dockyard = 1
 		}
-
+		victory_points = {
+			2095 20
+		}
+	}
+	resources = {
+		steel = 10
+		grain = 16
+		wood = 10
 	}
 	provinces={
 		41 81 424 779 1052 2006 2095 2301 2493 2759 4144 4146 4156 4172 4173 4179 4180 4218 4219 4252 4253 4265 
