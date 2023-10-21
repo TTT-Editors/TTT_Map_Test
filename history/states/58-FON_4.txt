@@ -1,0 +1,22 @@
+state={
+	id=58
+	name="STATE_58"
+	history={
+		owner = FON
+		add_core_of = FON
+		buildings = {
+			infrastructure = 2
+			5116 = {
+				naval_base = 1
+			}
+		}
+
+	}
+	provinces={
+		1415 1714 2183 2231 5096 5106 5116 5121 5134 5152 5186 
+	}
+	manpower=1220763
+	state_category = town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

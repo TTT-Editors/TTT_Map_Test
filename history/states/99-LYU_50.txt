@@ -1,22 +1,26 @@
+
 state={
 	id=99
 	name="STATE_99"
+	resources={
+		aluminium=4.000
+	}
+
 	history={
 		owner = LYU
 		add_core_of = LYU
 		buildings = {
 			infrastructure = 1
+
 		}
 
 	}
-	resources = {
-		aluminium = 4
-	}
+
 	provinces={
-		189 974 1176 1639 1664 1877 2117 2314 3471 3483 3502 3512 6392 
+		189 974 1176 1664 1877 2314 3471 3483 3502 3512 6392 
 	}
 	manpower=1768000
-	state_category = town
 	buildings_max_level_factor=1.000
+	state_category=town
 	local_supplies=0.000
 }

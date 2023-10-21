@@ -1,0 +1,24 @@
+
+state={
+	id=57
+	name="STATE_57"
+	history={
+		owner = FON
+		add_core_of = FON
+		buildings = {
+			infrastructure = 3
+		}
+
+	}
+	resources = {
+		steel = 19
+		chromium = 31
+	}
+	provinces={
+		104 201 476 770 879 964 1023 1250 1404 1429 1492 1643 1865 1937 2026 2196 2240 2386 2530 2531 2578 2748 2833 5057 5078 5079 5094 5095 5110 5111 5112 5120 5133 5147 5150 5160 5167 5170 5188 5196 5202 5215 5217 5224 5238 5239 5240 5253 5261 
+	}
+	manpower=1582000
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
