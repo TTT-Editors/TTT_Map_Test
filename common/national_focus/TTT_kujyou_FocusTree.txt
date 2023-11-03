@@ -1,0 +1,580 @@
+focus_tree =
+{
+    id = kujyou_focustree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KUJ
+		}
+	}
+	default = no
+    focus = {
+		id = KUJ_1   #游戏开始
+		icon = GFX_goal_generic
+		
+		available_if_capitulated = no
+		available = {
+			INA = 
+			{
+				NOT = {has_country_flag = INA_34_flag}
+			}
+		}
+		
+		x = 12
+		y = 0
+		cost = 21	
+        completion_reward = {
+			custom_effect_tooltip = "KUJ_depend_who"
+		}
+	}
+	focus = {
+		id = KUJ_2   #靠自己
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_1}
+		mutually_exclusive = {focus = KUJ_3}
+		available_if_capitulated = no
+		
+		x = 8
+		y = 1
+		cost = 21	
+        completion_reward = {
+				custom_effect_tooltip = "KUJ_depend_ourselves"
+		}
+	}
+	focus = {
+		id = KUJ_3   #靠盟友
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_1}
+		mutually_exclusive = {focus = KUJ_2}
+		available_if_capitulated = no
+		available = 
+		{
+		}
+		x = 16
+		y = 1
+		cost = 21
+        completion_reward = {
+				custom_effect_tooltip = "KUJ_depend_our_allies"
+		}
+	}
+	focus = {
+		id = KUJ_4   #收缴余粮
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_2}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress <0.3
+		}
+		x = 6
+		y = 2
+		cost = 21
+        completion_reward = {
+			add_ideas = 
+			{
+				KUJ_grain_collection
+			}	
+			223 =
+			{
+				add_resource = 
+				{
+					type = grain
+					amount = 20
+				}
+			}
+		}
+	}
+	focus = {
+		id = KUJ_5   #训练民兵
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_2}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress <0.3
+		}
+		x = 8
+		y = 2
+		cost = 21
+        completion_reward = {
+			load_oob = "KUJ_new_army"
+			add_ideas = 
+			{
+				KUJ_low_army_quality_1
+			}
+			add_manpower = -20000
+		}
+	}
+	focus = {
+		id = KUJ_6   #修建堡垒
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_2}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress <0.3
+			233 = { is_controlled_by = ROOT }
+			235 = { is_controlled_by = ROOT}
+		}
+		bypass = 
+		{
+			NOT = 
+			{
+				233 = { is_controlled_by = ROOT }
+			    235 = { is_controlled_by = ROOT}
+			}
+		}
+		x = 10
+		y = 2
+		cost = 21
+        completion_reward = {
+			custom_effect_tooltip = "KUJ_bunker"
+			hidden_effect = 
+			{
+                 add_ideas = {KUJ_bunker_low_quality}
+			}
+		}
+	}
+	focus = {
+		id = KUJ_7   #妇女工作
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_4}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress >0.3
+			surrender_progress <0.6
+		}
+		x = 6
+		y = 3
+		cost = 21
+        completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_ideas = { KUJ_female_labor }
+		}
+	}
+	focus = {
+		id = KUJ_8   #扩充民兵
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_5}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress >0.3
+			surrender_progress <0.6
+		}
+		x = 8
+		y = 3
+		cost = 21
+        completion_reward = {
+			swap_ideas = 
+			{
+				add_idea = KUJ_low_army_quality_2
+				remove_idea = KUJ_low_army_quality_1
+			}
+			79 = {
+				create_unit = {
+					division  = "division_template = \"KUJ_migrants_army\"  start_experience_factor = 0"
+					owner = KUJ
+					count = 2
+				}
+			}
+			add_manpower = -20000
+		}
+	}
+	focus = {
+		id = KUJ_9   #有内鬼
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_6}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress >0.3
+			surrender_progress <0.6
+		}
+		x = 10
+		y = 3
+		cost = 21
+        completion_reward = {
+			random_owned_state = 
+			{
+                  add_building_construction =
+				  {
+					  type = arms_factory
+					  level = -1
+					  instant_build = yes
+				  }
+			}
+			random_owned_state = 
+			{
+                  add_building_construction =
+				  {
+					  type = industrial_complex
+					  level = -1
+					  instant_build = yes
+				  }
+			}
+			random_owned_state = 
+			{
+                  add_building_construction =
+				  {
+					  type = arms_factory
+					  level = -1
+					  instant_build = yes
+				  }
+			}
+			random_owned_state = 
+			{
+                  add_building_construction =
+				  {
+					  type = industrial_complex
+					  level = -1
+					  instant_build = yes
+				  }
+			}
+			223 = 
+			{
+				  add_extra_state_shared_building_slots = 3
+				  add_building_construction =
+				  {
+					  type = arms_factory
+					  level = 3
+					  instant_build = yes
+				  }
+			}
+			add_manpower = -10000
+
+		}
+	}
+	focus = {
+		id = KUJ_10   #有内鬼
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_7}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress >0.6
+			surrender_progress <0.9
+		}
+		x = 6
+		y = 4
+		cost = 21
+        completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+			swap_ideas = { 
+				add_idea = KUJ_child_labor
+				remove_idea = KUJ_female_labor 
+			}
+			custom_effect_tooltip = "KUJ_Serious_consequences"
+		}
+	}
+	focus = {
+		id = KUJ_11   #有内鬼
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_8}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress >0.6
+			surrender_progress <0.9
+		}
+		x = 8
+		y = 4
+		cost = 21
+        completion_reward = {
+			swap_ideas = 
+			{
+				add_idea = KUJ_low_army_quality_3
+				remove_idea = KUJ_low_army_quality_2
+			}
+			223 = {
+				create_unit = {
+					division = "division_template = \"KUJ_migrants_army\"  start_experience_factor = 0"
+					owner = KUJ
+					count = 4
+				}
+			}
+			add_manpower = -40000
+		}
+	}
+	focus = {
+		id = KUJ_12   #有内鬼
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_9}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress >0.6
+			surrender_progress <0.9
+		}
+		x = 10
+		y = 4
+		cost = 21
+        completion_reward = {
+				223 = 
+				{
+					add_extra_state_shared_building_slots = 2
+					add_building_construction =
+					{
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_ideas = { KUJ_the_twist_of_KUJ }
+		}
+	}
+	focus = {
+		id = KUJ_13   #有内鬼
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_3}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress <0.3
+		}
+		x = 14
+		y = 2
+		cost = 21
+        completion_reward = {
+				add_offsite_building = {type = arms_factory level = 4}
+				random_owned_state = 
+				{
+					add_resource = 
+					{
+						type = steel
+						amount = 20
+					}
+				}
+		}
+	}
+	focus = {
+		id = KUJ_14   #愚人众武器
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_3}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress <0.3
+		}
+		x = 16
+		y = 2
+		cost = 21
+        completion_reward = {
+			custom_effect_tooltip = "KUJ_Fatui_Infulence"
+			add_equipment_to_stockpile = {
+		    	type = infantry_equipment 
+		    	amount = 5000
+	        }
+            add_equipment_to_stockpile = {
+		    	type = support_equipment
+		    	amount = 500
+	        }
+            add_equipment_to_stockpile = {
+		    	type = artillery_equipment 
+		   		amount = 1000
+	        }
+            add_equipment_to_stockpile = {
+		    	type = ttt_uniform_eq
+		    	amount = 1000
+	        }
+			add_equipment_to_stockpile = {
+		    	type = grain_conversion_eq
+		    	amount = 3000
+	        }
+		}
+	}
+	focus = {
+		id = KUJ_15   #有内鬼
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_3}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress <0.3
+		}
+		x = 18
+		y = 2
+		cost = 21
+        completion_reward = {
+			division_template = {
+					name = "KUJ_Inzuazuma_volunteer" 			
+					division_names_group = KUJ_Inzuazuma_volunteer
+					is_locked = yes
+									
+			regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					artillery_brigade  = { x = 1 y = 1 }
+		            artillery_brigade  = { x = 1 y = 0 }
+			}
+			support = 	{
+					engineer = { x = 0 y = 0 }
+				}		
+			}
+			223 = 
+			{
+				create_unit = {
+					division = "division_template = \ KUJ_Inzuazuma_volunteer \"  start_experience_factor = 1.5"
+					owner = KUJ
+					count = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = KUJ_16   #离岛劳工
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_13}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress >0.3
+			surrender_progress <0.6
+		}
+		x = 14
+		y = 3
+		cost = 21
+        completion_reward = {
+			 custom_effect_tooltip = "KUJ_LiDao_discontent"
+		     country_event = KUJevents.1
+			 add_ideas = KUJ_LiDao_labor
+			 223 = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = 
+				{
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_manpower = 20000 		
+			}
+			INA = {
+				add_timed_idea = 
+				{
+					idea = INA_Labor_Shortages
+					days = 120
+				}
+				209 = { add_manpower = -20000 }
+			}
+		}
+	}
+	focus = {
+		id = KUJ_17  #有内鬼
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_14}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress >0.3
+			surrender_progress <0.6
+		}
+		x = 16
+		y = 3
+		cost = 21
+        completion_reward = {
+				custom_effect_tooltip = "KUJ_Fatui_help"
+		}
+	}
+	focus = {
+		id = KUJ_18   #岛内兵员
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_15}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress >0.3
+			surrender_progress <0.6
+		}
+		x = 18
+		y = 3
+		cost = 21
+        completion_reward = {
+			add_ideas = { KUJ_low_army_quality_1 }
+			add_ideas = { service_by_requirement }
+			load_oob = "KUJ_new_army"
+		}
+	}
+	focus = {
+		id = KUJ_19   #有内鬼
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_16}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress >0.6
+			surrender_progress <0.9
+		}
+		x = 14
+		y = 4
+		cost = 21
+        completion_reward = {
+			    custom_effect_tooltip = KUJ_LiDaoJueWang
+				country_event = KUJevents.3
+		}
+	}
+	focus = {
+		id = KUJ_20   #有内鬼
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_17}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress >0.6
+			surrender_progress <0.9
+		}
+		x = 16
+		y = 4
+		cost = 21
+        completion_reward = {
+				country_event = KUJevents.4
+		}
+	}
+	focus = {
+		id = KUJ_21   #有内鬼
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_18}
+		available_if_capitulated = no
+		available = 
+		{
+			surrender_progress >0.6
+			surrender_progress <0.9
+		}
+		x = 18
+		y = 4
+		cost = 21
+        completion_reward = {
+				country_event = KUJevents.5
+		}
+	}
+	focus = {
+		id = KUJ_22   #有内鬼
+		icon = GFX_goal_generic
+		prerequisite = {focus = KUJ_10 focus = KUJ_19 }
+		prerequisite = {focus = KUJ_11 focus = KUJ_20}
+		prerequisite = {focus = KUJ_12 focus = KUJ_21 }
+        available = 
+		{
+			surrender_progress >0.9
+		}
+		available_if_capitulated = no
+		
+		x = 12
+		y = 5
+		cost = 21
+        completion_reward = {
+			add_ideas = { all_adults_serve }
+			add_ideas = { tot_economic_mobilisation }
+			223 = {
+			    create_unit = {
+					division = "division_template = \ KUJ_migrants_army\"  start_experience_factor = 0"
+					owner = KUJ
+					count = 5
+				}
+			}
+		}
+	}
+}

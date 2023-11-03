@@ -1,0 +1,1202 @@
+focus_tree = {
+	id = ANG
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = ANG
+		}
+	}
+	default = no
+	focus = {
+		id = ANG_1_0   #饥荒问题
+		icon = GFX_goal_ANG_jihuangwenti
+		cost = 21.00
+		select_effect = {
+			country_event = { id = heiyan.1 }
+		}
+		completion_reward = {
+			
+		}
+		x = 7
+		y = 0
+	}
+	focus = {
+		id = ANG_2_0  #组建公社
+		icon = GFX_goal_ANG_chengliweiyuanhui
+		cost = 21.00
+		available = {
+			NOT = {
+				OR = {
+					has_idea = ANG_idea_0
+					has_idea = ANG_idea_0_1
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+		x = 24
+		y = 0
+
+	}
+	focus = {
+		id = ANG_3_0 #集训民兵
+		icon = GFX_goal_ANG_jixunminbing
+		cost = 21.00
+		available = {
+			NOT = {
+				OR = {
+					has_idea = ANG_idea_0
+					has_idea = ANG_idea_0_1
+				}
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ANG_idea_1
+				add_idea = ANG_idea_1_1
+			}
+		}
+		x = 14
+		y = 0
+
+	}
+	focus = {
+		id = ANG_1_1  #边境走私
+		icon = GFX_goal_ANG_bianjingzousi
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_0
+		}
+		completion_reward = {
+			custom_effect_tooltip = ANG_kaiqizousi
+			set_country_flag = ANG_kaiqizousi_on
+			set_variable = {
+				var = ANG_heishi_level
+				value = 1
+			}
+		}
+		x = 6
+		y = 1
+
+	}
+	focus = {
+		id = ANG_1_2  #矿物交易
+		icon = GFX_goal_ANG_kuangwuhuanwuzi
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_1
+		}
+		completion_reward = {
+			custom_effect_tooltip = ANG_zousikuangwu
+			custom_effect_tooltip = ANG_huodeliangshi
+			set_country_flag = ANG_zousikuangwu_on
+			check_ANG_kuangwu = yes
+			add_to_variable = {
+				var = ANG_shiwuchubei
+				value = 100
+			}
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = ANG_1_7  #粮食走私扩大化
+		icon = GFX_goal_ANG_liangshizousikuoda
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_1
+		}
+		completion_reward = {
+			custom_effect_tooltip = ANG_huodeliangshi
+			set_country_flag = ANG_zousikuangwu_on
+			add_to_variable = {
+				var = ANG_shiwuchubei
+				value = 100
+			}
+			ANG_heishi_level_up = yes
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = ANG_1_3  #种植作物
+		icon = GFX_goal_ANG_zhongzhizuowu
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_0
+		}
+		completion_reward = {
+			
+			add_to_variable = {
+				var = ANG_shiwushengchan
+				value = 50
+			}
+			59 = {
+				add_resource = {
+					type = grain
+					amount = 18
+				}
+			}
+			56 = {
+				add_resource = {
+					type = grain
+					amount = 26
+				}
+			}
+			custom_effect_tooltip = ANG_shengchanzengjia
+		}
+		x = 8
+		y = 1
+
+	}
+	focus = {
+		id = ANG_1_4  #林地拓荒
+		icon = GFX_goal_ANG_lindituohuang
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_3
+		}
+		completion_reward = {
+			custom_effect_tooltip = ANG_shengchanzengjia
+			add_to_variable = {
+				var = ANG_shiwushengchan
+				value = 75
+			}
+		}
+		x = 8
+		y = 2
+
+	}
+	focus = {
+		id = ANG_1_6  #开发南部林地
+		icon = GFX_goal_ANG_nanbulindi
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_3
+		}
+		completion_reward = {
+			custom_effect_tooltip = ANG_shengchanzengjia
+			add_to_variable = {
+				var = ANG_shiwushengchan
+				value = 50
+			}
+		}
+		x = 10
+		y = 2
+
+	}
+	focus = {
+		id = ANG_1_5 #逐步恢复
+		icon = GFX_goal_ANG_zhubuhuifu
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_2
+		}
+		prerequisite = {
+			focus = ANG_1_4
+		}
+		prerequisite = {
+			focus = ANG_1_6
+		}
+		prerequisite = {
+			focus = ANG_1_7
+		}
+		available = {
+			NOT = {
+				has_idea = ANG_idea_0_1
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ANG_idea_0
+				add_idea = ANG_idea_0_2
+			}
+			ANG = { country_event = { id = heiyan.3 } }
+		}
+		x = 7
+		y = 3
+
+	}
+	focus = {
+		id = ANG_1_8 #修复废弃工厂
+		icon = GFX_goal_ANG_xiugufeiqigongchang
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_5
+		}
+		completion_reward = {
+			59 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+			56 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+		x = 7
+		y = 4
+	}
+	focus = {
+		id = ANG_1_9 #连接各公社
+		icon = GFX_goal_ANG_lianjiegongshe
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_5
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = ANG
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+		x = 5
+		y = 4
+	}
+	focus = {
+		id = ANG_1_10 #维持矿山运作
+		icon = GFX_goal_ANG_weichikuangshan
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_5
+		}
+		completion_reward = {
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = ANG
+				}
+				add_extra_state_shared_building_slots = 1
+				add_resource = {
+					type = steel
+					amount = 38
+				}
+			}
+		}
+		x = 9
+		y = 4
+	}
+	focus = {
+		id = ANG_1_11 #统计工业数据
+		icon = GFX_goal_ANG_tongjigongye
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_8
+		}
+		prerequisite = {
+			focus = ANG_1_9
+		}
+		completion_reward = {
+			add_ideas = ANG_idea_6_0
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+		x = 7
+		y = 5
+	}
+	focus = {
+		id = ANG_1_12 #恢复库存火车
+		icon = GFX_goal_ANG_huifuhuoche
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_10
+		}
+		prerequisite = {
+			focus = ANG_1_8
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 10
+				producer = LYU
+			}
+		}
+		x = 9
+		y = 5
+	}
+	focus = {
+		id = ANG_1_13 #鼓励发展农业
+		icon = GFX_goal_ANG_gulinongye
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_15
+		}
+		completion_reward = {
+			add_ideas = ANG_idea_5_0
+		}
+		x = 5
+		y = 6
+	}
+	focus = {
+		id = ANG_1_14 #确保基本教育
+		icon = GFX_goal_ANG_jibenjiaoyu
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_11
+		}
+		completion_reward = {
+			add_ideas = ANG_idea_7_0
+		}
+		x = 7
+		y = 6
+	}
+	focus = {
+		id = ANG_1_15 #社员互助
+		icon = GFX_goal_ANG_sheyuanhuzhu
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_9
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+		x = 5
+		y = 5
+	}
+	focus = {
+		id = ANG_1_16 #重组矿区城镇
+		icon = GFX_goal_ANG_chongzuchengzhen
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_1_12
+		}
+		prerequisite = {
+			focus = ANG_1_11
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+		x = 9
+		y = 6
+	}
+
+
+
+
+	focus = {
+		id = ANG_2_1 #成立公社代表大会
+		icon = GFX_goal_ANG_chengligongshedaibiao
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_3
+		}
+		completion_reward = {
+			add_ideas = ANG_idea_2_0
+		}
+		x = 25
+		y = 2
+
+	}
+	focus = {
+		id = ANG_2_2 #成立黑军委员会
+		icon = GFX_goal_ANG_chengliheijunweiyuanhui
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_3
+		}
+		completion_reward = {
+			add_ideas = ANG_idea_2_1
+		}
+		x = 23
+		y = 2
+
+	}
+	focus = {
+		id = ANG_2_3 #公社代表
+		icon = GFX_goal_ANG_gongshedaibiao
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_0
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.1
+		}
+		x = 24
+		y = 1
+
+	}
+	focus = {
+		id = ANG_2_4 #重建秩序
+		icon = GFX_goal_ANG_chongjianzhixu
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_1
+		}
+		prerequisite = {
+			focus = ANG_2_2
+		}
+		completion_reward = {
+			country_event = { id = heiyan.11 }
+			custom_effect_tooltip = ANG_unlock_bop
+			set_country_flag = ANG_bop_is_began
+			add_political_power = 100
+			set_variable = {
+				var = ANG_bop_var
+				value = 50
+			}
+			ANG_bop_var_calculation = yes
+		}
+		x = 24
+		y = 3
+
+	}
+	focus = {
+		id = ANG_2_5 #宣布内战状态
+		icon = GFX_goal_ANG_xuanbuneizhan
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_4
+		}
+		prerequisite = {
+			focus = ANG_2_2
+		}
+		available = {
+			ANG_check_mil_60 = yes
+		}
+		completion_reward = {
+			add_ideas = war_economy
+		}
+		x = 22
+		y = 4
+
+	}
+	focus = {
+		id = ANG_2_6 #稳定内部民众
+		icon = GFX_goal_ANG_wendinqunzhong
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_4
+		}
+		prerequisite = {
+			focus = ANG_2_1
+		}
+		available = {
+			ANG_check_com_60 = yes
+		}
+		completion_reward = {
+			add_ideas = equalitarianism
+		}
+		x = 26
+		y = 4
+
+	}
+	focus = {
+		id = ANG_2_7 #战时无执政
+		icon = GFX_goal_ANG_zhanshiwuzhizheng
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_5
+		}
+		mutually_exclusive = {
+			focus = ANG_2_8
+		}
+		available = {
+			ANG_check_mil_80 = yes
+		}
+		completion_reward = {
+			add_ideas = ANG_idea_11_0
+		}
+		x = 23
+		y = 5
+
+	}
+	focus = {
+		id = ANG_2_8 #动员宣传
+		icon = GFX_goal_ANG_dongyuan
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_6
+		}
+		mutually_exclusive = {
+			focus = ANG_2_7
+		}
+		available = {
+			ANG_check_com_80 = yes
+		}
+		completion_reward = {
+			add_ideas = ANG_idea_13_0
+		}
+		x = 25
+		y = 5
+
+	}
+	focus = {
+		id = ANG_2_9 #提高黑军待遇
+		icon = GFX_goal_ANG_tigaoheijundaiyu
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_5
+		}
+		available = {
+			ANG_check_mil_60 = yes
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = ANG_idea_10_0
+		}
+		x = 21
+		y = 5
+
+	}
+	focus = {
+		id = ANG_2_10 #关照农民
+		icon = GFX_goal_ANG_guanzhaonongming
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_6
+		}
+		available = {
+			ANG_check_com_60 = yes
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		x = 27
+		y = 5
+
+	}
+	focus = {
+		id = ANG_2_11 #提拔黑军将领
+		icon = GFX_goal_ANG_tibajiangling
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_9
+			focus = ANG_2_7
+		}
+		available = {
+			ANG_check_mil_60 = yes
+		}
+		completion_reward = {
+			ANG_mil_changchuan = {
+				add_corps_commander_role = {
+					skill = 1
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 1
+				}
+			}
+			ANG_mil_mudanshan = {
+				add_corps_commander_role = {
+					skill = 2
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 1
+					logistics_skill = 1
+				}
+			}
+			
+		}
+		x = 22
+		y = 6
+
+	}
+	focus = {
+		id = ANG_2_12 #监督委员会
+		icon = GFX_goal_ANG_jianduweiyuanhui
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_8
+			focus = ANG_2_10
+		}
+		available = {
+			ANG_check_com_60 = yes
+		}
+		completion_reward = {
+			add_ideas = ANG_idea_14_0
+		}
+		x = 26
+		y = 6
+
+	}
+	focus = {
+		id = ANG_2_13 #收编公社卫队
+		icon = GFX_goal_ANG_shoubianweidui
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_9
+		}
+		prerequisite = {
+			focus = ANG_2_11
+		}
+		available = {
+			ANG_check_mil_60 = yes
+		}
+		completion_reward = {
+			random_core_state = {
+				create_unit = {
+				    division = "division_template = \"Gongshe Huweidui\" start_experience_factor = 0.4" 
+				    owner = ANG
+				    count = 6
+			    }
+			} 
+		}
+		x = 21
+		y = 7
+
+	}
+	focus = {
+		id = ANG_2_14 #士官训练
+		icon = GFX_goal_ANG_shiguanxunlian
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_11
+		}
+		prerequisite = {
+			focus = ANG_2_7
+		}
+		mutually_exclusive = {
+			focus = ANG_2_16
+		}
+		available = {
+			ANG_check_mil_80 = yes
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ANG_idea_11_0
+				add_idea = ANG_idea_11_1
+			}
+		}
+		x = 23
+		y = 7
+
+	}
+	focus = {
+		id = ANG_2_15 #黑岩军委员
+		icon = GFX_goal_ANG_heijunweiyuan
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_13
+		}
+		prerequisite = {
+			focus = ANG_2_14
+		}
+		available = {
+			has_completed_focus = ANG_3_6
+			ANG_check_mil_80 = yes
+		}
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = ANG_idea_10_0
+				remove_ideas = ANG_idea_1_2
+				remove_ideas = ANG_idea_2_0
+				remove_ideas = ANG_idea_2_1
+			}
+			custom_effect_tooltip = ANG_heijun_tooltip
+			add_ideas = ANG_idea_15_0
+		}
+		x = 22
+		y = 8
+
+	}
+	focus = {
+		id = ANG_2_16 #社员准军事化训练
+		icon = GFX_goal_ANG_sheiyuanzhunjunshi
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_8
+		}
+		prerequisite = {
+			focus = ANG_2_12
+		}
+		mutually_exclusive = {
+			focus = ANG_2_14
+		}
+		available = {
+			ANG_check_com_80 = yes
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ANG_idea_13_0
+				add_idea = ANG_idea_13_1
+			}
+		}
+		x = 25
+		y = 7
+
+	}
+	focus = {
+		id = ANG_2_17 #黑军参加劳动
+		icon = GFX_goal_ANG_heijunlaodong
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_12
+		}
+		prerequisite = {
+			focus = ANG_2_10
+		}
+		available = {
+			ANG_check_com_60 = yes
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ANG_idea_14_0
+				add_idea = ANG_idea_14_1
+			}
+			ANG_com_cuishan = {
+				add_corps_commander_role = {
+					skill = 1
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+				}
+			} 
+				
+			
+		}
+		x = 27
+		y = 7
+
+	}
+	focus = {
+		id = ANG_2_18 #去中心化军队
+		icon = GFX_goal_ANG_quzhongxinhuajundui
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_2_16
+		}
+		prerequisite = {
+			focus = ANG_2_17
+		}
+		available = {
+			has_completed_focus = ANG_3_6
+				ANG_check_com_80 = yes
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ANG_idea_1_2
+				add_idea = ANG_idea_1_3
+			}
+		}
+		x = 26
+		y = 8
+
+	}
+	
+
+
+
+	focus = {
+		id = ANG_3_1 #搜集军需物资
+		icon = GFX_goal_ANG_soujijunxu
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_0
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = LYU
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 250
+				producer = ANG
+			}
+		}
+		x = 14
+		y = 1
+
+	}
+	focus = {
+		id = ANG_3_2 #重组原千岩军
+		icon = GFX_goal_ANG_chongzuqianyan
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_1
+		}
+		completion_reward = {
+			unlock_decision_tooltip = ANG_raise_militias
+			custom_effect_tooltip = ANG_unlock_mil_decision_tooltip
+			hidden_effect = {
+				division_template = {
+					name = "Gongshe Huweidui"
+					is_locked = no
+					priority = 2
+					division_names_group = ANG_INF_01
+					template_counter = 0
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+					support = { 
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+					} 
+				}
+				set_country_flag = ANG_can_raise_mil
+			}
+			
+			
+			59 = {
+			    create_unit = {
+				    division = "division_template = \"Gongshe Huweidui\" start_experience_factor = 0.8" 
+				    owner = ANG
+				    count = 6
+			    }
+		    }
+		}
+		x = 13
+		y = 2
+
+	}
+	focus = {
+		id = ANG_3_3 #动员民众
+		icon = GFX_goal_ANG_dongyuanminzhong
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_1
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			swap_ideas = {
+				remove_idea = ANG_idea_1_1
+				add_idea = ANG_idea_1_2
+			}
+			set_country_flag = ANG_can_zhuazhuangding
+		}
+		x = 15
+		y = 2
+
+	}
+	focus = {
+		id = ANG_3_4 #小规模生产军备
+		icon = GFX_goal_ANG_shengchanjundui
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_2
+		}
+		prerequisite = {
+			focus = ANG_3_3
+		}
+		completion_reward = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+		x = 14
+		y = 3
+
+	}
+	focus = {
+		id = ANG_3_18 #学会挖掘
+		icon = GFX_goal_ANG_xuehuiwajue
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_2
+		}
+		prerequisite = {
+			focus = ANG_3_3
+		}
+		completion_reward = {
+			add_ideas = ANG_idea_12_0
+		}
+		x = 16
+		y = 3
+
+	}
+	focus = {
+		id = ANG_3_5 #武器再利用
+		icon = GFX_goal_ANG_huishouliyong
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_2
+		}
+		completion_reward = {
+			add_ideas = ANG_idea_3_0
+		}
+		x = 12
+		y = 3
+
+	}
+	focus = {
+		id = ANG_3_6 #制定作战计划
+		icon = GFX_goal_ANG_zhidingjihua
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_4
+		}
+		completion_reward = {
+			country_event = { id = heiyan.10 }
+		}
+		x = 14
+		y = 4
+	}
+	focus = {
+		id = ANG_3_7 #先发制人
+		icon = GFX_goal_ANG_xianfazhiren
+		cost = 7.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = ANG_3_6
+		}
+		prerequisite = {
+			focus = ANG_3_5
+		}
+		mutually_exclusive = {
+			focus = ANG_3_8
+		}
+		completion_reward = {
+			custom_effect_tooltip = ANG_focus_unlock
+		}
+		x = 12
+		y = 5
+	}
+	focus = {
+		id = ANG_3_8 #按兵不动
+		icon = GFX_goal_ANG_anbingbudong
+		cost = 21.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = ANG_3_6
+		}
+		prerequisite = {
+			focus = ANG_3_18
+		}
+		mutually_exclusive = {
+			focus = ANG_3_7
+		}
+		completion_reward = {
+			custom_effect_tooltip = ANG_focus_unlock
+		}
+		x = 16
+		y = 5
+	}
+	focus = {
+		id = ANG_3_9 #做好战争准备
+		icon = GFX_goal_ANG_zuohaozhunbei
+		cost = 7.00
+		prerequisite = {
+			focus = ANG_3_7
+		}
+		completion_reward = {
+			add_ideas = ANG_idea_8_0
+			unlock_decision_tooltip = ANG_zuozhanjihua
+			set_variable = {
+				var = ANG_zuozhanzhunbei
+				value = 0
+			}
+		}
+		x = 12
+		y = 6
+	}
+	focus = {
+		id = ANG_3_10 #抓紧时间
+		icon = GFX_goal_ANG_zhuajinshijian
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_8
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = ANG_idea_17_0
+		}
+		x = 16
+		y = 6
+	}
+	focus = {
+		id = ANG_3_11 #煽动无执政主义者
+		icon = GFX_goal_ANG_shandongpanluan
+		cost = 7.00
+		prerequisite = {
+			focus = ANG_3_9
+		}
+		completion_reward = {
+			unlock_decision_tooltip = ANG_panluan_LYU
+			unlock_decision_tooltip = ANG_panluan_RTG
+			set_country_flag = ANG_shandong_panluan
+		}
+		x = 12
+		y = 7
+	}
+	focus = {
+		id = ANG_3_12 #边境防线
+		icon = GFX_goal_ANG_bianjingfangxian
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_10
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			} 	
+		}
+		x = 15
+		y = 7
+	}
+	focus = {
+		id = ANG_3_13 #战备物资
+		icon = GFX_goal_ANG_zhanbeiwuzhi
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_10
+		}
+		completion_reward = {
+			add_ideas = ANG_idea_9_0
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 15
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 1250
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 7500
+			}
+		}
+		x = 17
+		y = 7
+	}
+	focus = {
+		id = ANG_3_14 #主动出击
+		icon = GFX_goal_ANG_zhudongchuji
+		cost = 7.00
+		prerequisite = {
+			focus = ANG_3_11
+		}
+		completion_reward = {
+			custom_effect_tooltip = ANG_unlock_tongyiliyue_tooltip
+			set_country_flag = ANG_tongyiliyue_on
+			set_country_flag = ANG_jingong
+			ANG_tongyiliyue_start = yes
+			
+		}
+		x = 12
+		y = 8
+	}
+	focus = {
+		id = ANG_3_15 #诱敌深入
+		icon = GFX_goal_ANG_youdishenru
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_12
+			focus = ANG_3_13
+		}
+		completion_reward = {
+			custom_effect_tooltip = ANG_unlock_tongyiliyue_tooltip
+			set_country_flag = ANG_tongyiliyue_on
+			set_country_flag = ANG_fangyu
+			ANG_tongyiliyue_start = yes
+			country_event = { id = heiyan.14 }
+		}
+		x = 16
+		y = 8
+	}
+	focus = {
+		id = ANG_3_16 #统合南璃月
+		icon = GFX_goal_ANG_tonghenanliyue
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_14
+			focus = ANG_3_15
+		}
+		available = {
+			OR = {
+					LYU = { exists = no }
+					RTG = { exists = no }
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = ANG_south_liyue
+			if = {
+				limit = {
+					LYU = { exists = no }
+				}
+				add_to_variable = {
+					var = ANG_state_zhenghe_var_LYU
+					value = 20
+				}
+				add_to_variable = {
+					var = ANG_state_support_var_LYU
+					value = 15
+				}
+			}
+			if = {
+				limit = {
+					RTG = { exists = no }
+				}
+				add_to_variable = {
+					var = ANG_state_zhenghe_var_RTG
+					value = 20
+				}
+				add_to_variable = {
+					var = ANG_state_support_var_RTG
+					value = 15
+				}
+			}
+			
+		}
+		x = 14
+		y = 9
+	}
+	focus = {
+		id = ANG_3_17 #出发
+		icon = GFX_goal_ANG_chufa
+		cost = 21.00
+		prerequisite = {
+			focus = ANG_3_16
+		}
+		completion_reward = {
+			add_timed_idea = { idea = ANG_idea_16_0 days = 90 }
+		}
+		x = 14
+		y = 10
+	}
+
+
+
+
+
+
+}

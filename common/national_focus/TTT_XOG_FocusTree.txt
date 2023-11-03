@@ -1,0 +1,1100 @@
+focus_tree = {
+	id = XOG_FocusTree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = XOG
+		}
+	}
+	default = no
+	focus = { #局外中立
+		id = XOG_1
+		icon = GFX_goal_XOG_1
+		available_if_capitulated = no
+		x = 6
+		y = 0
+		cost = 21
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 50
+				NOT = { has_completed_focus = XOG_11 }
+			}
+		}
+        completion_reward = {
+		    add_political_power = 50
+			add_stability = 0.05  
+	    }	
+	}     
+	focus = { #关注局势
+		id = XOG_2
+		icon = GFX_goal_XOG_2	
+		available_if_capitulated = no	
+		x = 4
+		y = 1
+		cost = 35
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 50
+				NOT = { has_completed_focus = XOG_11 }
+			}
+		}
+		prerequisite = {
+			focus = XOG_1
+		}
+		completion_reward = {
+			country_event = {
+				id = XOG_events.103
+				days = 7
+			}
+			country_event = {
+				id = XOG_events.101
+				days = 17
+			}
+			country_event = {
+				id = XOG_events.102
+				days = 35
+			}
+		}	
+	}
+	focus = { #战争的脚步
+		id = XOG_3
+		icon = GFX_goal_XOG_3	
+		available_if_capitulated = no	
+		x = 2
+		y = 2
+		cost = 35
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 50
+				NOT = { has_completed_focus = XOG_11 }
+			}
+		}
+		prerequisite = {
+			focus = XOG_2
+		}
+		available = {
+		has_army_manpower = { size > 70000 }
+        }		
+		completion_reward = {
+			add_ideas = partial_economic_mobilisation
+			add_ideas = limited_conscription
+		    XOG_Damihu = {
+		    set_character_flag = XOG_exiled_flag
+			}
+			if = {
+				limit = {
+					NOT = { has_template = "千岩军" }
+				}
+		division_template = {
+			name = "千岩军"
+			priority = 2
+			is_locked = yes
+			division_names_group = LYU_INF_04
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				artillery_brigade = { x = 0 y = 3 }
+			}
+		}
+	}
+		110 = {
+		create_unit = {
+			division = "division_template = \"千岩军\" start_experience_factor = 0.4"
+			owner = XOG
+			count = 2
+		    }
+	    }
+		}	
+	}
+	focus = { #训练千岩军
+		id = XOG_4
+		icon = GFX_goal_XOG_4	
+		available_if_capitulated = no	
+		x = 2
+		y = 4
+		cost = 35
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 50
+				NOT = { has_completed_focus = XOG_11 }
+			}
+		}
+		prerequisite = {
+			focus = XOG_3
+		}
+		completion_reward = {
+			custom_effect_tooltip = XOG_4_tt
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = XOG_Qianyan_Army }
+				add_to_variable = { XOG_army_speed_factor = 0.10 }
+				add_to_variable = { XOG_army_morale_factor = 0.05 }
+			}
+		}	
+	}
+	focus = { #重拾帝君思想
+		id = XOG_5
+		icon = GFX_goal_XOG_5	
+		available_if_capitulated = no	
+		x = 4
+		y = 3
+		cost = 56
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 50
+				NOT = { has_completed_focus = XOG_11 }
+			}
+		}
+		prerequisite = {
+			focus = XOG_2
+		}
+		completion_reward = {
+		    add_timed_idea = { idea = XOG_Emperor_follower days = 180 }
+		}	
+	}
+	focus = { #扩大行政机构
+		id = XOG_6
+		icon = GFX_goal_XOG_6	
+		available_if_capitulated = no	
+		x = 8
+		y = 1
+		cost = 35
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 50
+				NOT = { has_completed_focus = XOG_11 }
+			}
+		}
+		prerequisite = {
+			focus = XOG_1
+		}
+		completion_reward = {
+		    set_country_flag = XOG_Unlock_all_consultants
+			add_political_power = 150
+			swap_ideas = {
+				add_idea = XOG_1_ideas1
+				remove_idea = XOG_1_ideas
+			}
+		}	
+	}
+	focus = { #荻花洲道路网
+		id = XOG_7
+		icon = GFX_goal_XOG_7	
+		available_if_capitulated = no	
+		x = 6
+		y = 2
+		cost = 35
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 50
+				NOT = { has_completed_focus = XOG_11 }
+			}
+		}
+		prerequisite = {
+			focus = XOG_6
+		}
+		available = {
+		    XOG = {
+		    has_full_control_of_state = 102
+			has_full_control_of_state = 105
+			has_full_control_of_state = 106
+			has_full_control_of_state = 103 
+			}
+		}
+		completion_reward = {
+		    102 = {
+		    add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes 
+		        }
+			}
+			105 = {
+		    add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes 
+		        }
+			}
+			106 = {
+		    add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes 
+		        }
+			}
+			103 = {
+		    add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes 
+		        }
+			}
+		}	
+	}
+	focus = { #保护轻策庄
+		id = XOG_8
+		icon = GFX_goal_XOG_8	
+		available_if_capitulated = no	
+		x = 8
+		y = 2
+		cost = 35
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 50
+				NOT = { has_completed_focus = XOG_11 }
+			}
+		}
+		prerequisite = {
+			focus = XOG_6
+		}
+		available = {
+		has_army_manpower = { size > 100000 }
+        XOG = { has_full_control_of_state = 106	}	
+		}
+		completion_reward = {
+			106 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes 
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			107 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes 
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}	
+	}
+	focus = { #清理无妄坡
+		id = XOG_9
+		icon = GFX_goal_XOG_9	
+		available_if_capitulated = no	
+		x = 10
+		y = 2
+		cost = 35
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 50
+				NOT = { has_completed_focus = XOG_11 }
+			}
+		}
+		prerequisite = {
+			focus = XOG_6
+		}
+		completion_reward = {
+		   swap_ideas = {
+			add_idea = XOG_3_ideas1
+			remove_idea = XOG_3_ideas
+		    }
+		}	
+	}
+	focus = { #为家园而战
+		id = XOG_10
+		icon = GFX_goal_XOG_10	
+		available_if_capitulated = no	
+		x = 8
+		y = 3
+		cost = 70
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 50
+				NOT = { has_completed_focus = XOG_11 }
+			}
+		}
+		prerequisite = {
+			focus = XOG_8
+			focus = XOG_7
+			focus = XOG_9
+		}
+		completion_reward = {
+		    swap_ideas = {
+			add_idea = XOG_Protect_the_homeland
+			remove_idea = XOG_2_ideas
+		    } 
+		}	
+	}
+	focus = { #击败干涉军
+		id = XOG_11
+		icon = GFX_goal_XOG_11	
+		available_if_capitulated = no	
+		x = 6
+		y = 6
+		cost = 7
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = {
+			focus = XOG_10
+		}
+		prerequisite = {
+			focus = XOG_4
+		}
+		prerequisite = {
+			focus = XOG_5
+		}
+		available = {
+			NOT = { country_exists = ZDG }
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			add_to_variable = { XOG_yezhangdu = -20 }
+		}	
+	}
+
+	focus = { #与仙人结盟
+		id = XOG_13
+		icon = GFX_goal_XOG_13	
+		available_if_capitulated = no	
+		x = 2
+		y = 7
+		cost = 7
+		ai_will_do = {
+			factor = 10
+		}
+		#available = {
+		#	has_country_flag =  XOG_Choice_XRG
+		#}
+		prerequisite = {
+			focus = XOG_11
+		}
+		allow_branch = {
+			always = no
+		}
+		mutually_exclusive= {
+			focus = XOG_14
+		}
+		mutually_exclusive= {
+			focus = XOG_15
+		}
+		mutually_exclusive= {
+			focus = XOG_16
+		}
+		completion_reward = {
+		}	
+	}
+	focus = { #来自龙王的援助
+		id = XOG_14
+		icon = GFX_goal_XOG_14	
+		available_if_capitulated = no	
+		x = 6
+		y = 7
+		cost = 7
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag =  XOG_Choice_Ruotuo
+		}
+		prerequisite = {
+			focus = XOG_11
+		}
+		allow_branch = {
+			always = no
+		}
+		mutually_exclusive= {
+			focus = XOG_13
+		}
+		mutually_exclusive= {
+			focus = XOG_15
+		}
+		mutually_exclusive= {
+			focus = XOG_16
+		}
+		completion_reward = {
+			country_event = { id = XOG_events.113 }
+		}	
+	}
+	focus = { #契约之璃月
+		id = XOG_15
+		icon = GFX_goal_XOG_15	
+		available_if_capitulated = no	
+		x = 10
+		y = 7
+		cost = 7
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag =  XOG_Choice_Ganyu
+		}
+		prerequisite = {
+			focus = XOG_11
+		}
+		allow_branch = {
+			always = no
+		}
+		mutually_exclusive= {
+			focus = XOG_13
+		}
+		mutually_exclusive= {
+			focus = XOG_14
+		}
+		mutually_exclusive= {
+			focus = XOG_16
+		}
+		completion_reward = {
+			country_event = {
+				id = XOG_events.114
+			}
+		}	
+	}
+	focus = { #四面皆敌
+		id = XOG_16
+		icon = GFX_goal_XOG_16	
+		available_if_capitulated = no	
+		x = 6
+		y = 7
+		cost = 7
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_country_flag =  XOG_Choice_XOG
+		}
+		prerequisite = {
+			focus = XOG_11
+		}
+		mutually_exclusive= {
+			focus = XOG_13
+		}
+		mutually_exclusive= {
+			focus = XOG_14
+		}
+		mutually_exclusive= {
+			focus = XOG_15
+		}
+		completion_reward = {
+			country_event = {
+				id = XOG_events.116
+			}
+		}	
+	}
+	focus = { #仙治的璃月
+		id = XOG_17
+		icon = GFX_goal_XOG_17	
+		available_if_capitulated = no	
+		x = 2
+		y = 8
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_13
+		}
+		completion_reward = {
+			add_ideas = XOG_immortal_rules
+		}	
+	}
+	focus = { #守护和平
+		id = XOG_18
+		icon = GFX_goal_XOG_18	
+		available_if_capitulated = no	
+		x = 2
+		y = 9
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_17
+		}
+		completion_reward = {
+			custom_effect_tooltip = GAME_OVER_TT
+			custom_effect = {
+				XRG = { annex_country = { target = XOG transfer_troops = yes } }
+			}
+			hidden_effect = {
+				XRG = {
+					country_event = {
+						id = XOG_events.115
+					}
+				}
+				if = {
+					limit = { XOG = { is_ai = no } }
+					XRG = { change_tag_from = ROOT }
+				}
+			}
+		}	
+	}
+	focus = { #经济合作
+		id = XOG_19
+		icon = GFX_goal_XOG_19	
+		available_if_capitulated = no	
+		x = 4
+		y = 8
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_13
+			focus = XOG_14
+		}
+		completion_reward = {
+		}	
+	}
+	focus = { #联合指挥部
+		id = XOG_20
+		icon = GFX_goal_XOG_20	
+		available_if_capitulated = no	
+		x = 4
+		y = 9
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_19
+		}
+		completion_reward = {
+		}	
+	}
+	focus = { #为璃月而战
+		id = XOG_21
+		icon = GFX_goal_XOG_21	
+		available_if_capitulated = no	
+		x = 6
+		y = 8
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_14
+		}
+		completion_reward = {
+			add_ideas = XOG_retuo_rules
+		}	
+	}
+	focus = { #和解
+		id = XOG_22
+		icon = GFX_goal_XOG_22	
+		available_if_capitulated = no	
+		x = 6
+		y = 9
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_21
+		}
+		completion_reward = {
+			custom_effect_tooltip = GAME_OVER_TT
+			RTG = {
+				country_event = {
+					id = XOG_events.104
+					days = 2
+				}
+			}
+		}	
+	}
+	focus = { #扩大交流
+		id = XOG_23
+		icon = GFX_goal_XOG_23	
+		available_if_capitulated = no	
+		x = 8
+		y = 8
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_15
+		}
+		completion_reward = {
+		}	
+	}
+	focus = { #归建
+		id = XOG_24
+		icon = GFX_goal_XOG_24	
+		available_if_capitulated = no	
+		x = 8
+		y = 9
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_23
+		}
+		completion_reward = {
+		}	
+	}
+	focus = { #人治的时代
+		id = XOG_25
+		icon = GFX_goal_XOG_25	
+		available_if_capitulated = no	
+		x = 10
+		y = 8
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_15
+		}
+		completion_reward = {
+			add_ideas = XOG_people_rules
+		}	
+	}
+	focus = { #恢复秩序
+		id = XOG_26
+		icon = GFX_goal_XOG_26	
+		available_if_capitulated = no	
+		x = 10
+		y = 9
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_25
+		}
+		completion_reward = {
+			custom_effect_tooltip = GAME_OVER_TT
+			LYU = {
+				country_event = {
+					id = XOG_events.100
+					days = 2
+				}
+			}
+		}	
+	}
+	focus = { #重返璃月港
+		id = XOG_27
+		icon = GFX_goal_XOG_27	
+		available_if_capitulated = no	
+		x = 6
+		y = 8
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_16
+		}
+		completion_reward = {
+			country_event = {
+				id = XOG_events.118
+			}
+		}	
+	}
+	focus = { #魔神战争的经验
+		id = XOG_28
+		icon = GFX_goal_XOG_28	
+		available_if_capitulated = no	
+		x = 24
+		y = 0
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			army_experience = 100
+		}	
+	}
+	focus = { #后勤保障
+		id = XOG_29
+		icon = GFX_goal_XOG_29	
+		available_if_capitulated = no	
+		x = 18
+		y = 1
+		cost = 70
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_28
+		}
+		completion_reward = {
+			add_ideas = XOG_logistic_service
+		}	
+	}
+	focus = { #统一生产管理
+		id = XOG_30
+		icon = GFX_goal_XOG_30	
+		available_if_capitulated = no	
+		x = 16
+		y = 2
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_29
+		}
+		mutually_exclusive= {
+			focus = XOG_34
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = XOG_logistic_service1
+				remove_idea = XOG_logistic_service
+			}
+		}	
+	}
+	focus = { #资源整合
+		id = XOG_32
+		icon = GFX_goal_XOG_32	
+		available_if_capitulated = no	
+		x = 16
+		y = 3
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_30
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = XOG_logistic_service2
+				remove_idea = XOG_logistic_service1
+			} 
+		}	
+	}
+	focus = { #奉献精神
+		id = XOG_33
+		icon = GFX_goal_XOG_33	
+		available_if_capitulated = no	
+		x = 16
+		y = 4
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_32
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = XOG_logistic_service3
+				remove_idea = XOG_logistic_service2
+			}
+		}	
+	}
+	focus = { #地方自主建设
+		id = XOG_34
+		icon = GFX_goal_XOG_34	
+		available_if_capitulated = no	
+		x = 20
+		y = 2
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_29
+		}
+		mutually_exclusive= {
+			focus = XOG_30
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = XOG_Another_line
+				remove_idea = XOG_logistic_service
+			}
+		}	
+	}
+	focus = { #工程奇迹
+		id = XOG_35
+		icon = GFX_goal_XOG_35	
+		available_if_capitulated = no	
+		x = 20
+		y = 3
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_34
+		}
+		completion_reward = {
+            swap_ideas = {
+				add_idea = XOG_Another_line1
+				remove_idea = XOG_Another_line
+			}
+		}	
+	}
+	focus = { #发动人民
+		id = XOG_36
+		icon = GFX_goal_XOG_36	
+		available_if_capitulated = no	
+		x = 20
+		y = 4
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_35
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = XOG_Another_line2
+				remove_idea = XOG_Another_line1
+			}
+		}	
+	}
+	focus = { #军用工业扩张
+		id = XOG_37
+		icon = GFX_goal_XOG_37	
+		available_if_capitulated = no	
+		x = 22
+		y = 1
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			XOG = {
+			has_full_control_of_state = 103
+			has_full_control_of_state = 102
+		    }
+		}
+		prerequisite = {
+			focus = XOG_28
+		}
+		completion_reward = {
+			103 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+			102 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}	
+	}
+	focus = { #农业经济改革
+		id = XOG_38
+		icon = GFX_goal_XOG_38	
+		available_if_capitulated = no	
+		x = 22
+		y = 2
+		cost = 70
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_37
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = XOG_3_ideas2
+				remove_idea = XOG_3_ideas1
+			}
+		}	
+	}
+	focus = { #军事改革
+		id = XOG_39
+		icon = GFX_goal_XOG_39	
+		available_if_capitulated = no	
+		x = 26
+		y = 1
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_war = yes
+		}
+		prerequisite = {
+			focus = XOG_28
+		}
+		mutually_exclusive= {
+			focus = XOG_42
+		}
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = XOG_39ideas_tooltip
+					remove_idea = XOG_4ideas_tooltip
+				}
+			}
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = XOG_Qianyan_Army }
+				add_to_variable = { XOG_army_attack_factor = 0.05 }
+			}
+		}	
+	}
+	focus = { #青年军官学校
+		id = XOG_40
+		icon = GFX_goal_XOG_40	
+		available_if_capitulated = no	
+		x = 24
+		y = 2
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_39
+		}
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = XOG_40ideas_tooltip
+					remove_idea = XOG_39ideas_tooltip
+				}
+			}
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = XOG_Qianyan_Army }
+				add_to_variable = { XOG_max_command_power = 50 }
+                add_to_variable = { XOG_army_org_factor = 0.05 }
+				add_to_variable = { XOG_experience_gain_army_factor = 0.10 }				
+			}
+		}	
+	}
+	focus = { #大规模训练
+		id = XOG_41
+		icon = GFX_goal_XOG_41	
+		available_if_capitulated = no	
+		x = 26
+		y = 2
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_39
+		}
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = XOG_41ideas_tooltip
+					remove_idea = XOG_39ideas_tooltip
+				}
+			}
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = XOG_Qianyan_Army }
+				add_to_variable = { XOG_training_time_army_factor = -0.20 }
+                add_to_variable = { XOG_conscription = 0.02 }
+			}
+		}	
+	}
+	focus = { #传统的部队
+		id = XOG_42
+		icon = GFX_goal_XOG_42	
+		available_if_capitulated = no	
+		x = 28
+		y = 1
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_28
+		}
+		available = {
+			has_war = yes
+		}
+		mutually_exclusive= {
+			focus = XOG_39
+		}
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = XOG_42ideas_tooltip
+					remove_idea = XOG_4ideas_tooltip
+				}
+			}
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = XOG_Qianyan_Army }
+				add_to_variable = { XOG_army_defence_factor = 0.05}
+			}
+		}	
+	}
+	focus = { #牢记历史
+		id = XOG_43
+		icon = GFX_goal_XOG_43	
+		available_if_capitulated = no	
+		x = 28
+		y = 2
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_42
+		}
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = XOG_43ideas_tooltip
+					remove_idea = XOG_42ideas_tooltip
+				}
+			}
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = XOG_Qianyan_Army }
+				add_to_variable = { XOG_land_reinforce_rate = 0.03 }
+				add_to_variable = { XOG_pocket_penalty = -0.20 }
+			}
+		}	
+	}
+	focus = { #精锐之师
+		id = XOG_44
+		icon = GFX_goal_XOG_44	
+		available_if_capitulated = no	
+		x = 30
+		y = 2
+		cost = 35
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = XOG_42
+		}
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					add_idea = XOG_44ideas_tooltip
+					remove_idea = XOG_42ideas_tooltip
+				}
+			}
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = XOG_Qianyan_Army }
+				add_to_variable = { XOG_experience_gain_army_unit_factor = 0.20 }
+				add_to_variable = { XOG_breakthrough_factor = 0.20 }
+				add_to_variable = { XOG_army_attack_factor = 0.15 }
+			}
+		}	
+	}
+}
