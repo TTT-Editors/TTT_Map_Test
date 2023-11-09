@@ -1,0 +1,38 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			LYU = { LYU_lazy_load_oob = yes }
+			LYU = { 
+				country_event = {
+					id = lyu_start.1
+					days = 12
+				}
+				add_ideas = idea_LYU_Keqing
+				add_ideas = idea_LYU_Ganyu
+				add_ideas = idea_LYU_Ningguang
+				every_owned_state = {
+					set_state_flag = is_Liyues_territory
+				}
+			}
+			#open the welcome screen
+			every_country = {
+				if = {
+					limit = { is_ai = no }
+					set_variable = { TTT_opening_page = 1 }
+					set_variable = { TTT_Nation_Page = 1 }
+					set_variable = { TTT_Mod_Page = 1 }
+					country_event = {
+						id = EMP_event.2
+					}
+				}
+			}
+			#set random seed
+			random_list = {
+				99 = { }
+				1 = {
+					XOG = { set_country_flag = XOG_lucky_yes }
+				}
+			}
+		}
+	}
+}

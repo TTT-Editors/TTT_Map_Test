@@ -1,0 +1,281 @@
+on_actions = {
+	on_weekly_LYU = {
+		effect = {
+			#每周扣除的至冬国进度
+			if = {
+				limit = {
+					has_country_flag = Ande
+				}
+				add_to_variable = { Operationprogress = -0.05 }				
+			}			
+		}	
+	}
+	on_weekly_LYU = {
+		effect = {
+			#每周增加的至冬国进度
+			if = {
+				limit = {
+					has_country_flag = Secretwar
+				}
+				add_to_variable = { Operationprogress = 0.10 }				
+			}			
+		}	
+	}
+	on_weekly_LYU = {
+		effect = {
+			#100%后对海防项目每周扣除5%筹备值
+			if = {
+				limit = {
+					check_variable = { Operationprogress  > 0.99 }
+				}
+				add_to_variable = { breakwater = -0.05 }
+                add_to_variable = { Shoregun = -0.05 }
+                add_to_variable = { logistics = -0.05 }				
+			}			
+		}	
+	}
+	on_weekly_LYU = {
+		effect = {
+			#检测天平平衡度
+			if = {
+				limit = {
+					check_variable = { Keqing_Alioth  > Ningguang_Tianquan_Star}
+					has_country_flag = Liyue_crisis
+				}
+				set_country_flag = Keqing_Dominant
+                clr_country_flag = Ningguang_Dominant
+                clr_country_flag = Ningguang_Keqing_balance				
+			}
+            else_if = {
+			limit = {
+				check_variable = { Ningguang_Tianquan_Star  > Keqing_Alioth}
+				has_country_flag = Liyue_crisis
+			}
+			clr_country_flag = Keqing_Dominant
+            set_country_flag = Ningguang_Dominant
+            clr_country_flag = Ningguang_Keqing_balance
+		    }
+            else_if = {
+			limit = {
+			    has_country_flag = Liyue_crisis
+				AND = {
+			    check_variable = {
+				var = Ningguang_Tianquan_Star
+				value = 60
+				compare = less_than_or_equals
+			        }
+			    check_variable = {
+				var = Ningguang_Tianquan_Star
+				value = 40
+				compare = greater_than
+			        }
+				check_variable = {
+				var = Keqing_Alioth
+				value = 60
+				compare = less_than_or_equals
+			        }
+			    check_variable = {
+				var = Keqing_Alioth
+				value = 40
+				compare = greater_than
+			        }
+				}
+			}
+			clr_country_flag = Keqing_Dominant
+            clr_country_flag = Ningguang_Dominant
+            set_country_flag = Ningguang_Keqing_balance
+		    }			
+		}	
+	}
+	on_weekly = {
+        effect = {
+			if = {
+				limit = { has_variable = ttt_liyue_civil_war_decision_ui_dirty }
+				recalculate_region_values = yes
+				add_to_variable = { ttt_liyue_civil_war_decision_ui_dirty = 1 }
+			}
+        }
+	}
+	on_monthly = {
+        effect = {
+		    #临时主矿道
+			if = {
+				limit = { has_global_flag = linshizhuguangdao_hazard_level1
+                has_country_flag = LYU_Selected_Area_flag4 			
+				controls_state = 63
+				controls_state = 64
+				controls_state = 65
+				controls_state = 66
+				controls_state = 67
+				controls_state = 68
+				}
+				add_to_variable = { global.Liyue_linshizhukuangdao_var = -2 }
+				clamp_variable = {
+	            var = global.Liyue_linshizhukuangdao_var
+	            min = 0
+	            max = 100
+                }
+			}
+        }
+	}
+	on_monthly = {
+        effect = {
+		    #巨渊主矿区 
+			if = {
+				limit = { has_global_flag = juyuanzhukuangqu_hazard_level2
+				has_country_flag = LYU_Selected_Area_flag3
+				controls_state = 63
+				controls_state = 64
+				controls_state = 65
+				controls_state = 66
+				controls_state = 67
+				controls_state = 68
+				}
+				add_to_variable = { global.Liyue_juyuanzhukuangqu_var = -4 }
+                clamp_variable = {
+	            var = global.Liyue_juyuanzhukuangqu_var
+	            min = 0
+	            max = 100
+                }				
+			}
+			else_if = {
+			limit = {
+				has_global_flag = juyuanzhukuangqu_hazard_level1
+				has_country_flag = LYU_Selected_Area_flag3
+				controls_state = 63
+				controls_state = 64
+				controls_state = 65
+				controls_state = 66
+				controls_state = 67
+				controls_state = 68		
+			}
+			add_to_variable = { global.Liyue_juyuanzhukuangqu_var = -2 }
+			clamp_variable = {
+	            var = global.Liyue_juyuanzhukuangqu_var
+	            min = 0
+	            max = 100
+                }
+		    }
+        }
+	}
+	on_monthly = {
+        effect = {
+		    #地下水泽
+			if = {
+				limit = { 
+				has_global_flag = dixiashuize_hazard_level3
+				has_country_flag = LYU_Selected_Area_flag1
+				controls_state = 63
+				controls_state = 64
+				controls_state = 65
+				controls_state = 66
+				controls_state = 67
+				controls_state = 68
+				check_variable = { global.Liyue_dixiashuize_var > 0 }
+				}
+				add_to_variable = { global.Liyue_dixiashuize_var = -6 }
+                clamp_variable = {
+	            var = global.Liyue_dixiashuize_var
+	            min = 0
+	            max = 100
+                }				
+			}
+			else_if = {
+			limit = {
+				has_global_flag = dixiashuize_hazard_level2
+				has_country_flag = LYU_Selected_Area_flag1
+				controls_state = 63
+				controls_state = 64
+				controls_state = 65
+				controls_state = 66
+				controls_state = 67
+				controls_state = 68
+				check_variable = { global.Liyue_dixiashuize_var > 0 }
+			}
+			add_to_variable = { global.Liyue_dixiashuize_var = -4  }
+			clamp_variable = {
+	            var = global.Liyue_dixiashuize_var
+	            min = 0
+	            max = 100
+                }
+		    }
+			else_if = {
+			limit = {
+				has_global_flag = dixiashuize_hazard_level1
+				has_country_flag = LYU_Selected_Area_flag1
+				controls_state = 63
+				controls_state = 64
+				controls_state = 65
+				controls_state = 66
+				controls_state = 67
+				controls_state = 68
+				check_variable = { global.Liyue_dixiashuize_var > 0 }
+			}
+			add_to_variable = { global.Liyue_dixiashuize_var = -2  }
+			clamp_variable = {
+	            var = global.Liyue_dixiashuize_var
+	            min = 0
+	            max = 100
+                }
+		    }
+        }
+	}
+	on_monthly = {
+        effect = {
+		    #巨蛇岩洞
+			if = {
+				limit = { has_global_flag = jusheyandong_hazard_level3
+				has_country_flag = LYU_Selected_Area_flag2
+				controls_state = 63
+				controls_state = 64
+				controls_state = 65
+				controls_state = 66
+				controls_state = 67
+				controls_state = 68		
+				}
+				add_to_variable = { global.Liyue_jushenyandong_var = -6 }
+                clamp_variable = {
+	            var = global.Liyue_jushenyandong_var
+	            min = 0
+	            max = 100
+                }				
+			}
+			else_if = {
+			limit = {
+				has_global_flag = jusheyandong_hazard_level2
+				has_country_flag = LYU_Selected_Area_flag2
+				controls_state = 63
+				controls_state = 64
+				controls_state = 65
+				controls_state = 66
+				controls_state = 67
+				controls_state = 68          				
+			}
+			add_to_variable = { global.Liyue_jushenyandong_var = -4 }
+			clamp_variable = {
+	            var = global.Liyue_jushenyandong_var
+	            min = 0
+	            max = 100
+                }
+		    }
+			else_if = {
+			limit = {
+				has_global_flag = jusheyandong_hazard_level1
+				controls_state = 63
+				controls_state = 64
+				controls_state = 65
+				controls_state = 66
+				controls_state = 67
+				controls_state = 68
+                check_variable = { global.Liyue_jushenyandong_var > 0 }				
+			}
+			add_to_variable = { global.Liyue_jushenyandong_var = -2 }
+			clamp_variable = {
+	            var = global.Liyue_jushenyandong_var
+	            min = 0
+	            max = 100
+                }
+		    }
+        }
+	}
+}

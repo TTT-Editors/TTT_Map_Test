@@ -1,0 +1,47 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					tag = XOG
+					FROM.FROM = {
+						state = 59
+					}
+					50 = {
+						controller = {
+							has_war_with = XOG
+						}
+					}
+				}
+				country_event = { id = XOG_events.120 }
+			}
+			
+			if = {
+				limit = {
+					has_global_flag = Liyue_Civil_War
+				}
+				if = {
+					limit = {
+						tag = RTG
+						RTG = { has_government = reformism }
+						FROM = {
+							controller = { has_war_with = RTG }
+						}
+						FROM.FROM = { state = 50 }
+						NOT = { has_global_flag = RTG_occupies_liyue_harbor }
+					}
+					set_global_flag = RTG_occupies_liyue_harbor
+					RTG = { news_event = { id = occupation_news.1 } }
+				}
+				if = {
+					limit = {
+						ROOT = { is_nominate_liyue = yes }
+						ROOT = { NOT = { has_country_flag = special_occupy_flag } }
+						FROM.FROM = { NOT = { is_owned_by = ROOT } }
+					}
+					ROOT = { country_event = { id = rule_explantion.1 } }
+				}
+			}
+		}
+	}
+}

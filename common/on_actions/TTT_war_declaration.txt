@@ -1,0 +1,535 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+			#War plans of Keqing
+			if = {
+				limit = {
+					OR = {
+						tag = KQG
+						FROM = {
+							tag = KQG
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = LYU
+							FROM = {
+								tag = LYU
+							}
+						}
+					}
+					KQG = {
+						country_event = {
+							id = KQG_events.2
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = XRG
+							FROM = {
+								tag = XRG
+							}
+						}
+					}
+					KQG = {
+						country_event = {
+							id = KQG_events.3
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = RTG
+							FROM = {
+								tag = RTG
+							}
+						}
+					}
+					KQG = {
+						country_event = {
+							id = KQG_events.4
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = ZDG
+							FROM = {
+								tag = ZDG
+							}
+						}
+					}
+					KQG = {
+						country_event = {
+							id = KQG_events.19
+						}
+					}
+				}
+			}
+			#Goodboy Retuo's war plans.
+			if = {
+				limit = {
+					OR = {
+						tag = RTG
+						FROM = {
+							tag = RTG
+						}
+						RTG = {
+							has_government = reformism
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = XRG
+							FROM = {
+								tag = XRG
+							}
+						}
+					}
+					RTG = {
+						country_event = {
+							id = retuo_juanshu.28
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = LYU
+							FROM = {
+								tag = LYU
+							}
+						}
+					}
+					RTG = {
+						country_event = {
+							id = retuo_juanshu.29
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = NNG
+							FROM = {
+								tag = NNG
+							}
+						}
+					}
+					RTG = {
+						country_event = {
+							id = retuo_juanshu.30
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = KQG
+							FROM = {
+								tag = KQG
+							}
+						}
+					}
+					RTG = {
+						country_event = {
+							id = retuo_juanshu.31
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = XOG
+							FROM = {
+								tag = XOG
+							}
+						}
+					}
+					RTG = {
+						country_event = {
+							id = retuo_juanshu.32
+						}
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = ZDG
+							FROM = {
+								tag = ZDG
+							}
+						}
+					}
+					RTG = {
+						country_event = {
+							id = retuo_juanshu.33
+						}
+					}
+				}
+			}
+			#Liyue cn battle
+			if = {
+				limit = {
+					has_global_flag = cn_battle_has_happen
+					NOT = { has_global_flag = global_news_11_happened }
+					OR = {
+						tag = XRG
+						tag = XOG
+						tag = KQG
+						tag = NNG
+					}
+					FROM = {
+						OR = {
+							tag = XRG
+							tag = XOG
+							tag = KQG
+							tag = NNG
+						}
+					}
+				}
+				hidden_effect = {
+					ROOT = {
+						news_event = {
+							id = global_news.11
+							hours = 12
+						}
+					}
+				}
+			}
+			#The Great Unification
+			if = {
+				limit = {
+					has_country_flag = LYU_great_union
+					FROM = {
+						OR = {
+							tag = KQG
+							tag = NNG
+							tag = ANG
+						}
+					}
+				}
+				if = {
+					limit = {
+						count_triggers = {
+							amount = 2
+							KQG = {
+								exists = yes
+							}
+							NNG = {
+								exists = yes
+							}
+							ANG = {
+								exists = yes
+							}
+						}
+					}
+					if = {
+						limit = {
+							exists = yes
+						}
+						set_country_flag = people_alliance_menbers
+					}
+					if = {
+						limit = {
+							NNG = {
+								exists = yes
+							}
+						}
+						NNG = {
+							create_faction = liyue_people_alliance
+						}
+						if = {
+							limit = {
+								KQG = {
+									exists = yes
+								}
+							}
+							if = {
+								limit = {
+									KQG = {
+										has_war_with = NNG
+									}
+								}
+								NNG = {
+									white_peace = KQG
+								}
+							}
+							NNG = {
+								add_to_faction = KQG
+							}
+						}
+						if = {
+							limit = {
+								ANG = {
+									exists = yes
+								}
+							}
+							if = {
+								limit = {
+									ANG = {
+										has_war_with = NNG
+									}
+								}
+								NNG = {
+									white_peace = ANG
+								}
+							}
+							NNG = {
+								add_to_faction = ANG
+							}
+						}
+						NNG = {
+							news_event = {
+								id = global_news.37
+							}
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								ANG = {
+									has_war_with = KQG
+								}
+							}
+							KQG = {
+								white_peace = ANG
+							}
+						}
+						KQG = {
+							create_faction = liyue_people_alliance
+						}
+						KQG = {
+							add_to_faction = ANG
+						}
+						KQG = {
+							news_event = {
+								id = global_news.37
+							}
+						}
+					}
+				}
+			}
+			#抵抗军宣战龙王，并且完成了国策暗度
+			if = {
+				limit = {
+					original_tag = ARF
+					has_war_with = RTG
+					has_completed_focus = ARF_7
+					NOT = {
+						has_country_flag = ARF_7_flag
+					}
+				}
+				ARF = { 
+				set_country_flag = ARF_7_flag
+				add_offsite_building = {
+					type = arms_factory
+					level = 1
+				}
+				division_template = {
+					name = "Minbing Budui"
+					priority = 2
+					is_locked = yes
+					division_names_group = ARF_INF_01
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+						militia = {
+							x = 1
+							y = 2
+						}
+					}
+				}
+				154 = {
+					create_unit = {
+						division = "division_template = \"Minbing Budui\" start_experience_factor = 0.2"
+						count = 3
+						owner = ARF
+					    }
+				    }
+				}
+			}
+			#抵抗军宣战龙王，并且完成了国策ARF_11
+			if = {
+				limit = {
+					original_tag = ARF
+					has_war_with = RTG
+					has_completed_focus = ARF_11
+					ARF = {
+					NOT = {
+						has_country_flag = ARF_11_flag
+					    }
+					}
+				}
+				ARF = {
+				set_country_flag = ARF_11_flag
+				}
+				RTG = {
+					add_timed_idea = {
+						idea = RTG_Hive_curdling
+						days = 120
+					}
+				}
+				ARF = {
+				division_template = {
+					name = "元素抵抗军"
+					priority = 2
+					is_locked = yes
+					division_names_group = ARF_INF_02
+					regiments = {
+						infantry = {
+							x = 0
+							y = 0
+						}
+						infantry = {
+							x = 0
+							y = 1
+						}
+						infantry = {
+							x = 0
+							y = 2
+						}
+						infantry = {
+							x = 1
+							y = 0
+						}
+						infantry = {
+							x = 1
+							y = 1
+						}
+						infantry = {
+							x = 1
+							y = 2
+						}
+						infantry = {
+							x = 2
+							y = 0
+						}
+						infantry = {
+							x = 2
+							y = 1
+						}
+						infantry = {
+							x = 2
+							y = 2
+						}
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "division_template = \"元素抵抗军\" start_experience_factor = 0.2"
+						count = 2
+						owner = ARF
+					    }
+				    }
+				}
+			}
+			#抵抗军和龙王进入战争状态，立刻完成国策兵临城下
+			if = {
+				limit = {
+			    	original_tag = ARF
+					FROM = {
+						tag = RTG
+					}
+				}
+				news_event = { id = global_news.59 }
+				set_country_flag = ARF_11_flag
+				mark_focus_tree_layout_dirty = yes
+            	complete_national_focus = ARF_binlinchengxia
+				set_country_flag = ARF_zuobijueyi_flag	
+			}
+		}
+	}
+	
+	on_peace = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = ARF
+					has_completed_focus = ARF_7
+					ARF = {
+					NOT = {
+						has_country_flag = ARF_7_flag2
+					    }
+					}
+				}
+				ARF = {
+				set_country_flag = ARF_7_flag2
+				add_offsite_building = {
+					type = arms_factory
+					level = -1
+				    }
+				}
+			}
+		}
+	}
+}
+
+on_actions = {
+    on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+	                ROOT = { tag = XRG }
+					FROM = { tag = ZDG }
+				}
+				ZDG = {
+					country_event = { days = 14  id = ZDG_events.39 }
+				}
+			}
+	    }
+    }
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = ZDG }
+					has_global_flag = liyue_unified
+				}
+				LYU = {
+					country_event = { days = 35  id = ZDG_events.41 }
+				}
+			}
+	    }
+    }
+	on_war = = {
+		effect = {
+			if = {
+				limit = {
+					ZDG = {
+						casualties > 300000
+					}
+				}
+				ZDG = {
+					country_event = { days = 31  id = ZDG_events.43 }
+				}
+			}
+	    }
+    }
+}
