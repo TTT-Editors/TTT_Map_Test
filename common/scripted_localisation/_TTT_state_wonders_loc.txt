@@ -1,0 +1,999 @@
+defined_text = { 
+    name = TTT_WONDER_INTRO_TITLE
+	
+	text = {
+		trigger = { state = 50 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Liyue_Harbor
+	}
+	
+	text = {
+		trigger = { state = 94 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Upper_Guiliyuan
+	}
+	
+	text = {
+		trigger = { state = 89 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Lower_Guiliyuan
+	}
+	
+	text = {
+		trigger = { state = 106 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Qingce_Village
+	}
+	
+	text = {
+		trigger = { state = 68 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Sedimentary_Rocks_Abyss
+	}
+	
+	text = {
+		trigger = { state = 115 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Yaoguang_Beach
+	}
+	
+	text = {
+		trigger = { state = 83 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Jueyunjian
+	}
+	
+	text = {
+		trigger = { state = 116 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Guyun_Cockloft
+	}
+	
+	####################Mondstadt
+	
+	text = {
+		trigger = { state = 1 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Mondstadt_City
+	}
+	
+	text = {
+		trigger = { state = 2 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Favonius_Chruch
+	}
+	
+	text = {
+		trigger = { state = 4 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Windrise
+	}
+	
+	text = {
+		trigger = { state = 34 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Dragonspine_Town
+	}
+	
+	text = {
+		trigger = { state = 36 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Sudwind_Town
+	}
+	
+	text = {
+		trigger = { state = 38 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Gimzen
+	}
+	
+	text = {
+		trigger = { state = 15 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Dawn_Town
+	}
+	
+	text = {
+		trigger = { state = 16 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Springvale
+	}
+	
+	text = {
+		trigger = { state = 18 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Ragnvindr_Mansion
+	}
+	
+	text = {
+		trigger = { state = 23 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Wolvendom
+	}
+	
+	text = {
+		trigger = { state = 21 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Tomb_of_Boreas
+	}
+	
+	text = {
+		trigger = { state = 32 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Debris_of_Decarabian_s_City
+	}
+	
+	text = {
+		trigger = { state = 26 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Stormterror_s_Lair
+	}
+	
+	text = {
+		trigger = { state = 24 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Brightcrown_Canyon
+	}
+	
+	####################Inazuma
+	
+	text = {
+		trigger = { 
+			OR = {
+				state = 222
+				state = 223
+			}
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_kujou_encampment
+	}	
+	
+	text = {
+		trigger = { 
+			OR = {
+				state = 235
+				state = 233
+			}
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_jakotsu_mine
+	}	
+	
+	text = {
+		trigger = { state = 225 }
+		localization_key = TTT_WONDER_INTRO_TITLE_mikage_furnace
+	}	
+	
+	text = {
+		trigger = { state = 232 }
+		localization_key = TTT_WONDER_INTRO_TITLE_musoujin_gorge
+	}
+	
+	text = {
+		trigger = { state = 240 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Sangonomiya_shrine
+	}	
+	
+	text = {
+		trigger = { state = 238 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Bourou_village
+	}	
+	
+	text = {
+		trigger = { state = 244 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Amakumo_peak
+	}	
+	
+	text = {
+		trigger = { state = 245 }
+		localization_key = TTT_WONDER_INTRO_TITLE_Asase_shrine
+	}	
+	
+	#text = {
+	#	trigger = { state = 188 }
+	#	localization_key = TTT_WONDER_INTRO_TITLE_dainichi_mikoshi
+	#}	
+	
+	text = {
+		trigger = { is_Araumi_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_Araumi
+	}
+	
+	text = {
+		trigger = { is_chinju_forest_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_Chinju_forest
+	}
+	
+	text = {
+		trigger = { is_grand_narukami_shine_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_Grand_narukami_shine
+	}
+	
+	text = {
+		trigger = { is_inazuma_city_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_Inazuma_city
+	}
+	
+	text = {
+		trigger = { is_kamisato_estate_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_kamisato_estate
+	}
+	
+	text = {
+		trigger = { is_konda_village_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_konda_village
+	}
+	
+	text = {
+		trigger = { is_mt_yougou_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_mt_yougou
+	}
+	
+	text = {
+		trigger = { is_ritou_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_ritou
+	}
+	
+	text = {
+		trigger = { is_tenshukaku_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_Tenshukaku
+	}
+	
+	text = {
+		trigger = { is_narukami_island_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_Narukami_Island
+	}
+	
+	#########sumeru 
+	text = {
+		trigger = {
+			state = 118
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_SumeruCity
+	}
+	text = {
+		trigger = {
+			state = 138
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_SumeruHabour
+	}
+	text = {
+		trigger = {
+			state = 119
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_SumeruLibary
+	}
+	text = {
+		trigger = {
+			state = 128
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_SumeruChruch
+	}
+	text = {
+		trigger = {
+			state = 150
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_VissudhaField
+	}
+	text = {
+		trigger = {
+			state = 133
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_VissudhaVillage
+	}
+	text = {
+		trigger = {
+			state = 123
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_GandharvaVille
+	}
+	text = {
+		trigger = {
+			state = 162
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_AaruVillage
+	}
+	text = {
+		trigger = {
+			state = 146
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_PardisDhyai
+	}
+	text = {
+		trigger = {
+			state = 196
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_Mausoleum_of_King_Deshret
+	}
+	text = {
+		trigger = {
+			state = 189
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_Mt_Damavand
+	}
+	text = {
+		trigger = {
+			state = 194
+		}
+		localization_key = TTT_WONDER_INTRO_TITLE_TanitCamps
+	}
+	################################ narukami island ends at here ###################################
+	
+	text = {
+		trigger = { is_kannazuka_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_Kannazuka
+	}
+	
+	text = {
+		trigger = { is_yashiori_island_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_Yashiori_Island
+	}
+	
+	text = {
+		trigger = { is_watatsumi_island_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_Watatsumi_Island
+	}
+	
+	text = {
+		trigger = { is_seirai_island_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_Seirai_Island
+	}
+	
+	text = {
+		trigger = { is_tsurumi_island_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_Tsurumi_Island
+	}
+	
+	text = {
+		trigger = { is_enkanomiya_states = yes }
+		localization_key = TTT_WONDER_INTRO_TITLE_Enkanomiya
+	}
+	
+	text = {
+		localization_key = TTT_WONDER_INTRO_TITLE_Default
+	}
+}
+
+defined_text = { 
+    name = TTT_WONDER_INTRO_DESC
+	
+	text = {
+		trigger = { state = 50 }
+		localization_key = TTT_WONDER_INTRO_DESC_Liyue_Harbor
+	}
+	
+	text = {
+		trigger = { state = 94 }
+		localization_key = TTT_WONDER_INTRO_DESC_Upper_Guiliyuan
+	}
+	
+	text = {
+		trigger = { state = 89 }
+		localization_key = TTT_WONDER_INTRO_DESC_Lower_Guiliyuan
+	}
+	
+	text = {
+		trigger = { state = 106 }
+		localization_key = TTT_WONDER_INTRO_DESC_Qingce_Village
+	}
+	
+	text = {
+		trigger = { state = 68 }
+		localization_key = TTT_WONDER_INTRO_DESC_Sedimentary_Rocks_Abyss
+	}
+	
+	text = {
+		trigger = { state = 115 }
+		localization_key = TTT_WONDER_INTRO_DESC_Yaoguang_Beach
+	}
+	
+	text = {
+		trigger = { state = 83 }
+		localization_key = TTT_WONDER_INTRO_DESC_Jueyunjian
+	}
+	
+	text = {
+		trigger = { state = 116 }
+		localization_key = TTT_WONDER_INTRO_DESC_Guyun_Cockloft
+	}
+	
+	####################Mondstadt
+	
+	text = {
+		trigger = { state = 1 }
+		localization_key = TTT_WONDER_INTRO_DESC_Mondstadt_City
+	}
+	
+	text = {
+		trigger = { state = 2 }
+		localization_key = TTT_WONDER_INTRO_DESC_Favonius_Chruch
+	}
+	
+	text = {
+		trigger = { state = 4 }
+		localization_key = TTT_WONDER_INTRO_DESC_Windrise
+	}
+	
+	text = {
+		trigger = { state = 34 }
+		localization_key = TTT_WONDER_INTRO_DESC_Dragonspine_Town
+	}
+	
+	text = {
+		trigger = { state = 36 }
+		localization_key = TTT_WONDER_INTRO_DESC_Sudwind_Town
+	}
+	
+	text = {
+		trigger = { state = 38 }
+		localization_key = TTT_WONDER_INTRO_DESC_Gimzen
+	}
+	
+	text = {
+		trigger = { state = 15 }
+		localization_key = TTT_WONDER_INTRO_DESC_Dawn_Town
+	}
+	
+	text = {
+		trigger = { state = 16 }
+		localization_key = TTT_WONDER_INTRO_DESC_Springvale
+	}
+	
+	text = {
+		trigger = { state = 18 }
+		localization_key = TTT_WONDER_INTRO_DESC_Ragnvindr_Mansion
+	}
+	
+	text = {
+		trigger = { state = 23 }
+		localization_key = TTT_WONDER_INTRO_DESC_Wolvendom
+	}
+	
+	text = {
+		trigger = { state = 21 }
+		localization_key = TTT_WONDER_INTRO_DESC_Tomb_of_Boreas
+	}
+	
+	text = {
+		trigger = { state = 32 }
+		localization_key = TTT_WONDER_INTRO_DESC_Debris_of_Decarabian_s_City
+	}
+	
+	text = {
+		trigger = { state = 26 }
+		localization_key = TTT_WONDER_INTRO_DESC_Stormterror_s_Lair
+	}
+	
+	text = {
+		trigger = { state = 24 }
+		localization_key = TTT_WONDER_INTRO_DESC_Brightcrown_Canyon
+	}
+	
+	####################Inazuma
+	
+	text = {
+		trigger = { 
+			OR = {
+				state = 222
+				state = 223
+			}
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_kujou_encampment
+	}	
+	
+	text = {
+		trigger = { 
+			OR = {
+				state = 235
+				state = 233
+			}
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_jakotsu_mine
+	}	
+	
+	text = {
+		trigger = { state = 225 }
+		localization_key = TTT_WONDER_INTRO_DESC_mikage_furnace
+	}	
+	
+	text = {
+		trigger = { state = 232 }
+		localization_key = TTT_WONDER_INTRO_DESC_musoujin_gorge
+	}
+	
+	text = {
+		trigger = { state = 240 }
+		localization_key = TTT_WONDER_INTRO_DESC_Sangonomiya_shrine
+	}	
+	
+	text = {
+		trigger = { state = 238 }
+		localization_key = TTT_WONDER_INTRO_DESC_Bourou_village
+	}	
+	
+	text = {
+		trigger = { state = 244 }
+		localization_key = TTT_WONDER_INTRO_DESC_Amakumo_peak
+	}	
+	
+	text = {
+		trigger = { state = 245 }
+		localization_key = TTT_WONDER_INTRO_DESC_Asase_shrine
+	}	
+	
+	#text = {
+	#	trigger = { state = 188 }
+	#	localization_key = TTT_WONDER_INTRO_DESC_dainichi_mikoshi
+	#}	
+	
+	text = {
+		trigger = { is_Araumi_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_Araumi
+	}
+	
+	text = {
+		trigger = { is_chinju_forest_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_Chinju_forest
+	}
+	
+	text = {
+		trigger = { is_grand_narukami_shine_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_Grand_narukami_shine
+	}
+	
+	text = {
+		trigger = { is_inazuma_city_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_Inazuma_city
+	}
+	
+	text = {
+		trigger = { is_kamisato_estate_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_kamisato_estate
+	}
+	
+	text = {
+		trigger = { is_konda_village_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_konda_village
+	}
+	
+	text = {
+		trigger = { is_mt_yougou_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_mt_yougou
+	}
+	
+	text = {
+		trigger = { is_ritou_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_ritou
+	}
+	
+	text = {
+		trigger = { is_tenshukaku_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_Tenshukaku
+	}
+	
+	text = {
+		trigger = { is_narukami_island_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_Narukami_Island
+	}
+	
+	text = {
+		trigger = { is_kannazuka_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_Kannazuka
+	}
+	
+	text = {
+		trigger = { is_yashiori_island_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_Yashiori_Island
+	}
+	
+	text = {
+		trigger = { is_watatsumi_island_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_Watatsumi_Island
+	}
+	
+	text = {
+		trigger = { is_seirai_island_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_Seirai_Island
+	}
+	
+	text = {
+		trigger = { is_tsurumi_island_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_Tsurumi_Island
+	}
+	
+	text = {
+		trigger = { is_enkanomiya_states = yes }
+		localization_key = TTT_WONDER_INTRO_DESC_Enkanomiya
+	}	
+	#sumeru 
+	text = {
+		trigger = {
+			state = 118
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_SumeruCity
+	}
+	text = {
+		trigger = {
+			state = 138
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_SumeruHabour
+	}
+	text = {
+		trigger = {
+			state = 119
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_SumeruLibary
+	}
+	text = {
+		trigger = {
+			state = 128
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_SumeruChruch
+	}
+	text = {
+		trigger = {
+			state = 150
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_VissudhaField
+	}
+	text = {
+		trigger = {
+			state = 133
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_VissudhaVillage
+	}
+	text = {
+		trigger = {
+			state = 123
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_GandharvaVille
+	}
+	text = {
+		trigger = {
+			state = 162
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_AaruVillage
+	}
+	text = {
+		trigger = {
+			state = 146
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_PardisDhyai
+	}
+	text = {
+		trigger = {
+			state = 196
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_Mausoleum_of_King_Deshret
+	}
+	text = {
+		trigger = {
+			state = 189
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_Mt_Damavand
+	}
+	text = {
+		trigger = {
+			state = 194
+		}
+		localization_key = TTT_WONDER_INTRO_DESC_TanitCamps
+	}
+	
+	
+	
+	
+	
+
+
+	text = {
+		localization_key = TTT_WONDER_INTRO_DESC_Default
+	}
+}
+
+defined_text = { 
+    name = ROOT_GetStatePicture
+	
+	text = {
+		trigger = { state = 50 }
+		localization_key = ROOT_GetStatePicture_Liyue_Harbor
+	}
+	
+	text = {
+		trigger = { state = 94 }
+		localization_key = ROOT_GetStatePicture_Upper_Guiliyuan
+	}
+	
+	text = {
+		trigger = { state = 89 }
+		localization_key = ROOT_GetStatePicture_Lower_Guiliyuan
+	}
+	
+	text = {
+		trigger = { state = 106 }
+		localization_key = ROOT_GetStatePicture_Qingce_Village
+	}
+	
+	text = {
+		trigger = { state = 68 }
+		localization_key = ROOT_GetStatePicture_Sedimentary_Rocks_Abyss
+	}
+	
+	text = {
+		trigger = { state = 115 }
+		localization_key = ROOT_GetStatePicture_Yaoguang_Beach
+	}
+	
+	text = {
+		trigger = { state = 83 }
+		localization_key = ROOT_GetStatePicture_Jueyunjian
+	}
+	
+	text = {
+		trigger = { state = 116 }
+		localization_key = ROOT_GetStatePicture_Guyun_Cockloft
+	}
+	
+	####################Mondstadt
+	
+	text = {
+		trigger = { state = 1 }
+		localization_key = ROOT_GetStatePicture_Mondstadt_City
+	}
+	
+	text = {
+		trigger = { state = 2 }
+		localization_key = ROOT_GetStatePicture_Favonius_Chruch
+	}
+	
+	text = {
+		trigger = { state = 4 }
+		localization_key = ROOT_GetStatePicture_Windrise
+	}
+	
+	text = {
+		trigger = { state = 34 }
+		localization_key = ROOT_GetStatePicture_Dragonspine_Town
+	}
+	
+	text = {
+		trigger = { state = 36 }
+		localization_key = ROOT_GetStatePicture_Sudwind_Town
+	}
+	
+	text = {
+		trigger = { state = 38 }
+		localization_key = ROOT_GetStatePicture_Gimzen
+	}
+	
+	text = {
+		trigger = { state = 18 }
+		localization_key = ROOT_GetStatePicture_Dawn_Town
+	}
+	
+	text = {
+		trigger = { state = 16 }
+		localization_key = ROOT_GetStatePicture_Springvale
+	}
+	
+	text = {
+		trigger = { state = 15 }
+		localization_key = ROOT_GetStatePicture_Ragnvindr_Mansion
+	}
+	
+	text = {
+		trigger = { state = 23 }
+		localization_key = ROOT_GetStatePicture_Wolvendom
+	}
+	
+	text = {
+		trigger = { state = 21 }
+		localization_key = ROOT_GetStatePicture_Tomb_of_Boreas
+	}
+	
+	text = {
+		trigger = { state = 32 }
+		localization_key = ROOT_GetStatePicture_Debris_of_Decarabian_s_City
+	}
+	
+	text = {
+		trigger = { state = 26 }
+		localization_key = ROOT_GetStatePicture_Stormterror_s_Lair
+	}
+	
+	text = {
+		trigger = { state = 24 }
+		localization_key = ROOT_GetStatePicture_Brightcrown_Canyon
+	}	
+	
+	####################Inazuma
+	
+	text = {
+		trigger = { 
+			OR = {
+				state = 222
+				state = 223
+			}
+		}
+		localization_key = ROOT_GetStatePicture_kujou_encampment
+	}	
+	
+	text = {
+		trigger = { 
+			OR = {
+				state = 235
+				state = 233
+			}
+		}
+		localization_key = ROOT_GetStatePicture_jakotsu_mine
+	}	
+	
+	text = {
+		trigger = { state = 225 }
+		localization_key = ROOT_GetStatePicture_mikage_furnace
+	}	
+	
+	text = {
+		trigger = { state = 232 }
+		localization_key = ROOT_GetStatePicture_musoujin_gorge
+	}
+	
+	text = {
+		trigger = { state = 240 }
+		localization_key = ROOT_GetStatePicture_Sangonomiya_shrine
+	}	
+	
+	text = {
+		trigger = { state = 238 }
+		localization_key = ROOT_GetStatePicture_Bourou_village
+	}	
+	
+	text = {
+		trigger = { state = 244 }
+		localization_key = ROOT_GetStatePicture_Amakumo_peak
+	}	
+	
+	text = {
+		trigger = { state = 245 }
+		localization_key = ROOT_GetStatePicture_Asase_shrine
+	}	
+	
+	#text = {
+	#	trigger = { state = 188 }
+	#	localization_key = ROOT_GetStatePicture_dainichi_mikoshi
+	#}	
+	
+	text = {
+		trigger = { is_Araumi_states = yes }
+		localization_key = ROOT_GetStatePicture_Araumi
+	}
+	
+	text = {
+		trigger = { is_chinju_forest_states = yes }
+		localization_key = ROOT_GetStatePicture_Chinju_forest
+	}
+	
+	text = {
+		trigger = { is_grand_narukami_shine_states = yes }
+		localization_key = ROOT_GetStatePicture_Grand_narukami_shine
+	}
+	
+	text = {
+		trigger = { is_inazuma_city_states = yes }
+		localization_key = ROOT_GetStatePicture_Inazuma_city
+	}
+	
+	text = {
+		trigger = { is_kamisato_estate_states = yes }
+		localization_key = ROOT_GetStatePicture_kamisato_estate
+	}
+	
+	text = {
+		trigger = { is_konda_village_states = yes }
+		localization_key = ROOT_GetStatePicture_konda_village
+	}
+	
+	text = {
+		trigger = { is_mt_yougou_states = yes }
+		localization_key = ROOT_GetStatePicture_mt_yougou
+	}
+	
+	text = {
+		trigger = { is_ritou_states = yes }
+		localization_key = ROOT_GetStatePicture_ritou
+	}
+	
+	text = {
+		trigger = { is_tenshukaku_states = yes }
+		localization_key = ROOT_GetStatePicture_Tenshukaku
+	}
+	
+	text = {
+		trigger = { is_narukami_island_states = yes }
+		localization_key = ROOT_GetStatePicture_Narukami_Island
+	}
+	
+	text = {
+		trigger = { is_kannazuka_states = yes }
+		localization_key = ROOT_GetStatePicture_Kannazuka
+	}
+	
+	text = {
+		trigger = { is_yashiori_island_states = yes }
+		localization_key = ROOT_GetStatePicture_Yashiori_Island
+	}
+	
+	text = {
+		trigger = { is_watatsumi_island_states = yes }
+		localization_key = ROOT_GetStatePicture_Watatsumi_Island
+	}
+	
+	text = {
+		trigger = { is_seirai_island_states = yes }
+		localization_key = ROOT_GetStatePicture_Seirai_Island
+	}
+	
+	text = {
+		trigger = { is_tsurumi_island_states = yes }
+		localization_key = ROOT_GetStatePicture_Tsurumi_Island
+	}
+	
+	text = {
+		trigger = { is_enkanomiya_states = yes }
+		localization_key = ROOT_GetStatePicture_Enkanomiya
+	}	
+	#sumeru 
+	text = {
+		trigger = {
+			state = 118
+		}
+		localization_key = ROOT_GetStatePicture_SumeruCity
+	}
+	text = {
+		trigger = {
+			state = 138
+		}
+		localization_key = ROOT_GetStatePicture_SumeruHabour
+	}
+	text = {
+		trigger = {
+			state = 119
+		}
+		localization_key = ROOT_GetStatePicture_SumeruLibary
+	}
+	text = {
+		trigger = {
+			state = 128
+		}
+		localization_key = ROOT_GetStatePicture_SumeruChruch
+	}
+	text = {
+		trigger = {
+			state = 150
+		}
+		localization_key = ROOT_GetStatePicture_VissudhaField
+	}
+	text = {
+		trigger = {
+			state = 133
+		}
+		localization_key = ROOT_GetStatePicture_VissudhaVillage
+	}
+	text = {
+		trigger = {
+			state = 123
+		}
+		localization_key = ROOT_GetStatePicture_GandharvaVille
+	}
+	text = {
+		trigger = {
+			state = 162
+		}
+		localization_key = ROOT_GetStatePicture_AaruVillage
+	}
+	text = {
+		trigger = {
+			state = 146
+		}
+		localization_key = ROOT_GetStatePicture_PardisDhyai
+	}
+	text = {
+		trigger = {
+			state = 196
+		}
+		localization_key = ROOT_GetStatePicture_Mausoleum_of_King_Deshret
+	}
+	text = {
+		trigger = {
+			state = 189
+		}
+		localization_key = ROOT_GetStatePicture_Mt_Damavand
+	}
+	text = {
+		trigger = {
+			state = 194
+		}
+		localization_key = ROOT_GetStatePicture_TanitCamps
+	}
+
+
+
+	text = {
+		localization_key = ROOT_GetStatePicture_Default
+	}
+}
