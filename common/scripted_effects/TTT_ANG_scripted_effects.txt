@@ -1,0 +1,1362 @@
+close_ANG_GUI = {
+    clr_country_flag = ANG_xinxi_GUI_open
+    clr_country_flag = ANG_xinxi_GUI_ANG
+    clr_country_flag = ANG_xinxi_GUI_LYU
+    clr_country_flag = ANG_xinxi_GUI_XQG
+    clr_country_flag = ANG_xinxi_GUI_XRG
+    clr_country_flag = ANG_xinxi_GUI_RTG
+    clr_country_flag = ANG_xinxi_GUI_KQG
+    clr_country_flag = ANG_xinxi_GUI_BDG
+    clr_country_flag = ANG_xinxi_GUI_XOG
+    clr_country_flag = ANG_xinxi_GUI_NNG
+    clr_country_flag = ANG_xinxi_GUI_ZDG
+    clr_country_flag = ANG_xinxi_GUI_SHG
+}
+clr_ANG_GUI_xinxi = {
+    clr_country_flag = ANG_xinxi_GUI_ANG
+    clr_country_flag = ANG_xinxi_GUI_LYU
+    clr_country_flag = ANG_xinxi_GUI_XQG
+    clr_country_flag = ANG_xinxi_GUI_XRG
+    clr_country_flag = ANG_xinxi_GUI_RTG
+    clr_country_flag = ANG_xinxi_GUI_KQG
+    clr_country_flag = ANG_xinxi_GUI_BDG
+    clr_country_flag = ANG_xinxi_GUI_XOG
+    clr_country_flag = ANG_xinxi_GUI_NNG
+    clr_country_flag = ANG_xinxi_GUI_ZDG
+    clr_country_flag = ANG_xinxi_GUI_SHG
+}
+open_ANG_GUI = {
+    set_country_flag = ANG_xinxi_GUI_open
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_LYU
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_LYU
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_LYU
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_LYU
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ANG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_ANG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ANG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_ANG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_RTG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_RTG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_RTG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_RTG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_NNG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_NNG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_NNG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_NNG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_KQG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_KQG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_KQG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_KQG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_SHG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_SHG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_SHG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_SHG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XRG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_XRG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XRG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_XRG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XOG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_XOG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XOG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_XOG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_BDG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_BDG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_BDG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_BDG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ZDG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_ZDG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ZDG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_ZDG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XQG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_XQG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XQG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_XQG
+        }
+    }
+
+}
+
+reset_ANG_GUI_var = {
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_LYU
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_LYU
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_LYU
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_LYU
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ANG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_ANG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ANG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_ANG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_RTG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_RTG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_RTG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_RTG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_NNG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_NNG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_NNG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_NNG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_KQG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_KQG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_KQG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_KQG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_SHG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_SHG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_SHG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_SHG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XRG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_XRG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XRG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_XRG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XOG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_XOG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XOG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_XOG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_BDG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_BDG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_BDG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_BDG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ZDG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_ZDG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ZDG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_ZDG
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XQG
+        }
+        set_variable = {
+	        var = ANG_state_support_var  
+	        value = ANG_state_support_var_XQG
+        }
+    }
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XQG
+        }
+        set_variable = {
+	        var = ANG_state_zhenghe_var  
+	        value = ANG_state_zhenghe_var_XQG
+        }
+    }
+}
+
+ANG_tongyiliyue_start = {
+    #黑岩军地区
+    set_variable = {
+        var = ANG_state_support_var_ANG
+        value = 75
+    }
+    set_variable = {
+        var = ANG_state_zhenghe_var_ANG
+        value = 90
+    }
+    #璃月港地区
+    set_variable = {
+        var = ANG_state_support_var_LYU
+        value = 25
+    }
+    set_variable = {
+        var = ANG_state_zhenghe_var_LYU
+        value = 15
+    }
+    #层岩地区
+    set_variable = {
+        var = ANG_state_support_var_RTG
+        value = 30
+    }
+    set_variable = {
+        var = ANG_state_zhenghe_var_RTG
+        value = 10
+    }
+    #灵矩关地区
+    set_variable = {
+        var = ANG_state_support_var_SHG
+        value = 10
+    }
+    set_variable = {
+        var = ANG_state_zhenghe_var_SHG
+        value = 5
+    }
+    #绝云间地区
+    set_variable = {
+        var = ANG_state_support_var_XRG
+        value = 5
+    }
+    set_variable = {
+        var = ANG_state_zhenghe_var_XRG
+        value = 0
+    }
+    #下归离原地区
+    set_variable = {
+        var = ANG_state_support_var_XQG
+        value = 10
+    }
+    set_variable = {
+        var = ANG_state_zhenghe_var_XQG
+        value = 0
+    }
+    #上归离原地区
+    set_variable = {
+        var = ANG_state_support_var_KQG
+        value = 10
+    }
+    set_variable = {
+        var = ANG_state_zhenghe_var_KQG
+        value = 0
+    }
+    #孤云阁地区
+    set_variable = {
+        var = ANG_state_support_var_NNG
+        value = 10
+    }
+    set_variable = {
+        var = ANG_state_zhenghe_var_NNG
+        value = 0
+    }
+    #瑶光滩地区
+    set_variable = {
+        var = ANG_state_support_var_BDG
+        value = 5
+    }
+    set_variable = {
+        var = ANG_state_zhenghe_var_BDG
+        value = 0
+    }
+    #碧水原地区
+    set_variable = {
+        var = ANG_state_support_var_XOG
+        value = 0
+    }
+    set_variable = {
+        var = ANG_state_zhenghe_var_XOG
+        value = 0
+    }
+    #轻策庄地区
+    set_variable = {
+        var = ANG_state_support_var_ZDG
+        value = 5
+    }
+    set_variable = {
+        var = ANG_state_zhenghe_var_ZDG
+        value = 0
+    }
+
+}
+
+ANG_kaungwu_jianshao_200 = {
+    add_to_variable = {
+        var = ANG_kuangwuchubei 
+        value = -200
+    }
+}
+ANG_kaungwu_jianshao_600 = {
+    add_to_variable = {
+        var = ANG_kuangwuchubei 
+        value = -600
+    }
+}
+ANG_kaungwu_jianshao_1000 = {
+    add_to_variable = {
+        var = ANG_kuangwuchubei 
+        value = -1000
+    }
+}
+ANG_kaungwu_jianshao_1500 = {
+    add_to_variable = {
+        var = ANG_kuangwuchubei 
+        value = -1500
+    }
+}
+ANG_kaungwu_jianshao_2500 = {
+    add_to_variable = {
+        var = ANG_kuangwuchubei 
+        value = -2500
+    }
+}
+
+
+check_ANG_kuangwu = {
+    set_temp_variable = {
+        var = ANG_kuangwu_temp
+        value = 0
+    }
+    add_to_temp_variable = {
+        var = ANG_kuangwu_temp
+        value = resource@steel
+    }
+    add_to_temp_variable = {
+        var = ANG_kuangwu_temp
+        value = resource@tungsten
+    }
+    add_to_temp_variable = {
+        var = ANG_kuangwu_temp
+        value = resource@chromium
+    }
+    set_variable = {
+        var = ANG_kuangwuzengzhang
+        value = ANG_kuangwu_temp
+    }
+}
+ANG_heishi_level_up = {
+    custom_effect_tooltip = ANG_heishi_level_up_text
+    add_to_variable = {
+        var = ANG_heishi_level
+        value = 1 
+    }
+}
+ANG_zhenghe_LYU = {
+    set_temp_variable = { ANG_zhenghedu_temp = ANG_state_zhenghe_var_LYU }
+    set_temp_variable = { ANG_zhenghejindu_temp = ANG_state_support_var_LYU }
+    divide_temp_variable = { ANG_zhenghejindu_temp = 10 }
+    add_to_temp_variable = { ANG_zhenghedu_temp = ANG_zhenghejindu_temp }
+    set_variable = { ANG_state_zhenghe_var_LYU = ANG_zhenghedu_temp }
+    round_variable = ANG_state_zhenghe_var_LYU
+    clamp_variable = {
+        var = ANG_state_zhenghe_var_LYU
+        min = 0
+        max = 100
+    }
+    reset_ANG_GUI_var = yes
+}
+ANG_LYU_CORE = {
+    50 = { add_core_of = ANG }
+    51 = { add_core_of = ANG }
+    52 = { add_core_of = ANG }
+    53 = { add_core_of = ANG }
+    54 = { add_core_of = ANG }
+    55 = { add_core_of = ANG }
+    87 = { add_core_of = ANG }
+}
+ANG_zhenghe_RTG = {
+    set_temp_variable = { ANG_zhenghedu_temp = ANG_state_zhenghe_var_RTG }
+    set_temp_variable = { ANG_zhenghejindu_temp = ANG_state_support_var_RTG }
+    divide_temp_variable = { ANG_zhenghejindu_temp = 10 }
+    add_to_temp_variable = { ANG_zhenghedu_temp = ANG_zhenghejindu_temp }
+    set_variable = { ANG_state_zhenghe_var_RTG = ANG_zhenghedu_temp }
+    round_variable = ANG_state_zhenghe_var_RTG
+    clamp_variable = {
+        var = ANG_state_zhenghe_var_RTG
+        min = 0
+        max = 100
+    }
+    reset_ANG_GUI_var = yes
+}
+ANG_RTG_CORE = {
+    61 = { add_core_of = ANG }
+	62 = { add_core_of = ANG }
+	63 = { add_core_of = ANG }
+	64 = { add_core_of = ANG }
+	65 = { add_core_of = ANG }
+	66 = { add_core_of = ANG }
+	67 = { add_core_of = ANG }
+    68 = { add_core_of = ANG }
+}
+ANG_zhenghe_XQG = {
+    set_temp_variable = { ANG_zhenghedu_temp = ANG_state_zhenghe_var_XQG }
+    set_temp_variable = { ANG_zhenghejindu_temp = ANG_state_support_var_XQG }
+    divide_temp_variable = { ANG_zhenghejindu_temp = 10 }
+    add_to_temp_variable = { ANG_zhenghedu_temp = ANG_zhenghejindu_temp }
+    set_variable = { ANG_state_zhenghe_var_XQG = ANG_zhenghedu_temp }
+    round_variable = ANG_state_zhenghe_var_XQG
+    clamp_variable = {
+        var = ANG_state_zhenghe_var_XQG
+        min = 0
+        max = 100
+    }
+    reset_ANG_GUI_var = yes
+}
+ANG_XQG_CORE = {
+    84 = { add_core_of = ANG }
+	86 = { add_core_of = ANG }
+	88 = { add_core_of = ANG }
+	89 = { add_core_of = ANG }
+    90 = { add_core_of = ANG }
+    91 = { add_core_of = ANG }
+}
+ANG_zhenghe_SHG = {
+    set_temp_variable = { ANG_zhenghedu_temp = ANG_state_zhenghe_var_SHG }
+    set_temp_variable = { ANG_zhenghejindu_temp = ANG_state_support_var_SHG }
+    divide_temp_variable = { ANG_zhenghejindu_temp = 10 }
+    add_to_temp_variable = { ANG_zhenghedu_temp = ANG_zhenghejindu_temp }
+    set_variable = { ANG_state_zhenghe_var_SHG = ANG_zhenghedu_temp }
+    round_variable = ANG_state_zhenghe_var_SHG
+    clamp_variable = {
+        var = ANG_state_zhenghe_var_SHG
+        min = 0
+        max = 100
+    }
+    reset_ANG_GUI_var = yes
+}
+ANG_SHG_CORE = {
+   # 151 = { add_core_of = ANG }
+	#153 = { add_core_of = ANG }
+}
+ANG_zhenghe_KQG = {
+    set_temp_variable = { ANG_zhenghedu_temp = ANG_state_zhenghe_var_KQG }
+    set_temp_variable = { ANG_zhenghejindu_temp = ANG_state_support_var_KQG }
+    divide_temp_variable = { ANG_zhenghejindu_temp = 10 }
+    add_to_temp_variable = { ANG_zhenghedu_temp = ANG_zhenghejindu_temp }
+    set_variable = { ANG_state_zhenghe_var_KQG = ANG_zhenghedu_temp }
+    round_variable = ANG_state_zhenghe_var_KQG
+    clamp_variable = {
+        var = ANG_state_zhenghe_var_KQG
+        min = 0
+        max = 100
+    }
+    reset_ANG_GUI_var = yes
+}
+ANG_KQG_CORE = {
+    92 = { add_core_of = ANG }
+	93 = { add_core_of = ANG }
+	94 = { add_core_of = ANG }
+	95 = { add_core_of = ANG }
+	96 = { add_core_of = ANG }
+	97 = { add_core_of = ANG }
+	98 = { add_core_of = ANG }
+    113 = { add_core_of = ANG }
+    114 = { add_core_of = ANG }
+}
+ANG_zhenghe_NNG = {
+    set_temp_variable = { ANG_zhenghedu_temp = ANG_state_zhenghe_var_NNG }
+    set_temp_variable = { ANG_zhenghejindu_temp = ANG_state_support_var_NNG }
+    divide_temp_variable = { ANG_zhenghejindu_temp = 10 }
+    add_to_temp_variable = { ANG_zhenghedu_temp = ANG_zhenghejindu_temp }
+    set_variable = { ANG_state_zhenghe_var_NNG = ANG_zhenghedu_temp }
+    round_variable = ANG_state_zhenghe_var_NNG
+    clamp_variable = {
+        var = ANG_state_zhenghe_var_NNG
+        min = 0
+        max = 100
+    }
+    reset_ANG_GUI_var = yes
+}
+ANG_NNG_CORE = {
+    116 = { add_core_of = ANG }
+	117 = { add_core_of = ANG }
+}
+ANG_zhenghe_BDG = {
+    set_temp_variable = { ANG_zhenghedu_temp = ANG_state_zhenghe_var_BDG }
+    set_temp_variable = { ANG_zhenghejindu_temp = ANG_state_support_var_BDG }
+    divide_temp_variable = { ANG_zhenghejindu_temp = 10 }
+    add_to_temp_variable = { ANG_zhenghedu_temp = ANG_zhenghejindu_temp }
+    set_variable = { ANG_state_zhenghe_var_BDG = ANG_zhenghedu_temp }
+    round_variable = ANG_state_zhenghe_var_BDG
+    clamp_variable = {
+        var = ANG_state_zhenghe_var_BDG
+        min = 0
+        max = 100
+    }
+    reset_ANG_GUI_var = yes
+}
+ANG_BDG_CORE = {
+    115 = { add_core_of = ANG }
+}
+ANG_zhenghe_XOG = {
+    set_temp_variable = { ANG_zhenghedu_temp = ANG_state_zhenghe_var_XOG }
+    set_temp_variable = { ANG_zhenghejindu_temp = ANG_state_support_var_XOG }
+    divide_temp_variable = { ANG_zhenghejindu_temp = 10 }
+    add_to_temp_variable = { ANG_zhenghedu_temp = ANG_zhenghejindu_temp }
+    set_variable = { ANG_state_zhenghe_var_XOG = ANG_zhenghedu_temp }
+    round_variable = ANG_state_zhenghe_var_XOG
+    clamp_variable = {
+        var = ANG_state_zhenghe_var_XOG
+        min = 0
+        max = 100
+    }
+    reset_ANG_GUI_var = yes
+}
+ANG_XOG_CORE = {
+    102 = { add_core_of = ANG }
+    103 = { add_core_of = ANG }
+    104 = { add_core_of = ANG }
+    105 = { add_core_of = ANG }
+    106 = { add_core_of = ANG }
+    107 = { add_core_of = ANG }
+    108 = { add_core_of = ANG }
+    109 = { add_core_of = ANG }
+    110 = { add_core_of = ANG }
+    111 = { add_core_of = ANG }
+    112 = { add_core_of = ANG }
+}
+ANG_zhenghe_XRG = {
+    set_temp_variable = { ANG_zhenghedu_temp = ANG_state_zhenghe_var_XRG }
+    set_temp_variable = { ANG_zhenghejindu_temp = ANG_state_support_var_XRG }
+    divide_temp_variable = { ANG_zhenghejindu_temp = 10 }
+    add_to_temp_variable = { ANG_zhenghedu_temp = ANG_zhenghejindu_temp }
+    set_variable = { ANG_state_zhenghe_var_XRG = ANG_zhenghedu_temp }
+    round_variable = ANG_state_zhenghe_var_XRG
+    clamp_variable = {
+        var = ANG_state_zhenghe_var_XRG
+        min = 0
+        max = 100
+    }
+    reset_ANG_GUI_var = yes
+}
+ANG_XRG_CORE = {
+    72 = { add_core_of = ANG }
+    73 = { add_core_of = ANG }
+    74 = { add_core_of = ANG }
+    75 = { add_core_of = ANG }
+    76 = { add_core_of = ANG }
+    77 = { add_core_of = ANG }
+    78 = { add_core_of = ANG }
+    79 = { add_core_of = ANG }
+    80 = { add_core_of = ANG }
+    81 = { add_core_of = ANG }
+    82 = { add_core_of = ANG }
+    83 = { add_core_of = ANG }
+    99 = { add_core_of = ANG }
+    100 = { add_core_of = ANG }
+    101 = { add_core_of = ANG }
+}
+ANG_zhenghe_ZDG = {
+    set_temp_variable = { ANG_zhenghedu_temp = ANG_state_zhenghe_var_ZDG }
+    set_temp_variable = { ANG_zhenghejindu_temp = ANG_state_support_var_ZDG }
+    divide_temp_variable = { ANG_zhenghejindu_temp = 10 }
+    add_to_temp_variable = { ANG_zhenghedu_temp = ANG_zhenghejindu_temp }
+    set_variable = { ANG_state_zhenghe_var_ZDG = ANG_zhenghedu_temp }
+    round_variable = ANG_state_zhenghe_var_ZDG
+    clamp_variable = {
+        var = ANG_state_zhenghe_var_ZDG
+        min = 0
+        max = 100
+    }
+    reset_ANG_GUI_var = yes
+}
+ANG_ZDG_CORE = {
+    207 = { add_core_of = ANG }
+}
+
+ANG_support_up_effect_2 = {
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_LYU
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_LYU  
+	        value = 2
+        } 
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_LYU  
+	        value = -2
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ANG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_ANG
+	        value = 2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_ANG
+	        value = -2
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_RTG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_RTG
+	        value = 2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_RTG
+	        value = -2
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XQG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_XQG
+	        value = 2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_XQG
+	        value = -2
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_SHG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_SHG
+	        value = 2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_SHG
+	        value = -2
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XRG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_XRG
+	        value = 2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_XRG
+	        value = -2
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_KQG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_KQG
+	        value = 2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_KQG
+	        value = -2
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_NNG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_NNG
+	        value = 2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_NNG
+	        value = -2
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_BDG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_BDG
+	        value = 2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_BDG
+	        value = -2
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XOG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_XOG
+	        value = 2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_XOG
+	        value = -2
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ZDG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_ZDG
+	        value = 2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_ZDG
+	        value = -2
+        }
+    }
+
+    add_to_variable = {
+        var = ANG_state_zhenghe_click_times
+        value = 1
+    }
+    clamp_variable = {
+        var = ANG_state_zhenghe_click_times
+        min = 0
+        max = 30
+    }
+    reset_ANG_GUI_var = yes
+}
+ANG_support_up_effect_pp_50 = {
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_LYU
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_LYU  
+	        value = 5
+        }
+        add_political_power = -50
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ANG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_ANG
+	        value = 5
+        }
+        add_political_power = -50
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_RTG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_RTG
+	        value = 5
+        }
+        add_political_power = -50
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XQG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_XQG
+	        value = 5
+        }
+        add_political_power = -50
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_SHG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_SHG
+	        value = 5
+        }
+        add_political_power = -50
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XRG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_XRG
+	        value = 5
+        }
+        add_political_power = -50
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_KQG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_KQG
+	        value = 5
+        }
+        add_political_power = -50
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_NNG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_NNG
+	        value = 5
+        }
+        add_political_power = -50
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_BDG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_BDG
+	        value = 5
+        }
+        add_political_power = -50
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XOG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_XOG
+	        value = 5
+        }
+        add_political_power = -50
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ZDG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_ZDG
+	        value = 5
+        }
+        add_political_power = -50
+    }
+    reset_ANG_GUI_var = yes
+}
+ANG_support_up_effect_eqm_500 = {
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_LYU
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_LYU  
+	        value = -2
+        } 
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_LYU  
+	        value = 5
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ANG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_ANG
+	        value = -2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_ANG
+	        value = 5
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_RTG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_RTG
+	        value = -2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_RTG
+	        value = 5
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XQG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_XQG
+	        value = -2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_XQG
+	        value = 5
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_SHG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_SHG
+	        value = -2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_SHG
+	        value = 5
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XRG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_XRG
+	        value = -2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_XRG
+	        value = 5
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_KQG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_KQG
+	        value = -2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_KQG
+	        value = 5
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_NNG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_NNG
+	        value = -2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_NNG
+	        value = 5
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_BDG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_BDG
+	        value = -2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_BDG
+	        value = 5
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_XOG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_XOG
+	        value = -2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_XOG
+	        value = 5
+        }
+    }
+
+    if = {
+        limit = {
+            has_country_flag = ANG_xinxi_GUI_ZDG
+        }
+        add_to_variable = {
+	        var = ANG_state_support_var_ZDG
+	        value = -2
+        }
+        add_to_variable = {
+	        var = ANG_state_zhenghe_var_ZDG
+	        value = 5
+        }
+    }
+
+    add_to_variable = {
+        var = ANG_state_zhenghe_click_times
+        value = 1
+    }
+    clamp_variable = {
+        var = ANG_state_zhenghe_click_times
+        min = 0
+        max = 30
+    }
+    reset_ANG_GUI_var = yes
+    add_equipment_to_stockpile = {
+        type = infantry_equipment
+        amount = -500
+    }
+}
+ANG_mil_bop_up_2 = { #军事委员会支持度上升2
+    custom_effect_tooltip = ANG_mil_bop_up_2_tooltip
+    add_to_variable = {
+        var = ANG_bop_var
+        value = 2
+    }
+    ANG_bop_var_calculation = yes
+}
+ANG_mil_bop_up_5 = { #军事委员会支持度上升5
+    custom_effect_tooltip = ANG_mil_bop_up_5_tooltip
+    add_to_variable = {
+        var = ANG_bop_var
+        value = 5
+    }
+    ANG_bop_var_calculation = yes
+}
+ANG_mil_bop_up_8 = { #军事委员会支持度上升8
+    custom_effect_tooltip = ANG_mil_bop_up_8_tooltip
+    add_to_variable = {
+        var = ANG_bop_var
+        value = 8
+    }
+    ANG_bop_var_calculation = yes
+}
+ANG_com_bop_up_2 = { #公社支持度上升2
+    custom_effect_tooltip = ANG_com_bop_up_2_tooltip
+    add_to_variable = {
+        var = ANG_bop_var
+        value = -2
+    }
+    ANG_bop_var_calculation = yes
+}
+ANG_com_bop_up_5 = { #公社支持度上升5
+    custom_effect_tooltip = ANG_com_bop_up_5_tooltip
+    add_to_variable = {
+        var = ANG_bop_var
+        value = -5
+    }
+    ANG_bop_var_calculation = yes
+}
+ANG_com_bop_up_8 = { #公社支持度上升8
+    custom_effect_tooltip = ANG_com_bop_up_8_tooltip
+    add_to_variable = {
+        var = ANG_bop_var
+        value = -8
+    }
+    ANG_bop_var_calculation = yes
+}
+ANG_bop_var_calculation = {
+    set_variable = {
+        var = ANG_bop_var_com
+        value = 100
+    }
+    subtract_from_variable = { ANG_bop_var_com = ANG_bop_var }
+    clamp_variable = {
+        var = ANG_bop_var
+        min = 0
+        max = 100
+    }
+    clamp_variable = {
+        var = ANG_bop_var_com
+        min = 0
+        max = 100
+    }
+}

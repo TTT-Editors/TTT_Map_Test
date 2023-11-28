@@ -1,0 +1,214 @@
+add_namespace = narukami
+
+country_event = {
+   id = narukami.1
+   title = narukami.1.t
+   desc = narukami.1.d
+   
+   is_triggered_only = yes
+   
+    option = {
+        name = narukami.1.a
+	    
+		set_global_flag = jiangjunbeijiakong
+		
+	    NIE = {
+		    transfer_state = 213  add_state_core = 213
+		    transfer_state = 214  add_state_core = 214
+		    transfer_state = 215  add_state_core = 215
+	        transfer_state = 216  add_state_core = 216
+		    transfer_state = 217  add_state_core = 217
+		    transfer_state = 218  add_state_core = 218
+	    }
+	    RIT = {
+	        transfer_state = 209  add_state_core = 209
+
+			division_template = {
+				name = "离岛防卫军"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1}
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+				} 
+			}
+            209 = {
+			    create_unit = {
+				    division = "division_template = \"离岛防卫军\" start_experience_factor = 0.1" 
+				    owner = RIT
+				    count = 3
+			    }
+		    }
+	    }
+	    ARI = { 
+	        transfer_state = 210  add_state_core = 210
+			division_template = {
+				name = "荒海遗迹守卫"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+				}
+				support = { 
+					recon = { x = 0 y = 1 }
+				} 
+			}
+            210 = {
+			    create_unit = {
+				    division = "division_template = \"荒海遗迹守卫\" start_experience_factor = 0.1" 
+				    owner = ARI
+				    count = 3
+			    }
+		    }
+	    }
+	    NAR = {
+	        transfer_state = 211  add_state_core = 211
+			add_offsite_building = { type = arms_factory  level = 2 }
+			division_template = {
+				name = "八重军"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1}
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+				} 
+			}
+			211 = {
+			    create_unit = {
+				    division = "division_template = \"八重军\" start_experience_factor = 0.1" 
+				    owner = NAR
+				    count = 4
+			    }
+		    }
+	    }
+	    KMR = {
+	        transfer_state = 212  add_state_core = 212
+			division_template = {
+				name = "神里军"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1}
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+				} 
+			}
+            212 = {
+			    create_unit = {
+				    division = "division_template = \"神里军\" start_experience_factor = 0.1" 
+				    owner = KMR
+				    count = 3
+			    }
+		    }
+	    }
+	    AVH = {
+	        transfer_state = 220  add_state_core = 220
+			division_template = {
+				name = "长野原反抗军"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1}
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+				} 
+			}
+			220 = {
+			    create_unit = {
+				    division = "division_template = \"长野原反抗军\" start_experience_factor = 0.1" 
+				    owner = AVH
+				    count = 4
+			    }
+		    }
+	    }
+		INA = {
+			end_puppet = KUJ
+		}
+		KUJ = {
+			transfer_state = 222  add_state_core = 222
+		}
+		222 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		222 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+    }
+}
+
+country_event = {
+	id = narukami.2
+	title = narukami.2.t
+	desc = narukami.2.d
+	
+	trigger = {
+		check_variable = {
+			current_Raden_Shogun_doubt_frame = 9
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+    option = {
+	   name = narukami.2.a
+	   INA = {
+		   annex_country = {
+			   target = KUJ
+			   transfer_troops = yes
+		   }
+	   }
+	}
+}

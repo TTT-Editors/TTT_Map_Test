@@ -1,0 +1,1311 @@
+add_namespace = MOT_event
+##################################################################
+################################################################
+###风魔龙危机阶段（1——8）
+country_event = {
+	id = MOT_event.1 #骑士团邀请我们共同解决风魔龙问题
+	title = MOT_event.1.t
+	desc = MOT_event.1.d
+	
+	is_triggered_only = yes
+	#fire_only_once = yes #仅触发一次
+	option = { 
+		name = MOT_event.1.a #准备行李吧
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = MOT_event.2 #琴团长的演讲
+	title = MOT_event.2.t
+	desc = MOT_event.2.d
+	picture = GFX_MOT_event_03
+	is_triggered_only = yes
+	fire_only_once = yes #仅触发一次
+	option = { 
+		name = MOT_event.2.a 
+		add_stability = 0.01
+	    add_war_support = 0.01
+		hidden_effect = { #此为隐藏效果
+			country_event = { 
+				days = 7 id = MOT_event.29
+		    }
+			country_event = { 
+				days = 49 id = MOT_event.48
+		    }
+		}
+	}
+}
+
+country_event = {
+	id = MOT_event.3 #晚间闲暇
+	title = MOT_event.3.t
+	desc = MOT_event.3.d
+	picture = GFX_MOT_event_04
+	is_triggered_only = yes
+	fire_only_once = yes #仅触发一次
+	option = { 
+		name = MOT_event.3.a 
+	}
+}
+
+country_event = {
+	id = MOT_event.4 #鸽子
+	title = MOT_event.4.t
+	desc = MOT_event.4.d
+	picture = GFX_MOT_event_05
+	is_triggered_only = yes
+	fire_only_once = yes 
+	option = { 
+		name = MOT_event.4.a 
+	}
+}
+
+country_event = {
+	id = MOT_event.5 #归乡的风啊……
+	title = MOT_event.5.t
+	desc = MOT_event.5.d
+	picture = GFX_MOT_event_02
+	is_triggered_only = yes
+	fire_only_once = yes 
+	option = { 
+		name = MOT_event.5.a 
+		hidden_effect = { #此为隐藏效果
+			country_event = { 
+				days = 21 id = MOT_event.6
+		    }
+		}
+	}
+}
+
+country_event = {
+	id = MOT_event.6 #请不要迷茫......
+	title = MOT_event.6.t
+	desc = MOT_event.6.d
+	picture = GFX_MOT_event_01
+	is_triggered_only = yes
+	fire_only_once = yes 
+	option = { 
+		name = MOT_event.6.a 
+		hidden_effect = { #此为隐藏效果
+			country_event = { 
+				days = 21 id = MOT_event.7
+		    }
+		}
+	}
+}
+country_event = {
+	id = MOT_event.7 #木雕手艺
+	title = MOT_event.7.t
+	desc = MOT_event.7.d
+	picture = GFX_MOT_event_06
+	is_triggered_only = yes
+	fire_only_once = yes 
+	option = { 
+		name = MOT_event.7.a 
+	}
+}
+country_event = {
+	id = MOT_event.8 #旅行者相关事件
+	title = MOT_event.8.t
+	desc = MOT_event.8.d
+	picture = GFX_MOT_event_07
+	is_triggered_only = yes
+	fire_only_once = yes 
+	option = { 
+		name = MOT_event.8.a 
+	}
+}
+
+##################################################################
+################################################################
+####风魔龙危机结束（11——15）
+###事件名：东风守护回归
+news_event = {
+	id = MOT_event.11
+	immediate = {}
+	picture= GFX_MOT_news_event_02
+	title = MOT_event.11.t
+	desc = MOT_event.11.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	option = {
+		name = MOT_event.11.a
+		news_event = {
+			id = MOT_event.12 days = 720
+		}
+		if = {
+			limit = {
+				has_idea = MOT_crisis_of_Tewalin
+			}
+			remove_ideas = MOT_crisis_of_Tewalin
+		}
+		else_if = {
+			limit = {
+				has_idea = MOT_crisis_of_Tewalin2
+			}
+			remove_ideas = MOT_crisis_of_Tewalin2
+		}
+		TWL = {
+			remove_ideas = TWL_frightening_strikes_of_windy_dargons
+		}
+		BLL = {
+			remove_ideas = BLL_fengmolongweiji
+		}
+		clr_global_flag = MOT_dragon_crisis
+		hidden_effect = {
+			MOT_clear_deadline_standpoint_progress_and_clear_mission_and_flag = yes
+		}
+		complete_national_focus = MOT_tree_0_17
+	}
+}
+###事件名：东风守护回归
+news_event = {
+	id = MOT_event.12
+	immediate = {}
+	picture= GFX_MOT_news_event_02
+	title = MOT_event.12.t
+	desc = MOT_event.12.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	option = {
+		name = MOT_event.12.a
+		####风魔龙已经可用
+		set_country_flag = MOT_Wind_Dragon_is_available
+		custom_effect_tooltip = MOT_event_12_tooltip
+		every_country = {
+			limit = {
+				not = {
+					original_tag = MOT
+				}
+			}
+			country_event = {days = 1 id = MOT_event.1202}
+		}
+	}
+}
+###事件名：风魔龙的陨落
+news_event = {
+	id = MOT_event.13
+	immediate = {}
+	picture= GFX_MOT_news_event_02
+	title = MOT_event.13.t
+	desc = MOT_event.13.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	option = {
+		name = MOT_event.13.a
+		TWL = {
+			add_timed_idea = {
+				idea = MOT_The_aftermath_of_the_Wind_dragon_crisis
+				days = 365
+			}
+		}
+		MOT = {
+			add_timed_idea = {
+				idea = MOT_Wind_Dragon_ruins_reconstruction
+				days = 365
+			}
+		}
+		if = {
+			limit = {
+				has_idea = MOT_crisis_of_Tewalin
+			}
+			remove_ideas = MOT_crisis_of_Tewalin
+		}
+		else_if = {
+			limit = {
+				has_idea = MOT_crisis_of_Tewalin2
+			}
+			remove_ideas = MOT_crisis_of_Tewalin2
+		}
+		TWL = {
+			remove_ideas = TWL_frightening_strikes_of_windy_dargons
+		}
+		BLL = {
+			remove_ideas = BLL_fengmolongweiji
+		}
+		clr_global_flag = MOT_dragon_crisis
+		hidden_effect = {
+			MOT_clear_deadline_standpoint_progress_and_clear_mission_and_flag = yes
+		}
+		complete_national_focus = MOT_tree_0_17
+	}
+}
+###事件名：风魔龙危机延续
+country_event = {
+	id = MOT_event.14
+	immediate = {}
+	picture= unkown
+	title = MOT_event.14.t
+	desc = MOT_event.14.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	option = {
+		name = MOT_event.14.a
+		##阴影
+		MOT = {add_ideas = MOT_The_shadow_of_the_Demon_Dragon_crisis}
+		BLL = {add_ideas = MOT_The_shadow_of_the_Demon_Dragon_crisis}
+		TWL = {add_ideas = MOT_The_shadow_of_the_Demon_Dragon_crisis}
+		TWL = {add_timed_idea = {idea = MOT_Wind_Dragon_ruins_reconstruction_grant days = 365}}
+		DLK = {add_ideas = MOT_The_shadow_of_the_Demon_Dragon_crisis}
+		DSC = {add_ideas = MOT_The_shadow_of_the_Demon_Dragon_crisis}
+		MDQ = {add_ideas = MOT_The_shadow_of_the_Demon_Dragon_crisis}
+		FXE = {add_ideas = MOT_The_shadow_of_the_Demon_Dragon_crisis}
+		ALS = {add_ideas = MOT_The_shadow_of_the_Demon_Dragon_crisis}
+		QQZ = {add_ideas = MOT_The_shadow_of_the_Demon_Dragon_crisis}
+		add_to_variable = {MOT_Prestige_num = -4}
+		MOT_check_MOT_Prestige_num = yes
+
+		hidden_effect = {
+			#####为领袖添加额外特质，有与顾问不同的写法
+			add_trait = {
+				character = MOT_Jean
+				ideology = authoritarian_democracy
+				trait = MOT_Jean2_traits 
+			}
+			add_trait = {
+				character = MOT_Jean
+				ideology = classical_liberalism
+				trait = MOT_Jean2_traits 
+			}
+			
+			if = {
+				limit = {
+					has_idea = MOT_crisis_of_Tewalin
+				}
+				remove_ideas = MOT_crisis_of_Tewalin
+			}
+			else_if = {
+				limit = {
+					has_idea = MOT_crisis_of_Tewalin2
+				}
+				remove_ideas = MOT_crisis_of_Tewalin2
+			}
+			TWL = {
+				remove_ideas = TWL_frightening_strikes_of_windy_dargons
+			}
+			BLL = {
+				remove_ideas = BLL_fengmolongweiji
+			}
+		}
+		add_trait = {
+			character = MOT_Jean
+			slot = country_leader
+			trait = MOT_Jean2_traits 
+		}
+		###清除flag
+		clr_country_flag = MOT_Jean_is_available
+
+		hidden_effect={
+			MOT_Jean2 = {
+				set_nationality = XQG
+			}
+			PREV = {
+				MOT_Jean2 = {
+					set_nationality = MOT
+				}
+			}
+		}
+
+		custom_effect_tooltip = MOT_event_14_tooltip
+		clr_global_flag = MOT_dragon_crisis
+		hidden_effect = {
+			MOT_clear_deadline_standpoint_progress_and_clear_mission_and_flag = yes
+		}
+		####破坏
+		every_country = {
+			limit = {
+				is_puppet_of = MOT
+			}
+			random_owned_controlled_state = {
+				limit = {
+					or = {
+						industrial_complex > 0
+						arms_factory > 0
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 5
+				}
+				damage_building = {
+					type = rail_way
+					damage = 5
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 5
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 5
+				}
+				owner = {
+					country_event = {id = MOT_event.16}
+				}
+			}		
+		}
+		MOT = {
+			capital_scope = {
+				damage_building = {
+					type = infrastructure
+					damage = 3
+				}
+				damage_building = {
+					type = rail_way
+					damage = 3
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 3
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 3
+				}
+			}
+		}
+		MOT_Upgrade_country_focustree = YES
+	}
+}
+###事件名：风魔龙危机——溃败
+news_event = {
+	id = MOT_event.15
+	immediate = {}
+	picture= GFX_MOT_news_event_08
+	title = MOT_event.15.t
+	desc = MOT_event.15.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	option = {
+		name = MOT_event.15.a
+	}
+}
+###############################################风魔龙结局，其他国家特供
+news_event = {
+	id = MOT_event.1102
+	immediate = {}
+	picture= GFX_MOT_news_event_02
+	title = MOT_event.1102.t
+	desc = MOT_event.1102.d
+	is_triggered_only =yes
+	option = {
+		name = MOT_event.1102.a
+	}
+}
+news_event = {
+	id = MOT_event.1202
+	immediate = {}
+	picture= GFX_MOT_news_event_02
+	title = MOT_event.1202.t
+	desc = MOT_event.1202.d
+	is_triggered_only =yes
+	option = {
+		name = MOT_event.1202.a
+	}
+}
+news_event = {
+	id = MOT_event.1302
+	immediate = {}
+	picture= GFX_MOT_news_event_02
+	title = MOT_event.1302.t
+	desc = MOT_event.1302.d
+	is_triggered_only =yes
+	option = {
+		name = MOT_event.1302.a
+	}
+}
+news_event = {
+	id = MOT_event.1402
+	immediate = {}
+	picture= GFX_MOT_news_event_08
+	title = MOT_event.1402.t
+	desc = MOT_event.1402.d
+	is_triggered_only =yes
+	option = {
+		name = MOT_event.1402.a
+	}
+}
+###############################################
+###风魔龙行动后续1（16——18）
+##风魔龙的大肆破坏（蒙德其他国家）
+country_event = {
+	id = MOT_event.16
+	immediate = {}
+	
+	title = MOT_event.16.t
+	desc = MOT_event.16.d
+	is_triggered_only =yes
+	option = {
+		name = MOT_event.16.a
+		MOT = {
+			country_event = {id = MOT_event.17}
+		}
+	}
+}
+###风魔龙行动后续1
+##风魔龙大肆破坏（蒙德）
+country_event = {
+	id = MOT_event.17
+	immediate = {}
+	
+	title = MOT_event.17.t
+	desc = MOT_event.17.d
+	is_triggered_only =yes
+	option = {
+		name = MOT_event.17.a
+	}
+}
+####风魔龙会议的承诺
+country_event = {
+	id = MOT_event.18
+	immediate = {}
+	
+	title = MOT_event.18.t
+	desc = MOT_event.18.d
+	is_triggered_only =yes
+	option = {
+		name = MOT_event.18.a
+		if = {
+			limit = {
+				has_global_flag = Lock_MOT_Standpoint_decision_1
+				has_country_flag = MOT_Standpoint_choose_decision_01
+			}
+			add_timed_idea = {
+				idea = MOT_The_promise_of_the_Wind_Dragon_meeting
+				days = 180
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = Lock_MOT_Standpoint_decision_2
+				has_country_flag = MOT_Standpoint_choose_decision_02
+			}
+			add_timed_idea = {
+				idea = MOT_The_promise_of_the_Wind_Dragon_meeting
+				days = 180
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = Lock_MOT_Standpoint_decision_3
+				has_country_flag = MOT_Standpoint_choose_decision_03
+			}
+			add_timed_idea = {
+				idea = MOT_The_promise_of_the_Wind_Dragon_meeting
+				days = 180
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = MOT_The_promise_of_the_Wind_Dragon_meeting2
+				days = 180
+			}
+		}
+	}
+}
+################################################
+#################################################
+###事件名：向蒙德城要求军事装备（21——28）
+country_event = {
+	id = MOT_event.21
+	immediate = {}
+	
+	title = MOT_event.21.t
+	desc = MOT_event.21.d
+	is_triggered_only =yes
+	fire_only_once =no
+	option = {
+		name = MOT_event.21.a
+		trigger = {
+			has_equipment = {grain_conversion_eq > 1000}
+			has_equipment = {infantry_equipment > 2000}
+			has_equipment = {ttt_uniform_eq > 1000}
+		}
+		From = {
+			country_event = {days = 3 id = MOT_event.23}
+		}
+		ai_chance = {
+			base = 2
+			modifier = {#5#14
+				has_equipment = {grain_conversion_eq > 3000}
+				has_equipment = {infantry_equipment > 6000}
+				has_equipment = {ttt_uniform_eq > 3000}
+				add = 3
+			}
+			modifier = {#20
+				has_equipment = {grain_conversion_eq > 5000}
+				has_equipment = {infantry_equipment > 10000}
+				has_equipment = {ttt_uniform_eq > 5000}
+				add = 3
+			}
+			modifier = {#6
+				FROM = {
+					has_war = yes
+				}
+				add = 4
+			}
+		}
+	}
+	option = {
+		name = MOT_event.21.b
+		From = {
+			country_event = {days = 3 id = MOT_event.24}
+		}
+		trigger = {
+			has_equipment = {grain_conversion_eq > 500}
+			has_equipment = {infantry_equipment > 1000}
+			has_equipment = {ttt_uniform_eq > 500}
+		}
+		ai_chance = {
+			base = 2
+			modifier = {#5#10#40
+				has_equipment = {grain_conversion_eq > 1500}
+				has_equipment = {infantry_equipment > 3000}
+				has_equipment = {ttt_uniform_eq > 1500}
+				add = 3
+			}
+			modifier = {
+				FROM = {#4
+					has_war = yes	
+				}
+				add = 2
+			}
+			modifier = {#14
+				has_war = yes
+				add = 5
+				factor = 2
+			}
+		}
+	}
+	option = {
+		name = MOT_event.21.c
+		From = {
+			country_event = {days = 3 id = MOT_event.25}
+		}
+		ai_chance = {
+			base = 2
+			modifier = {#7#40
+				has_equipment = {grain_conversion_eq < 1000}
+				has_equipment = {infantry_equipment < 2000}
+				has_equipment = {ttt_uniform_eq < 1000}
+				add = 3
+			}
+			modifier = {
+				FROM = {#4
+					has_war = no	
+				}
+				factor = 2
+			}
+			modifier = {
+				has_war = yes
+				add = 2
+			}
+		}
+	}
+}
+###事件名：向蒙德城要求人力
+country_event = {
+	id = MOT_event.22
+	immediate = {}
+	
+	title = MOT_event.22.t
+	desc = MOT_event.22.d
+	is_triggered_only =yes
+	fire_only_once =no
+	option = {
+		name = MOT_event.22.a
+		From = {
+			country_event = {days = 3 id = MOT_event.26}
+		}
+		trigger = {
+			has_manpower > 3000
+		}
+		add_manpower = -3000
+		ai_chance = {
+			base = 2
+			modifier = {
+				FROM = {#4
+					has_war = yes
+				}
+				add = 5
+			}
+			modifier = {
+				has_manpower < 50000
+				factor = 0
+			}
+			modifier = {
+				FROM = {
+					surrender_progress > 0.5
+				}
+				add = 5
+			}
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = MOT_event.22.b
+		From = {
+			country_event = {days = 3 id = MOT_event.27}
+		}
+		add_manpower = -1500
+		trigger = {
+			has_manpower > 1500
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				FROM = {#4
+					has_war = yes
+				}
+				add = 5
+			}
+			modifier = {
+				has_manpower < 25000
+				factor = 0
+			}
+			modifier = {
+				FROM = {
+					surrender_progress < 0.5
+				}
+				add = 5
+			}
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = MOT_event.22.c
+		From = {
+			country_event = {days = 3 id = MOT_event.28}
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				FROM = {#4
+					has_war = no
+				}
+				add = 3
+			}
+			modifier = {
+				FROM = {#4
+					num_divisions > 35
+				}
+				add = 3
+			}
+		}
+	}
+}
+###事件名：军事装备抵达！
+country_event = {
+	id = MOT_event.23
+	immediate = {}
+	
+	title = MOT_event.23.t
+	desc = MOT_event.23.d
+	is_triggered_only =yes
+	fire_only_once =no
+	option = {
+		name = MOT_event.23.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2000
+			producer = MOT
+		}
+		add_equipment_to_stockpile = {
+			type = ttt_uniform_eq
+			amount = 1000
+			producer = MOT
+		}
+		add_equipment_to_stockpile = {
+			type = grain_conversion_eq
+			amount = 1000
+			producer = MOT
+		}
+		custom_effect_tooltip = MOT_event.23_tooltip
+		if = {
+			limit = {
+				ROOT = {
+					tag = TWL
+				}
+			}
+			add_to_variable = {global.MOT_Expectation_TWL = 10}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					tag = MDQ
+				}
+			}
+			add_to_variable = {global.MOT_Expectation_MDQ = 10}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					tag = FXE
+				}
+			}
+			add_to_variable = {global.MOT_Expectation_FXE = 10}
+		}
+	}
+}
+###事件名：军事装备抵达？
+country_event = {
+	id = MOT_event.24
+	immediate = {}
+	
+	title = MOT_event.24.t
+	desc = MOT_event.24.d
+	is_triggered_only =yes
+	fire_only_once =no
+	option = {
+		name = MOT_event.24.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = MOT
+		}
+		add_equipment_to_stockpile = {
+			type = ttt_uniform_eq
+			amount = 500
+			producer = MOT
+		}
+		add_equipment_to_stockpile = {
+			type = grain_conversion_eq
+			amount = 500
+			producer = MOT
+		}
+		custom_effect_tooltip = MOT_event.24_tooltip
+		if = {
+			limit = {
+				ROOT = {
+					tag = TWL
+				}
+			}
+			add_to_variable = {global.MOT_Expectation_TWL = 5}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					tag = MDQ
+				}
+			}
+			add_to_variable = {global.MOT_Expectation_MDQ = 5}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					tag = FXE
+				}
+			}
+			add_to_variable = {global.MOT_Expectation_FXE = 5}
+		}
+	}
+}
+###事件名：军事装备...
+country_event = {
+	id = MOT_event.25
+	immediate = {}
+	
+	title = MOT_event.25.t
+	desc = MOT_event.25.d
+	is_triggered_only =yes
+	fire_only_once =no
+	option = {
+		name = MOT_event.25.a
+	}
+}
+###事件名：新兵入伍！
+country_event = {
+	id = MOT_event.26
+	immediate = {}
+	
+	title = MOT_event.26.t
+	desc = MOT_event.26.d
+	is_triggered_only =yes
+	fire_only_once =no
+	option = {
+		name = MOT_event.26.a
+		add_manpower = 3000
+		custom_effect_tooltip = MOT_event.26_tooltip
+		if = {
+			limit = {
+				ROOT = {
+					tag = TWL
+				}
+			}
+			add_to_variable = {global.MOT_Expectation_TWL = 10}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					tag = MDQ
+				}
+			}
+			add_to_variable = {global.MOT_Expectation_MDQ = 10}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					tag = FXE
+				}
+			}
+			add_to_variable = {global.MOT_Expectation_FXE = 10}
+		}
+	}
+}
+###事件名：新兵入伍？
+country_event = {
+	id = MOT_event.27
+	immediate = {}
+	
+	title = MOT_event.27.t
+	desc = MOT_event.27.d
+	is_triggered_only =yes
+	fire_only_once =no
+	option = {
+		name = MOT_event.27.a
+		add_manpower = 1500
+		custom_effect_tooltip = MOT_event.27_tooltip
+		if = {
+			limit = {
+				ROOT = {
+					tag = TWL
+				}
+			}
+			add_to_variable = {global.MOT_Expectation_TWL = 5}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					tag = MDQ
+				}
+			}
+			add_to_variable = {global.MOT_Expectation_MDQ = 5}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					tag = FXE
+				}
+			}
+			add_to_variable = {global.MOT_Expectation_FXE = 5}
+		}
+	}
+}
+###事件名：新兵……
+country_event = {
+	id = MOT_event.28
+	immediate = {}
+	
+	title = MOT_event.28.t
+	desc = MOT_event.28.d
+	is_triggered_only =yes
+	fire_only_once =no
+	option = {
+		name = MOT_event.28.a
+	}
+}
+###############################################
+#####################################################
+###援助军区事件（201——203）
+country_event = {
+	id = MOT_event.201
+	immediate = {}
+	
+	title = MOT_event.201.t
+	desc = MOT_event.201.d
+	is_triggered_only =yes
+	fire_only_once =no
+	option = {
+		name = MOT_event.201.a
+		add_war_support = 0.01
+        add_manpower = 1000
+	}
+}
+country_event = {
+	id = MOT_event.202
+	immediate = {}
+	
+	title = MOT_event.202.t
+	desc = MOT_event.202.d
+	is_triggered_only =yes
+	fire_only_once =no
+	option = {
+		name = MOT_event.202.a
+		add_war_support = 0.01
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+			producer = MOT
+		}
+	}
+}
+country_event = {
+	id = MOT_event.203
+	immediate = {}
+	
+	title = MOT_event.203.t
+	desc = MOT_event.203.d
+	is_triggered_only =yes
+	fire_only_once =no
+	option = {
+		name = MOT_event.203.a
+		add_war_support = 0.01
+		add_equipment_to_stockpile = {
+			type = grain_conversion_eq
+			amount = 1000
+			producer = MOT
+		}
+	}
+}
+#####################################################
+####################################################
+##风魔龙危机行动（206——210）
+###什么也没找到
+country_event = {
+	id = MOT_event.206
+	immediate = {}
+	
+	title = MOT_event.206.t
+	desc = MOT_event.206.d
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = MOT_event.206.a
+	}
+}
+###找到了风魔龙存在的证据
+country_event = {
+	id = MOT_event.207
+	immediate = {}
+	
+	title = MOT_event.207.t
+	desc = MOT_event.207.d
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = MOT_event.207.a
+	}
+}
+####侦察团已经组建
+country_event = {
+	id = MOT_event.208
+	immediate = {}
+	
+	title = MOT_event.208.t
+	desc = MOT_event.208.d
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = MOT_event.208.a
+	}
+}
+####侦察团开始组建
+country_event = {
+	id = MOT_event.209
+	immediate = {}
+	
+	title = MOT_event.209.t
+	desc = MOT_event.209.d
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = MOT_event.209.a
+	}
+}
+####侦察团组建结束
+country_event = {
+	id = MOT_event.210
+	immediate = {}
+	
+	title = MOT_event.210.t
+	desc = MOT_event.210.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = MOT_event.210.a
+	}
+}
+
+####侦察风龙废墟(风龙废墟特供版，必须由风龙废墟军区触发)
+country_event = {
+	id = MOT_event.211
+	immediate = {}
+	
+	title = MOT_event.211.t
+	desc = MOT_event.211.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = MOT_event.211.a
+		###设置三个flag (MOT_TWL_the_dragon_maybe_rest_in_here)在风龙废墟地块
+		random_owned_state = {
+			limit = {
+				has_state_flag = TWL_is_dragon_maybe_rest
+				is_fully_controlled_by = TWL
+				not = {
+					has_state_flag = MOT_TWL_the_dragon_maybe_rest_in_here
+				}
+			}
+			set_state_flag = MOT_TWL_the_dragon_maybe_rest_in_here
+		}
+		random_owned_state = {
+			limit = {
+				has_state_flag = TWL_is_dragon_maybe_rest
+				is_fully_controlled_by = TWL
+				not = {
+					has_state_flag = MOT_TWL_the_dragon_maybe_rest_in_here
+				}
+			}
+			set_state_flag = MOT_TWL_the_dragon_maybe_rest_in_here
+		}
+		random_owned_state = {
+			limit = {
+				has_state_flag = TWL_is_dragon_maybe_rest
+				is_fully_controlled_by = TWL
+				not = {
+					has_state_flag = MOT_TWL_the_dragon_maybe_rest_in_here
+				}
+			}
+			set_state_flag = MOT_TWL_the_dragon_maybe_rest_in_here
+		}
+	}
+}
+#####侦察风龙废墟（蒙德特供）
+country_event = {
+	id = MOT_event.212
+	immediate = {}
+	
+	title = MOT_event.212.t
+	desc = MOT_event.212.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = MOT_event.212.a
+		
+	}
+}
+#####侦察风龙废墟结束（风龙废墟军区特供）
+country_event = {
+	id = MOT_event.213
+	immediate = {}
+	
+	title = MOT_event.213.t
+	desc = MOT_event.213.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = MOT_event.213.a
+	}
+}
+#####侦察风龙废墟结束（蒙德特供）
+country_event = {
+	id = MOT_event.214
+	immediate = {}
+	
+	title = MOT_event.214.t
+	desc = MOT_event.214.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = MOT_event.214.a
+		every_state = {
+			limit={
+				is_owned_by = TWL
+				has_state_flag = MOT_dragon_crisis_the_state_Reconnaissance_has_begun
+			}
+			clr_state_flag = MOT_dragon_crisis_the_state_Reconnaissance_has_begun
+		}
+	}
+}
+#####准备净化
+country_event = {
+	id = MOT_event.215
+	immediate = {}
+	
+	title = MOT_event.215.t
+	desc = MOT_event.215.d
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = MOT_event.215.a
+	}
+}
+#####准备净化结束
+country_event = {
+	id = MOT_event.216
+	immediate = {}
+	
+	title = MOT_event.216.t
+	desc = MOT_event.216.d
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = MOT_event.216.a
+	}
+}
+#####支援风龙废墟军区
+country_event = {
+	id = MOT_event.217
+	immediate = {}
+	
+	title = MOT_event.217.t
+	desc = MOT_event.217.d
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = MOT_event.217.a
+		add_political_power = 100
+	}
+}
+###############################################
+#####################################################
+###难民事件链
+country_event = {
+	id = MOT_event.29 #新的生活（难民事件链其一）
+	title = MOT_event.29.t
+	desc = MOT_event.29.d
+	picture = GFX_MOT_event_05
+	is_triggered_only = yes
+	fire_only_once = yes 
+	option = { 
+		name = MOT_event.29.a 
+		add_manpower = 1
+	}
+}
+###############################################
+#####################################################
+##军事改革路线事件
+###事件名：骑士团的现状
+country_event = {
+	id = MOT_event.41
+	immediate = {}
+	picture = GFX
+	title = MOT_event.41.t
+	desc = MOT_event.41.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	option = {
+		name = MOT_event.41.a
+		activate_advisor = MOT_mika
+	}
+}
+###事件名：签字笔
+country_event = {
+	id = MOT_event.42
+	immediate = {}
+	picture =GFX
+	title = MOT_event.42.t
+	desc = MOT_event.42.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	option = {
+		name = MOT_event.42.a
+	}
+}
+###事件名：临时会议——辅助军队可行性
+country_event = {
+	id = MOT_event.43
+	immediate = {}
+	picture =GFX
+	title = MOT_event.43.t
+	desc = MOT_event.43.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	option = {
+		name = MOT_event.43.a
+	}
+}
+###事件名：授勋之花
+country_event = {
+	id = MOT_event.44
+	immediate = {}
+	picture =GFX
+	title = MOT_event.44.t
+	desc = MOT_event.44.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	option = {
+		name = MOT_event.44.a
+	}
+}
+###事件名：回信
+country_event = {
+	id = MOT_event.45
+	immediate = {}
+	picture =GFX
+	title = MOT_event.45.t
+	desc = MOT_event.45.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	option = {
+		name = MOT_event.45.a
+		set_country_flag = MOT_MOT_tree_0_40_Select_the_quality_troops_flag
+	}
+		option = {
+		name = MOT_event.45.b
+		set_country_flag = MOT_MOT_tree_0_40_Select_the_quanlity_troops_flag
+	}
+}
+###事件名：回信2
+country_event = {
+	id = MOT_event.46
+	immediate = {}
+	picture =GFX
+	title = MOT_event.46.t
+	desc = MOT_event.46.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	option = {
+		name = MOT_event.46.a
+	}
+}
+####来自骑士团的支援
+country_event = {
+	id = MOT_event.47
+	immediate = {}
+	picture =GFX
+	title = MOT_event.47.t
+	desc = MOT_event.47.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	option = {
+		name = MOT_event.47.a
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 50
+		add_manpower = 5000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2000
+			producer = MOT
+		}
+		add_equipment_to_stockpile = {
+			type = grain_conversion_eq
+			amount = 2000
+			producer = MOT
+		}
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+}
+###失落的小太阳
+country_event = {
+	id = MOT_event.48
+	picture = GFX
+	title = MOT_event.48.t
+	desc = MOT_event.48.d
+	is_triggered_only =yes
+	fire_only_once =yes
+	picture = GFX_MOT_event_08
+	option = {
+		name = MOT_event.48.a
+		add_political_power = 15
+		custom_effect_tooltip = MOT_event48_tt
+	}
+}

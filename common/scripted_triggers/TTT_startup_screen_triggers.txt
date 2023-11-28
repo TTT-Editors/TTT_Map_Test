@@ -1,0 +1,25 @@
+TTT_is_special_nation = {
+	#���������õģ�֮�������Ҫ�������������ҵĻ�ֱ�ӷ����������
+	OR = {
+		
+		#Ina islands
+		tag = NAR
+		tag = SNA
+		
+		#Liyue nations
+		tag = ZDG
+		tag = XOG
+		tag = NNG
+		tag = XRG
+		tag = KQG
+		tag = RTG
+		tag = ANG
+		tag = ARF
+		tag = LYU
+		
+		#Mot nations
+		tag = MOT
+		tag = BLL
+		tag = MDQ
+	}
+}

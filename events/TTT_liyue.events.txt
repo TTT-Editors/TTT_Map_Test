@@ -1,0 +1,1477 @@
+add_namespace = liyue
+country_event = {
+	id = liyue.1
+	title = liyue.1.t
+	desc = liyue.1.d
+	picture = GFX_report_event_djqs
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			retire_character = LYU_morax
+			news_event = {
+				id = global_news.1
+				hours = 12
+			}
+
+			country_event = { days = 120 id = ZDG_events.29 }
+			country_event = { days = 60 id = liyue.101 }
+			set_research_slots = 2
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	option = {
+		name = liyue.1.a
+		add_stability = -0.2
+		complete_national_focus = drop_the_oracle
+		unlock_decision_category_tooltip = Liyue_political_crisis
+		set_country_flag = Liyue_crisis
+		set_country_flag = Financial_collapse
+		activate_mission = liyue_civilwar_is_coming
+		add_ideas = Liyue_social_unrest
+		remove_ideas = a_dying_morax
+		remove_ideas = a_torn_society
+		set_country_flag = Ningguang_Dominant
+		swap_ideas = {
+			add_idea = Barely_satisfactory
+			remove_idea = balance_laws
+		}
+		custom_effect_tooltip = Liyue_1_tt
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#country_event = {
+#	id = liyue.3
+#	title = liyue.3.t
+#	desc = liyue.3.d
+#    picture = GFX_report_event_gyzb
+#	fire_only_once = yes
+#	is_triggered_only = yes
+#	option = { 
+#		name = liyue.3.a
+#        set_politics = {
+#            ruling_party = reformism
+#        }
+#		custom_effect_tooltip = Quarter_year_countdown_tt
+#		hidden_effect = {
+#			news_event = {
+#				id = global_news.2
+#				hours = 12
+#			}
+#			country_event = {
+#				id = liyue.4
+#				days = 2
+#			}
+#			country_event = {
+#				id = liyue.6
+#				days = 3
+#			}
+#			country_event = {
+#				id = liyue.7
+#				days = 5
+#			}
+#			country_event = {
+#				id = liyue.8
+#				days = 7
+#			}
+#			country_event = {
+#				id = liyue.10
+#				days = 15
+#			}
+#			country_event = {
+#				id = liyue.11
+#				days = 20
+#			}
+#			country_event = {
+#				id = liyue.12
+#				days = 90
+#			}
+#		}
+#	}
+#}
+country_event = {
+	id = liyue.4
+	title = liyue.4.t
+	desc = liyue.4.d
+	picture = GFX_report_event_ngzf
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			#add_political_power = -1000
+			add_ideas = panic_fills_land
+			add_ideas = blocked_harbour
+			send_equipment_fraction = {
+            value = 0.1
+            target = NNG
+            }
+			if = {
+				limit = {
+					NNG = {
+						has_country_flag = Ideological_attraction
+					}
+				}
+				NNG = {
+					add_timed_idea = {
+						idea = Liyue_Ideological_attraction
+						days = 180
+					}
+				}
+			}
+			NNG = {
+				transfer_state = 115
+				transfer_state = 116
+				transfer_state = 117
+				transfer_state = 84
+				transfer_state = 85
+				transfer_state = 86
+				transfer_state = 88
+				transfer_state = 89
+				transfer_state = 90
+				transfer_state = 91
+			}
+			NNG = {
+				every_owned_state = {
+					add_core_of = NNG
+					remove_core_of = LYU
+				}
+				country_event = {
+					days = 15
+					id = NNG_event.1
+				}
+			}
+			transfer_units_fraction = {
+				target = NNG
+				size = 0.1
+				keep_unit_leaders = {
+				}
+				keep_unit_leaders_trigger = {
+					always = yes
+				}
+			}
+			log = "Units has been released"
+			if = {
+				limit = {
+					has_idea = idea_LYU_Ningguang
+				}
+				remove_ideas = idea_LYU_Ningguang
+			}
+			LYU_Ningguang = { set_nationality = NNG }
+			LYU_Yelan = {
+				set_nationality = {
+					target_country = NNG
+				}
+			}
+			LYU_BeiDou = {
+				set_nationality = {
+					target_country = NNG
+				}
+			}
+			LYU_Xinyan = {
+				set_nationality = {
+					target_country = NNG
+				}
+			}
+			LYU_Chongyun = {
+				set_nationality = {
+					target_country = NNG
+				}
+			}
+			#LYU_Xingqiu = {
+			#	set_nationality = NNG
+			#}
+			log = "Characters has been divided"
+			NNG = {
+				inherit_technology = LYU
+				#promote_character = LYU_BeiDou
+				#promote_character = LYU_Xinyan
+				#promote_character = LYU_Ningguang
+				#promote_character = {
+				#	character = LYU_BeiDou
+				#	ideology = market_liberalism
+				#}
+				#promote_character = {
+				#	Character = LYU_Xinyan
+				#	ideology = anarcho_syndicalism
+				#}
+			}
+			NNG = {
+				load_oob = "NNG"
+			}
+			every_possible_country = {
+				limit = {
+					is_nominate_liyue = yes
+					NOT = {
+						is_in_array = {
+							liyue_warlords_array = NNG
+						}
+					}
+				}
+				add_to_array = {
+					liyue_warlords_array = NNG
+				}
+			}
+			LYU = {
+				LYU_Ganyu = {
+					promote_character = yes
+				}
+			}
+			# create_country_leader = {
+			# 	name = "LYU_Ganyu"
+			# 	desc = "LYU_Ganyu_desc"
+			# 	picture = GFX_portrait_large_Liyue_Ganyu
+			# 	expire = "2023.7.29.1"
+			# 	ideology = moraxism
+			# 	traits = {
+			# 		obey_rule_law
+			# 	}
+			# }
+			NNG = {
+				create_country_leader = {
+					name = "LYU_Ningguang"
+					desc = "Ningguang_desc"
+					picture = GFX_portrait_large_Liyue_NingGuang
+					expire = "2023.8.7.1"
+					ideology = classical_liberalism
+					traits = {
+						LiYueisthe_pioneerhumangovernance
+					}
+				}
+			}
+			log = "[GetDateText]: [Root.GetName]: NingGuangand_Xingqiu_has_load_oob"
+		}
+	}
+	option = {
+		name = liyue.4.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = liyue.4.b
+		ai_chance = {
+			factor = 0
+		}
+		NNG = {
+			change_tag_from = ROOT
+		}
+		NNG = {
+			TTT_open_book = yes
+		}
+	}
+}
+
+country_event = {
+	id = liyue.6
+	title = liyue.6.t
+	desc = liyue.6.d
+	picture = GFX_report_event_kqzf
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					KQG = {
+						has_country_flag = Ideological_attraction
+					}
+				}
+				KQG = {
+					add_timed_idea = {
+						idea = Liyue_Ideological_attraction
+						days = 180
+					}
+				}
+			}
+			send_equipment_fraction = {
+            value = 0.1
+            target = KQG
+            }
+			KQG = {
+				transfer_state = 92
+				transfer_state = 93
+				transfer_state = 94
+				transfer_state = 95
+				transfer_state = 96
+				transfer_state = 97
+				transfer_state = 98
+				transfer_state = 112
+				transfer_state = 113
+				transfer_state = 114
+			}
+			KQG = {
+				every_owned_state = {
+					add_core_of = KQG
+					remove_core_of = LYU
+				}
+			}
+			transfer_units_fraction = {
+				target = KQG
+				size = 0.07
+				keep_unit_leaders_trigger = {
+					always = yes
+				}
+			}
+			if = {
+				limit = {
+					has_idea = idea_LYU_Keqing
+				}
+				remove_ideas = idea_LYU_Keqing
+			}
+			LYU_Keqing = {
+				set_nationality = {
+					target_country = KQG
+				}
+			}
+			KQG = {
+				inherit_technology = LYU
+				promote_character = LYU_Keqing
+				LYU_Keqing = {
+					unit_leader_event = {
+						id = liyue_civil_war.31
+						days = 15
+					}
+				}
+			}
+			KQG = {
+				load_oob = "KQG"
+			}
+			KQG = {
+				activate_mission = KQG_ready_to_attack_NNG
+			}
+			KQG = {
+				country_event = {
+					days = 30
+					id = KQG_events.15
+				}
+			}
+			#KQG = { activate_mission = battle_of_yaoguang_shoal }
+			NNG = {
+				activate_mission = NNG_ready_to_attack_KQG
+			}
+			#NNG = { activate_mission = battle_of_yaoguang_shoal_reverse }
+			every_possible_country = {
+				limit = {
+					is_nominate_liyue = yes
+					NOT = {
+						is_in_array = {
+							liyue_warlords_array = KQG
+						}
+					}
+				}
+				add_to_array = {
+					liyue_warlords_array = KQG
+				}
+			}
+		}
+	}
+	option = {
+		name = liyue.6.a
+		ai_chance = {
+			factor = 1
+		}
+		#hidden_effect = {
+		#	KQG = { set_technology = { super_kqg = 1 } }
+		#}
+		#逆天狠活，别开
+	}
+	option = {
+		name = liyue.6.b
+		ai_chance = {
+			factor = 0
+		}
+		KQG = {
+			change_tag_from = ROOT
+		}
+		KQG = {
+			TTT_open_book = yes
+		}
+		KQG = {
+			country_event = {
+				hours = 12
+				id = KQG_events.32
+			}
+		}
+	}
+}
+
+country_event = {
+	id = liyue.7
+	title = liyue.7.t
+	desc = liyue.7.d
+	picture = GFX_report_event_xozf
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			XOG = {
+				inherit_technology = LYU
+			}
+			send_equipment_fraction = {
+            value = 0.1
+            target = XOG
+            }
+			XOG = {
+				transfer_state = 102
+				transfer_state = 103
+				transfer_state = 104
+				transfer_state = 105
+				transfer_state = 106
+				transfer_state = 107
+				transfer_state = 108
+				transfer_state = 109
+				transfer_state = 110
+				transfer_state = 111
+			}
+			XOG = {
+				load_oob = "XOG"
+			}
+			transfer_units_fraction = {
+				target = XOG
+				size = 0.2
+				keep_unit_leaders_trigger = {
+					always = yes
+				}
+			}
+			LYU_Xiao = {
+				set_nationality = XOG
+			}
+			XOG = {
+				set_country_flag = XOG_mechanism_mandrills
+				add_to_variable = {
+					var = XOG_yezhangdu
+					value = 50
+				}
+				add_to_variable = {
+					var = XOG_zhizheng_var
+					value = 25
+				}
+				inherit_technology = LYU
+				promote_character = LYU_Xiao
+			}
+			XOG = {
+				every_owned_state = {
+					add_core_of = XOG
+					remove_core_of = LYU
+				}
+			}
+			if = {
+				limit = {
+					XOG = {
+						has_country_flag = XOG_lucky_yes
+					}
+				}
+				country_event = {
+					id = XOG_events.119
+					days = 259
+				}
+			}
+			every_possible_country = {
+				limit = {
+					is_nominate_liyue = yes
+					NOT = {
+						is_in_array = {
+							liyue_warlords_array = XOG
+						}
+					}
+				}
+				add_to_array = {
+					liyue_warlords_array = XOG
+				}
+			}
+		}
+	}
+	option = {
+		name = liyue.7.a
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			LYU_Xiao = {
+				unit_leader_event = {
+					id = XOG_events.1
+					days = 3
+				}
+			}
+		}
+	}
+	option = {
+		name = liyue.7.b
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			LYU_Xiao = {
+				unit_leader_event = {
+					id = XOG_events.1
+					days = 3
+				}
+			}
+		}
+		XOG = {
+			change_tag_from = ROOT
+		}
+		XOG = {
+			TTT_open_book = yes
+		}
+	}
+}
+
+country_event = {
+	id = liyue.8
+	title = liyue.8.t
+	desc = liyue.8.d
+	picture = GFX_report_event_rtzf
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					LYU = {
+						has_country_flag = Ideological_attraction
+					}
+				}
+				LYU = {
+					add_timed_idea = {
+						idea = Liyue_Ideological_attraction
+						days = 180
+					}
+				}
+			}
+			send_equipment_fraction = {
+            value = 0.1
+            target = RTG
+            }
+			RTG = {
+				transfer_state = 61
+				transfer_state = 62
+				transfer_state = 63
+				transfer_state = 64
+				transfer_state = 65
+				transfer_state = 66
+				transfer_state = 67
+				transfer_state = 68
+			}
+			RTG = {
+				load_oob = "RTG"
+			}
+			RTG = {
+				every_owned_state = {
+					add_core_of = RTG
+					remove_core_of = LYU
+				}
+			}
+			transfer_units_fraction = {
+				target = RTG
+				size = 0.2
+				keep_unit_leaders_trigger = {
+					always = yes
+				}
+			}
+			every_possible_country = {
+				limit = {
+					is_nominate_liyue = yes
+					NOT = {
+						is_in_array = {
+							liyue_warlords_array = RTG
+						}
+					}
+				}
+				add_to_array = {
+					liyue_warlords_array = RTG
+				}
+			}
+		}
+	}
+	option = {
+		name = liyue.8.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = liyue.8.b
+		ai_chance = {
+			factor = 0
+		}
+		RTG = {
+			change_tag_from = ROOT
+		}
+		RTG = {
+			TTT_open_book = yes
+		}
+	}
+}
+
+country_event = {
+	id = liyue.9
+	title = liyue.9.t
+	desc = liyue.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_country_event_countryevent_007pshemeima
+	immediate = {
+		hidden_effect = {
+			set_global_flag = zdg_had_come
+			ZDG = {
+				transfer_state = 207
+				transfer_state = 108
+				transfer_state = 109
+			}
+			ZDG = {
+				inherit_technology = SNE
+				set_research_slots = 3
+				load_oob = "ZDG"
+				add_offsite_building = {
+					type = arms_factory
+					level = 1
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			108 = {
+				set_state_flag = liyue_civilwar_origianl_state_SCLIA_owned
+			}
+			109 = {
+				set_state_flag = liyue_civilwar_origianl_state_SCLIA_owned
+			}
+			ZDG = {
+				every_owned_state = {
+					add_core_of = ZDG
+					remove_core_of = SNE
+				}
+				add_manpower = 10000
+				set_political_power = 200
+			}
+			SNE = {
+				SNE_Childe = {
+					set_nationality = ZDG
+				}
+				SNE_Elizabeth = {
+					set_nationality = ZDG
+				}
+			}
+			ZDG = {
+				promote_character = {
+					character = SNE_Childe
+					ideology = despotism_subtype
+				}
+			}
+			news_event = {
+				id = global_news.3
+				hours = 12
+			}
+			XOG = {
+				country_event = {
+					id = liyue_civil_war.5
+					days = 20
+				}
+			}
+			XRG = {
+				country_event = {
+					id = liyue_civil_war.5
+					days = 20
+				}
+			}
+			every_possible_country = {
+				limit = {
+					is_nominate_liyue = yes
+					NOT = {
+						is_in_array = {
+							liyue_warlords_array = ZDG
+						}
+					}
+				}
+				add_to_array = {
+					liyue_warlords_array = ZDG
+				}
+			}
+		}
+	}
+	option = {
+		name = liyue.9.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = liyue.9.b
+		ai_chance = {
+			factor = 0
+		}
+		ZDG = {
+			change_tag_from = ROOT
+		}
+		ZDG = {
+			TTT_open_book = yes
+		}
+	}
+}
+
+country_event = {
+	id = liyue.10
+	title = liyue.10.t
+	desc = liyue.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_country_event_countryevent_003
+	immediate = {
+		hidden_effect = {
+		    send_equipment_fraction = {
+            value = 0.1
+            target = XRG
+            }
+			XRG = {
+				transfer_state = 72
+				transfer_state = 73
+				transfer_state = 74
+				transfer_state = 75
+				transfer_state = 76
+				transfer_state = 77
+				transfer_state = 78
+				transfer_state = 79
+				transfer_state = 80
+				transfer_state = 81
+				transfer_state = 82
+				transfer_state = 83
+				transfer_state = 99
+				transfer_state = 100
+				transfer_state = 101
+			}
+			XRG = {
+				inherit_technology = LYU
+			}
+			XRG = {
+				load_oob = "XRG"
+			}
+			transfer_units_fraction = {
+				target = XRG
+				size = 0.4
+				keep_unit_leaders = {
+				}
+				keep_unit_leaders_trigger = {
+					always = yes
+				}
+			}
+			XRG = {
+				every_owned_state = {
+					add_core_of = XRG
+					remove_core_of = LYU
+				}
+			}
+			XRG_Shenhe = {
+				set_nationality = XRG
+			}
+			every_possible_country = {
+				limit = {
+					is_nominate_liyue = yes
+					NOT = {
+						is_in_array = {
+							liyue_warlords_array = XRG
+						}
+					}
+				}
+				add_to_array = {
+					liyue_warlords_array = XRG
+				}
+			}
+		}
+	}
+	option = {
+		name = liyue.10.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = liyue.10.b
+		ai_chance = {
+			factor = 0
+		}
+		XRG = {
+			change_tag_from = ROOT
+		}
+		XRG = {
+			TTT_open_book = yes
+		}
+	}
+}
+
+country_event = {
+	id = liyue.11
+	title = liyue.11.t
+	desc = liyue.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_country_event_countryevent_006pshemeima
+	immediate = {
+		hidden_effect = {
+			ANG = {
+				inherit_technology = LYU
+				transfer_state = 56
+				transfer_state = 59
+				transfer_state = 60
+				transfer_state = 69
+				transfer_state = 71
+				load_oob = "ANG"
+				every_owned_state = {
+					add_core_of = ANG
+					remove_core_of = LYU
+				}
+			}
+			hidden_effect = {
+				LYU = { load_focus_tree = LH_start }
+				LYU = { 
+					add_ideas = collapse_ofqixing_system #七星无光
+					add_ideas = unstable_mora_system #金叶寥落
+					add_ideas = GANYU0 #合法政府
+	
+					add_ideas = closed_economy #封闭经济
+					add_ideas = low_economic_mobilisation #前期动员
+					add_ideas = Tosuppress_bandits #进剿匪寇
+					add_ideas = free_speech #言论自由
+					add_ideas = Urban_rural_coordination #城乡协调
+					add_ideas = Literary_artistic_protection #文艺保护
+					add_ideas = Gear_operation #齿轮周转
+					add_ideas = Barely_satisfactory #差强人意
+				}
+				LYU = { 			
+					set_cosmetic_tag = GANYULY
+					set_politics = {
+						ruling_party = reformism
+						elections_allowed = no
+					}
+
+					set_party_name = { 
+						ideology = authoritarianism
+						long_name = LH_party_Xianren_long 
+						name = LH_party_Xianren
+					}
+					set_party_name = { 
+						ideology = communism
+						long_name = LH_party_KQ_rest_long 
+						name = LH_party_KQ_rest
+					}
+					set_party_name = { 
+						ideology = liberalism
+						long_name = LH_party_NG_rest_long 
+						name = LH_party_NG_rest
+					}
+					set_popularities = {
+						reformism = 60
+						authoritarianism = 20
+						communism = 10
+						liberalism = 10
+					}
+					
+					add_country_leader_trait = sinner_ofLiyue
+					LYU_Keqing_fake = {
+						promote_leader = yes
+					}
+					LYU_Ningguang_fake = {
+						promote_leader = yes
+					}
+					LYU_Xianren_fake = {
+						promote_leader = yes
+					}
+				} 
+			}
+			every_possible_country = {
+				limit = {
+					is_nominate_liyue = yes
+					NOT = {
+						is_in_array = {
+							liyue_warlords_array = ANG
+						}
+					}
+				}
+				add_to_array = {
+					liyue_warlords_array = ANG
+				}
+			}
+		}
+	}
+	option = {
+		name = liyue.11.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = liyue.11.b
+		ai_chance = {
+			factor = 0
+		}
+		ANG = {
+			change_tag_from = ROOT
+			TTT_open_book = yes
+		}
+	}
+}
+
+country_event = { #内战爆发事件 LYU触发
+	id = liyue.12
+	title = liyue.12.t
+	desc = liyue.12.d
+	fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.12.a
+		kickstart_of_liyue_civil_war = yes
+		set_global_flag = Liyue_Civil_War
+		clr_global_flag = Liyue_Civil_War_Coming
+		hidden_effect = {
+			if = {
+				limit = {
+					LYU = {
+						is_ai = no
+					}
+				}
+				LYU = {
+					TTT_open_book = yes
+				}
+			}
+			log = "[GetDateText], [Root.GetName]: Liyue Civil War Begins"
+			country_event = {
+				id = super.1
+			}
+			country_event = {
+				id = liyue.9
+				days = 1
+			}
+			country_event = {
+				id = LHPG.10 
+				days = 14
+			}
+		}
+	}
+}
+
+country_event = {
+	id = liyue.40
+	title = liyue.40.t
+	desc = liyue.40.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.40.a
+		annex_country = {
+			target = RTG
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = LYU
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = ZDG
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = ANG
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = KQG
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = XOG
+			transfer_troops = yes
+		}
+		set_capital = {
+			state = 127
+		}
+	}
+}
+
+country_event = {
+	id = liyue.41
+	title = liyue.41.t
+	desc = liyue.41.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.41.a
+		add_to_faction = LYU
+	}
+}
+
+country_event = {
+	id = liyue.46
+	title = liyue.46.t
+	desc = liyue.46.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.46.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.15
+		}
+		set_party_name = {
+			ideology = communism
+			long_name = LYU_communism_Keqing_party_long
+			name = LYU_communism_Keqing_party
+		}
+		set_country_flag = Keqing_become_leader
+		clr_country_flag = Ganyu_linshi_leader
+		hidden_effect = {
+			set_cosmetic_tag = LYUKQ
+		}
+	}
+}
+
+country_event = {
+	id = liyue.47
+	title = liyue.47.t
+	desc = liyue.47.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.47.a
+		set_politics = {
+			ruling_party = authoritarianism
+		}
+		add_popularity = {
+			ideology = authoritarianism
+			popularity = 0.11
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.07
+		}
+		set_country_flag = NingGuang_become_leader
+		clr_country_flag = Ganyu_linshi_leader
+	}
+}
+
+country_event = {
+	id = liyue.48
+	title = liyue.48.t
+	desc = liyue.48.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.48.a
+		custom_effect_tooltip = increase_Keqing_power
+		add_to_variable = {
+			Keqing_PP = 3
+		}
+		add_to_variable = {
+			Keqing_PS = 2
+		}
+	}
+	option = {
+		name = liyue.48.b
+		custom_effect_tooltip = increase_Ganyu_power
+		add_to_variable = {
+			Ganyu_PP = 3
+		}
+		add_to_variable = {
+			Ganyu_PS = 2
+		}
+	}
+	option = {
+		name = liyue.48.c
+		custom_effect_tooltip = increase_NingGuang_power
+		add_to_variable = {
+			NingGuang_PP = 3
+		}
+		add_to_variable = {
+			NingGuang_PS = 2
+		}
+	}
+}
+
+country_event = {
+	id = liyue.49
+	title = liyue.49.t
+	desc = liyue.49.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.49.a
+		custom_effect_tooltip = increase_Keqing_power
+		add_to_variable = {
+			Keqing_PP = 3
+		}
+		add_to_variable = {
+			Keqing_PS = 2
+		}
+	}
+	option = {
+		name = liyue.49.b
+		custom_effect_tooltip = increase_Ganyu_power
+		add_to_variable = {
+			Ganyu_PP = 3
+		}
+		add_to_variable = {
+			Ganyu_PS = 2
+		}
+	}
+	option = {
+		name = liyue.49.c
+		custom_effect_tooltip = increase_NingGuang_power
+		add_to_variable = {
+			NingGuang_PP = 3
+		}
+		add_to_variable = {
+			NingGuang_PS = 2
+		}
+	}
+}
+
+country_event = {
+	id = liyue.50
+	title = liyue.50.t
+	desc = liyue.50.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.50.a
+	}
+}
+
+country_event = {
+	id = liyue.51
+	title = liyue.51.t
+	desc = liyue.51.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.51.a
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						Ganyu_PP > Keqing_PP
+					}
+					check_variable = {
+						Ganyu_PP > NingGuang_PP
+					}
+				}
+				country_event = {
+					id = liyue.52
+					days = 7
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = Keqing_take_over_power
+				}
+				country_event = {
+					id = liyue.46
+					days = 7
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = NingGuang_take_over_power
+				}
+				country_event = {
+					id = liyue.47
+					days = 7
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						Keqing_PP > Ganyu_PP
+					}
+					check_variable = {
+						Keqing_PP > NingGuang_PP
+					}
+				}
+				country_event = {
+					id = liyue.46
+					days = 7
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						NingGuang_PP > Ganyu_PP
+					}
+					check_variable = {
+						NingGuang_PP > Keqing_PP
+					}
+				}
+				country_event = {
+					id = liyue.47
+					days = 7
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						check_variable = {
+							Ganyu_PP = Keqing_PP
+						}
+						check_variable = {
+							Ganyu_PP = NingGuang_PP
+						}
+					}
+					check_variable = {
+						Ganyu_PS > Keqing_PS
+					}
+					check_variable = {
+						Ganyu_PS > NingGuang_PS
+					}
+				}
+				country_event = {
+					id = liyue.47
+					days = 7
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						check_variable = {
+							Keqing_PP = Ganyu_PP
+						}
+						check_variable = {
+							Keqing_PP = NingGuang_PP
+						}
+					}
+					check_variable = {
+						Keqing_PS > Ganyu_PS
+					}
+					check_variable = {
+						Keqing_PS > NingGuang_PS
+					}
+				}
+				country_event = {
+					id = liyue.46
+					days = 7
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						check_variable = {
+							NingGuang_PP = Ganyu_PP
+						}
+						check_variable = {
+							NingGuang_PP = Keqing_PP
+						}
+					}
+					check_variable = {
+						NingGuang_PS > Ganyu_PS
+					}
+					check_variable = {
+						NingGuang_PS > Keqing_PS
+					}
+				}
+				country_event = {
+					id = liyue.47
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = liyue.52
+	title = liyue.52.t
+	desc = liyue.52.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.52.a
+		set_country_flag = Ganyu_become_leader
+		clr_country_flag = Ganyu_linshi_leader
+	}
+}
+
+country_event = {
+	id = liyue.53
+	title = liyue.53.t
+	desc = liyue.53.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.53.a
+		FROM = {
+			country_event = {
+				id = liyue.54
+				days = 3
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = liyue.53.b
+		FROM = {
+			country_event = {
+				id = liyue.55
+				days = 3
+			}
+		}
+		ai_chance = {
+			base = 9
+		}
+	}
+}
+
+country_event = {
+	id = liyue.54
+	title = liyue.54.t
+	desc = liyue.54.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.54.a
+		annex_country = {
+			target = NNG
+			transfer_troops = yes
+		}
+		FROM = {
+			transfer_navy = {
+				target = ROOT
+			}
+		}
+	}
+}
+
+country_event = {
+	id = liyue.55
+	title = liyue.55.t
+	desc = liyue.55.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.55.a
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				ROOT = {
+					transfer_state = PREV
+				}
+			}
+		}
+		white_peace = NNG
+		clr_country_flag = Guyun_Stone_Forest_scheme_has_been_given
+	}
+	option = {
+		name = liyue.55.b
+		unlock_decision_tooltip = force_landing_Guyun_Stone_Forest
+		set_country_flag = {
+			flag = allowed_to_force_landing_Guyun_Stone_Forest
+			days = 100
+			value = 1
+		}
+	}
+}
+
+country_event = {
+	id = liyue.56
+	title = liyue.56.t
+	desc = liyue.56.d
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_country_flag = is_landing_Guyun_Stone_Forest
+		NOT = {
+			has_country_flag = rest_time_landing_Guyun_Stone_Forest
+		}
+		NNG = {
+			has_full_control_of_state = 116
+			has_full_control_of_state = 117
+		}
+	}
+	option = {
+		name = liyue.56.a
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				ROOT = {
+					transfer_state = PREV
+				}
+			}
+		}
+		white_peace = NNG
+	}
+}
+
+country_event = { #北国银行
+	id = liyue.101
+	title = liyue.101.t
+	desc = liyue.101.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.101.a
+		custom_effect_tooltip = liyue.101.a_TT
+		country_event = { id = liyue.102 days = 1 }
+	}
+	option = {
+		name = liyue.101.b
+		custom_effect_tooltip = liyue.101.b_TT
+		country_event = { id = liyue.103 days = 1 }
+	}
+	option = {
+		name = liyue.101.c
+		custom_effect_tooltip = liyue.101.c_TT
+		country_event = { id = liyue.104 days = 1 }
+	}
+}
+country_event = { #锐意的改革者
+	id = liyue.102
+	title = liyue.102.t
+	desc = liyue.102.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.102.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_stability = -0.1
+	}
+}
+country_event = { #不拘小节，方成大事
+	id = liyue.103
+	title = liyue.103.t
+	desc = liyue.103.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.103.a
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.05
+		}
+		add_political_power = -80
+	}
+}
+country_event = { #集中精神
+	id = liyue.104
+	title = liyue.104.t
+	desc = liyue.104.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = liyue.104.a
+		add_popularity = {
+			ideology = reformism
+			popularity = 0.1
+		}
+		add_stability = 0.05
+	}
+}
