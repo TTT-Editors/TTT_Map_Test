@@ -1,0 +1,21 @@
+state={
+	id=267
+	name="STATE_267"
+	provinces={
+		6444 6446 6459 6460 6463 6468 6473 6477 6481 6483 6485 6489 6490 6492 6493 6494 6499 6502 6503 6504 6511 6513 6515 6516 6519 6524 6530 6531 6540 6542 6545 6549 6559 6560 6570 6579 6583 6584 6587 6599 6603 6617 6631 6639 6650 6657 6662 6672 6677 6713 6714 6726 6773 6774 
+	}
+	history={
+		owner = FON
+		add_core_of = FON
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	manpower=1910810
+	state_category=large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
