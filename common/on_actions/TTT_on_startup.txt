@@ -39,6 +39,20 @@ on_actions = {
 					XOG = { set_country_flag = XOG_lucky_yes }
 				}
 			}
+			
+			every_country = {
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								tag = LYU
+								tag = SUM
+							}
+						}
+					}
+					country_event = { id = spawn_army_event.1 }
+				}
+			}
 		}
 	}
 }
