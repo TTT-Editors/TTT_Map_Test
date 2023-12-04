@@ -16,7 +16,7 @@ add_ideas = {
 	extensive_conscription
 	war_machines
 	Limited_election
-	Balanced_publicity
+	#Balanced_publicity
     limited_exports
 }
 set_stability = 0.50

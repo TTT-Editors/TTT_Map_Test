@@ -199,7 +199,7 @@ country_event = {
 				#}
 			}
 			NNG = {
-				load_oob = "NNG"
+				#load_oob = "NNG"
 			}
 			every_possible_country = {
 				limit = {
@@ -337,7 +337,7 @@ country_event = {
 				}
 			}
 			KQG = {
-				load_oob = "KQG"
+				#load_oob = "KQG"
 			}
 			KQG = {
 				activate_mission = KQG_ready_to_attack_NNG
@@ -427,7 +427,7 @@ country_event = {
 				transfer_state = 111
 			}
 			XOG = {
-				load_oob = "XOG"
+				#load_oob = "XOG"
 			}
 			transfer_units_fraction = {
 				target = XOG
@@ -557,7 +557,7 @@ country_event = {
 				transfer_state = 68
 			}
 			RTG = {
-				load_oob = "RTG"
+				#load_oob = "RTG"
 			}
 			RTG = {
 				every_owned_state = {
@@ -625,7 +625,7 @@ country_event = {
 			ZDG = {
 				inherit_technology = SNE
 				set_research_slots = 3
-				load_oob = "ZDG"
+				#load_oob = "ZDG"
 				add_offsite_building = {
 					type = arms_factory
 					level = 1
@@ -748,7 +748,7 @@ country_event = {
 				inherit_technology = LYU
 			}
 			XRG = {
-				load_oob = "XRG"
+				#load_oob = "XRG"
 			}
 			transfer_units_fraction = {
 				target = XRG
@@ -819,7 +819,7 @@ country_event = {
 				transfer_state = 60
 				transfer_state = 69
 				transfer_state = 71
-				load_oob = "ANG"
+				#load_oob = "ANG"
 				every_owned_state = {
 					add_core_of = ANG
 					remove_core_of = LYU

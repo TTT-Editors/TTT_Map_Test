@@ -31,7 +31,7 @@ recruit_character = MDQ_Zhuang_Yang
 recruit_character = MDQ_Damut
 recruit_character = MDQ_Egidito_von_Page
 
-set_oob = "MDQ"
+#set_oob = "MDQ"
 
 set_stability = 0.3
 set_war_support = 0.3

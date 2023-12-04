@@ -728,7 +728,7 @@ shared_focus = {
 			KUJ = { add_state_core = 234 } 
 			KUJ = { add_state_core = 235 } 
 			release = KUJ
-			KUJ = {load_oob = "KUJ"}
+			#KUJ = {#load_oob = "KUJ"}
 			if = { 
 				limit = {has_country_flag = KUJ_get_weapons}
 				KUJ = {

@@ -1,5 +1,5 @@
 capital = 1
-oob = "XQG"
+#oob = "XQG"
 set_research_slots = 1
 set_stability = 0.50
 add_political_power = 200

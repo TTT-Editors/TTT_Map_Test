@@ -19,7 +19,7 @@ recruit_character = QQR_wood_strike_chuchu
 recruit_character = QQR_wind_master_chuchu
 recruit_character = QQR_abgrund_ice_master
 
-set_oob = "QQR"
+#set_oob = "QQR"
 
 set_stability = 0.8
 set_war_support = 0.8

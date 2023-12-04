@@ -1,5 +1,5 @@
 capital = 68
-oob = "RTG"
+#oob = "RTG"
 set_research_slots = 4
 
 recruit_character = RTG_KunJun

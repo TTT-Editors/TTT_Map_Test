@@ -194,7 +194,7 @@ focus_tree ={
 				KUJ = { add_state_core = 77 } 
 				KUJ = { add_state_core = 372 } 
 				KUJ = { add_state_core = 84 } 
-				KUJ = {load_oob = "KUJ"}
+				#KUJ = {#load_oob = "KUJ"}
 				if = { 
 					limit = {has_country_flag = KUJ_get_weapons}
 					KUJ = {

@@ -1,5 +1,5 @@
 capital = 207
-oob = "ZDG"
+#oob = "ZDG"
 set_research_slots = 4
 
 add_ideas = {

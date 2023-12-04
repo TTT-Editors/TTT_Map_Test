@@ -1,5 +1,5 @@
 capital = 1
-oob = "MOT"
+#oob = "MOT"
 set_research_slots = 5
 
 set_technology = {

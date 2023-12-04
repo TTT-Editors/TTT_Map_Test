@@ -98,7 +98,7 @@ focus_tree =
 		y = 2
 		cost = 21
         completion_reward = {
-			load_oob = "KUJ_new_army"
+			#load_oob = "KUJ_new_army"
 			add_ideas = 
 			{
 				KUJ_low_army_quality_1
@@ -495,7 +495,7 @@ focus_tree =
         completion_reward = {
 			add_ideas = { KUJ_low_army_quality_1 }
 			add_ideas = { service_by_requirement }
-			load_oob = "KUJ_new_army"
+			#load_oob = "KUJ_new_army"
 		}
 	}
 	focus = {
