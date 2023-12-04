@@ -1,5 +1,5 @@
 capital = 92
-oob = "KQG"
+#oob = "KQG"
 set_research_slots = 2
 
 recruit_character = KQG_Xiongbohong
@@ -22,7 +22,7 @@ add_ideas = {
     Limited_election
     Low_tax
     balance_laws
-    Balanced_publicity
+    #Balanced_publicity
 	volunteer_only
 	civilian_economy
 }

@@ -946,7 +946,7 @@ ZDG_decision_category = {
 				set_stability = 0.3
 				set_war_support = 0.3
 				hidden_effect = {
-					load_oob = "XRG_kuilei"
+					#load_oob = "XRG_kuilei"
 				}
 			}
 			XRG = {
@@ -1026,7 +1026,7 @@ ZDG_decision_category = {
 				set_stability = 0.3
 				set_war_support = 0.3
 				hidden_effect = {
-					load_oob = "XOG_kuilei"
+					#load_oob = "XOG_kuilei"
 				}
 			}
 			XOG = {
@@ -1106,7 +1106,7 @@ ZDG_decision_category = {
 				set_stability = 0.3
 				set_war_support = 0.3
 				hidden_effect = {
-					load_oob = "KNG_kuilei"
+					#load_oob = "KNG_kuilei"
 				}
 			}
 			set_autonomy = {
@@ -1180,7 +1180,7 @@ ZDG_decision_category = {
 				set_stability = 0.3
 				set_war_support = 0.3
 				hidden_effect = {
-					load_oob = "RTG_kuilei"
+					#load_oob = "RTG_kuilei"
 				}
 			}
 			set_autonomy = {
@@ -1276,7 +1276,7 @@ ZDG_decision_category = {
 				set_stability = 0.3
 				set_war_support = 0.3
 				hidden_effect = {
-					load_oob = "LYU_kuilei"
+					#load_oob = "LYU_kuilei"
 				}
 			}
 			set_autonomy = {

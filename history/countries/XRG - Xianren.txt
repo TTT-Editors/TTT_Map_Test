@@ -1,5 +1,5 @@
 capital = 79
-oob = "XRG"
+#oob = "XRG"
 set_research_slots = 3
 
 recruit_character = XRG_Qunxianhuiyi
@@ -11,7 +11,7 @@ recruit_character = XRG_xunliancaodian
 recruit_character = XRG_guifanshouze
 
 add_ideas = {
-	Balanced_publicity
+	#Balanced_publicity
 	deficit_laws
 	Limited Conscription
 	war_economy

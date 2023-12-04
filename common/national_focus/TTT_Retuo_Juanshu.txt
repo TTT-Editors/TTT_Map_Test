@@ -518,7 +518,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = RTG_super_division_army
 			hidden_effect = {
-				load_oob = RTG_Civil_War_Juanshu
+				#load_oob = RTG_Civil_War_Juanshu
 			}
 		}
 	}

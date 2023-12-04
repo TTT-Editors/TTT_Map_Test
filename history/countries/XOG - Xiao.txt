@@ -1,5 +1,5 @@
 capital = 106
-oob = "XOG"
+#oob = "XOG"
 set_research_slots = 3
 recruit_character = XOG_huaian
 recruit_character = XOG_jiangxue
@@ -18,7 +18,7 @@ recruit_character = XOG_Xuanfan
 recruit_character = XOG_Shaling
 add_ideas = {
     Low_tax
-    Balanced_publicity
+    #Balanced_publicity
 	volunteer_only
 	civilian_economy
 	free_trade

@@ -1,5 +1,5 @@
 capital = 89
-oob = "LYU"
+#oob = "LYU"
 set_research_slots = 3
 
 recruit_character = NNG_huixing

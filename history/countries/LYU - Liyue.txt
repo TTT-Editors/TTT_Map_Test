@@ -1,5 +1,5 @@
 capital = 51
-oob = "LYU"
+#oob = "LYU"
 set_research_slots = 2
 
 recruit_character = LYU_morax

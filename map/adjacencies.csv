@@ -1,2 +1,16 @@
 From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
-
+928;3449;sea;5934;-1;-1;-1;-1;;Liyue_Strait_1
+3404;3429;sea;5934;-1;-1;-1;-1;;Liyue_Strait_2
+2101;3718;sea;5878;-1;-1;-1;-1;;Liyue_Strait_3
+3587;3573;sea;6068;-1;-1;-1;-1;;Liyue_Strait_4
+2095;2797;sea;5873;-1;-1;-1;-1;;Liyue_Strait_5
+937;4186;sea;6119;-1;-1;-1;-1;;Liyue_Strait_6
+2813;4023;sea;6119;-1;-1;-1;-1;;Liyue_Strait_7
+4183;1728;sea;6119;-1;-1;-1;-1;;Liyue_Strait_8
+722;2714;sea;6109;-1;-1;-1;-1;;Liyue_Strait_9
+4224;1140;sea;6109;-1;-1;-1;-1;;Liyue_Strait_10
+4273;1430;sea;5639;-1;-1;-1;-1;;Liyue_Strait_11
+4342;4359;sea;5639;-1;-1;-1;-1;;Liyue_Strait_12
+4342;4465;sea;5639;-1;-1;-1;-1;;Liyue_Strait_13
+4023;3911;sea;5670;-1;-1;-1;-1;;Liyue_Strait_14
+6266;6068;sea;3544;-1;-1;-1;-1;DIHUAZHOU_CANAL;dihua

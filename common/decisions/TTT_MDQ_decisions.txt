@@ -37,7 +37,7 @@ MOT_Standpoint_decision_category ={
 					transfer_state = 37
 					transfer_state = 38
 					transfer_state = 40
-					load_oob = "QQR"
+					#load_oob = "QQR"
 				}
 				37 = { set_demilitarized_zone = no }
 				38 = { set_demilitarized_zone = no }
@@ -1345,7 +1345,7 @@ MDQ_IS_DEBUG= {
 				transfer_state = 37
 				transfer_state = 38
 				transfer_state = 40
-				load_oob = "QQR"
+				#load_oob = "QQR"
 			}
 			37 = { set_demilitarized_zone = no }
 			38 = { set_demilitarized_zone = no }

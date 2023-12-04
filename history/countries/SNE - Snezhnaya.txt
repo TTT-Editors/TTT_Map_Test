@@ -1,5 +1,5 @@
 capital = 260
-oob = "SNE"
+#oob = "SNE"
 set_research_slots = 4
 
 recruit_character = SNE_Bronya
